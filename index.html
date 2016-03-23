@@ -1,0 +1,60 @@
+---
+layout: nhse_default
+---
+<!-- Note this is what makes the background image appear -->
+<div class="homepage layout-3">
+  <div class="container">
+    <div class="span9">
+      <div class="flash-messages">
+      </div>
+    </div>
+  </div>
+
+  <!-- Snippet home/layout3.html start -->
+  <div role="main" class="hero" style="margin-top: 0px;">
+    <div class="container">
+
+      <!-- Snippet home/snippets/search.html start -->
+
+      <div class="module-search">
+        <form class="module-content search-form" method="get" action="/dataset">
+          <h3 class="heading">Open health data in the UK</h3>
+          <h4 class="heading">Exploring benefits and re-use</h4>
+        </form>
+      </div>
+      <!-- Snippet home/snippets/search.html end -->
+
+    </div>
+  </div>
+  <style>
+    .lead {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+    .project-title {
+    padding-bottom: 20px;
+    }
+
+  </style>
+
+  <div role="main">
+    <div class="container">
+      <div class="row">
+        <div class="span8 offset2">
+          {% for post in site.posts %}
+          <h2 class="project-title"><center>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </center></h2>
+          <center>
+            <img src="{{ post.imageurl }}" style="max-height: 200px;"/>
+          </center>
+          <p class="lead">
+            {{ post.description }} <a href="{{ post.url | prepend: site.baseurl }}">...read more</a>
+          </p>
+          <hr />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
