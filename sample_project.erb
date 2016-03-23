@@ -2,7 +2,7 @@
 layout: nhse_post
 title: "<%= @name %> (<%= @orgname %>)"
 date: <%= @datestring %>
-description: "<%= @usage %>"
+description: "<%= @usage[0..500] %>"
 imageurl: <%= @imageurl %>
 ---
 <img src="<%= @imageurl %>" />

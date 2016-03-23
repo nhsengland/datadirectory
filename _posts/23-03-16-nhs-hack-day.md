@@ -1,7 +1,7 @@
 ---
 layout: nhse_post
 title: "NHS Hack Day (Open Health Care UK)"
-date: 23-03-2016 16:24 +0000
+date: 23-03-2016 18:00 +0000
 description: "Our participants use it all the time"
 imageurl: http://nhshackday.com/assets/images/header-logo.png
 ---
