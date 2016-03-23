@@ -43,13 +43,13 @@ layout: nhse_default
         <div class="span8 offset2">
           {% for post in site.posts %}
           <h2 class="project-title"><center>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
           </center></h2>
           <center>
             <img src="{{ post.imageurl }}" style="max-height: 200px;"/>
           </center>
           <p class="lead">
-            {{ post.description }} <a href="{{ post.url | prepend: site.baseurl }}">...read more</a>
+            {{ post.description }} <a href="{{ post.url  }}">...read more</a>
           </p>
           <hr />
           {% endfor %}
