@@ -1,7 +1,7 @@
 ---
 layout: nhse_post
 title: "clinical calculator API (openhealthhub CIC)"
-date: 23-03-2016 18:00 +0000
+date: 04-04-2016 17:05 +0000
 description: "We created a REST API which conceals some of the complexity of open data, by removing some of the need to understand the document structure, geographical jargon, and clinical meaning of the raw open data, and enabling simple access to  relevant portions of the data.
 
 As an example, the open data on prevalence of obesity is available as a large Excel file from http://www.noo.org.uk/visualisation. It's organised by region, by LSOA, and MSOA, and by electoral ward (geographical jargon). We felt that"
