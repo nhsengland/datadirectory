@@ -2,6 +2,8 @@
 
 Listings website for the NHS England Health Data Directory.
 
+[![Stories in Ready](https://badge.waffle.io/nhsengland/datadirectory.png?label=ready&title=Ready)](http://waffle.io/nhsengland/datadirectory)
+
 ### Generating the Directory
 
 1. Data is gathered from a survey / research process.
