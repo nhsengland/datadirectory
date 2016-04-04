@@ -32,3 +32,8 @@ repository. The script expects the dataset to be available in the file "data.dir
 
     rake generate
     rake commit
+
+### 6. Deploying the Directory
+
+The directory is deployed to the Catalogue using the catalogue ansible scripts. See documentation
+there.
