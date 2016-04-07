@@ -41,7 +41,7 @@ task :transform do
       'name', 'url', 'usage', 'orgname', 'orgdescription',
       'datasets', 'imageurl'
     ]
-    CSV.foreach('dataset.csv', :headers => true) do |row|
+    CSV.foreach('exported.data.csv', :headers => true) do |row|
       rowhash = row.to_hash
       dataset << [
         rowhash["What is the name of your project?"],
