@@ -27,8 +27,27 @@
   <div class="container">
 
     <h2>
-      <h2>NHS England Open Data Directory</h2>
+      <h2>NHS England Healthcare Open Data Directory</h2>
     </h2>
 
   </div>
 </footer>
+    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+    <style type="text/css" media="screen, projection">
+      @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    </style>
+    <script type="text/javascript">
+      if (typeof(Zenbox) !== "undefined") {
+      Zenbox.init({
+      dropboxID:   "20263731",
+      url:         "https://nhse.zendesk.com",
+      tabTooltip:  "Feedback",
+      tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_feedback.png",
+      tabColor:    "#A00054",
+      tabPosition: "Left"
+      });
+      var zenbox = document.getElementById("zenbox_tab");
+      zenbox.setAttribute('data-intro', 'Click the "Feedback" tab to tell us your thoughts, report bugs and request features.');
+      zenbox.setAttribute('data-position', 'right');
+      }
+    </script>
