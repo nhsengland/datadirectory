@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NHS England Open Data Directory</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://fredkingham.github.io//datadirectory//</link>
+    <atom:link href="http://fredkingham.github.io//datadirectory//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 02 May 2016 11:22:11 +0100</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 11:22:11 +0100</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Prescribing Analytics ()</title>
+        <description>&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-href-targetblank-prescribing-analytics-i-classfa-fa-external-linkia&quot;&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt; Prescribing Analytics &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Statins etc&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used&lt;/h2&gt;
+
+&lt;p&gt;Prescribing&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;#&lt;/h1&gt;
+</description>
+        <pubDate>Fri, 15 Apr 2016 14:48:00 +0100</pubDate>
+        <link>http://fredkingham.github.io//datadirectory//2016/04/15/prescribing-analytics.html</link>
+        <guid isPermaLink="true">http://fredkingham.github.io//datadirectory//2016/04/15/prescribing-analytics.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Open Prescribing  (EBM DATA LAB)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://ebmdatalab.net/images/portfolio/openprescribing.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-hrefhttpsopenprescribingnet-targetblank-open-prescribing--i-classfa-fa-external-linkia&quot;&gt;&lt;a href=&quot;https://openprescribing.net/&quot; target=&quot;_blank&quot;&gt; Open Prescribing  &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Every month, the NHS in England publishes anonymised data about the drugs prescribed by GPs. But the raw data files are large and unwieldy, with more than 600 million rows. We’re making it easier for GPs, managers and everyone to explore - supporting safer, more efficient prescribing.&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used&lt;/h2&gt;
+
+&lt;p&gt;http://www.hscic.gov.uk/gpprescribingdata&lt;/p&gt;
+
+&lt;h2 id=&quot;ebm-data-lab&quot;&gt;EBM DATA LAB&lt;/h2&gt;
+
+&lt;p&gt;The EBM Data Lab is a range of projects being designed and built by Dr Ben Goldacre and Anna Powell-Smith at the University of Oxford, with colleagues across the university and around the world.&lt;/p&gt;
+
+&lt;p&gt;We have set out to create interesting, innovative, live, impactful projects using academic and health data. We publish academic papers. But we think academics should collaborate outside academia, and work with data in ways that go beyond static PDFs in academic journals.&lt;/p&gt;
+
+&lt;p&gt;We are based in the Centre for Evidence-Based Medicine, in the Nuffield Department of Primary Care Health Sciences, in the University of Oxford.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Apr 2016 14:48:00 +0100</pubDate>
+        <link>http://fredkingham.github.io//datadirectory//2016/04/15/open-prescribing.html</link>
+        <guid isPermaLink="true">http://fredkingham.github.io//datadirectory//2016/04/15/open-prescribing.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>NHS Hack Day (Open Health Care UK)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://nhshackday.com/assets/images/header-logo.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-hrefnhshackdaycom-targetblank-nhs-hack-day-i-classfa-fa-external-linkia&quot;&gt;&lt;a href=&quot;nhshackday.com&quot; target=&quot;_blank&quot;&gt; NHS Hack Day &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Our participants use it all the time&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used&lt;/h2&gt;
+
+&lt;p&gt;All of the data.&lt;/p&gt;
+
+&lt;h2 id=&quot;open-health-care-uk&quot;&gt;Open Health Care UK&lt;/h2&gt;
+
+&lt;p&gt;Health.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Apr 2016 14:48:00 +0100</pubDate>
+        <link>http://fredkingham.github.io//datadirectory//2016/04/15/nhs-hack-day.html</link>
+        <guid isPermaLink="true">http://fredkingham.github.io//datadirectory//2016/04/15/nhs-hack-day.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Living a Long Life? (Open Public Services Network)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-hrefhttpswwwthersaorgaction-and-researchrsa-projectspublic-services-and-communities-foldermental-healthlong-lifehtml-targetblank-living-a-long-life-i-classfa-fa-external-linkia&quot;&gt;&lt;a href=&quot;https://www.thersa.org/action-and-research/rsa-projects/public-services-and-communities-folder/mental-health/long-life.html/&quot; target=&quot;_blank&quot;&gt; Living a Long Life? &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Please see our white paper that explains this https://www.thersa.org/discover/publications-and-articles/reports/getting-the-message-on-mental-health/&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used&lt;/h2&gt;
+
+&lt;p&gt;The Quality and Outcomes Framework (QOF) data and local authority data used from 2013/14 and extracted from Public Health England’s
+Fingertips website
+Data on mortality rates extracted in October 2015.&lt;/p&gt;
+
+&lt;h2 id=&quot;open-public-services-network&quot;&gt;Open Public Services Network&lt;/h2&gt;
+
+&lt;p&gt;Re-uses and re-analyses open data to hold public services to account and make it better understood by the public&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Apr 2016 14:48:00 +0100</pubDate>
+        <link>http://fredkingham.github.io//datadirectory//2016/04/15/living-a-long-life.html</link>
+        <guid isPermaLink="true">http://fredkingham.github.io//datadirectory//2016/04/15/living-a-long-life.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Data Catalogue (NHS England)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://www.nextgearcapital.com/wp-content/uploads/2015/11/Big-Data.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-hrefhttpsdataenglandnhsuk-targetblank-data-catalogue-i-classfa-fa-external-linkia&quot;&gt;&lt;a href=&quot;https://data.england.nhs.uk&quot; target=&quot;_blank&quot;&gt; Data Catalogue &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;We provided a catalogue of the data used by NHS England.&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used&lt;/h2&gt;
+
+&lt;p&gt;Lots of data from the HSCIC, PHE, and other sources: https://data.england.nhs.uk/dataset&lt;/p&gt;
+
+&lt;h2 id=&quot;nhs-england&quot;&gt;NHS England&lt;/h2&gt;
+
+&lt;p&gt;NHS England commissions health and care services in England.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Apr 2016 14:48:00 +0100</pubDate>
+        <link>http://fredkingham.github.io//datadirectory//2016/04/15/data-catalogue.html</link>
+        <guid isPermaLink="true">http://fredkingham.github.io//datadirectory//2016/04/15/data-catalogue.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>clinical calculator API (openhealthhub CIC)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;a-hrefapiclinicalcalculatororg-api-only--targetblank-clinical-calculator-api-i-classfa-fa-external-linkia&quot;&gt;&lt;a href=&quot;api.clinicalcalculator.org (API only) &quot; target=&quot;_blank&quot;&gt; clinical calculator API &lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;We created a REST API which conceals some of the complexity of open data, by removing some of the need to understand the document structure, geographical jargon, and clinical meaning of the raw open data, and enabling simple access to  relevant portions of the data.&lt;/p&gt;
+
+&lt;p&gt;As an example, the open data on prevalence of obesity is available as a large Excel file from http://www.noo.org.uk/visualisation. It’s organised by region, by LSOA, and MSOA, and by electoral ward (geographical jargon). We felt that many people would want to search by postcode, in order to discover the prevalence of obesity in their area. We therefore used MySociety’s MapIt postcode data API https://mapit.mysociety.org/ to return the Ward/MSOA/LSOA for a given postcode, and them used this to look up the relevant information and return it as a JSON response.&lt;/p&gt;
+
+&lt;p&gt;To return to what the illustrious David Miller refers to as ‘That Old Chestnut’ - Clinical Calculator API also provides height centile, weight centile and BMI centile data, used for assessing child growth, general health, and (increasingly) obesity. This is NOT open data, although it definitely should be. In the USA it is open data. http://www.cdc.gov/growthcharts/percentile_data_files.htm&lt;/p&gt;
+
+&lt;p&gt;I suggest trying to use the API from Postman with the following example queries:&lt;/p&gt;
+
+&lt;p&gt;Centile: GET http://api.clinicalcalculator.org/centile?weight_in_kg=29&amp;amp;height_in_m=1.20&amp;amp;year_of_birth=2006&amp;amp;month_of_birth=11&amp;amp;day_of_birth=10&amp;amp;sex=M&lt;/p&gt;
+
+&lt;p&gt;Obesity Data: GET http://api.clinicalcalculator.org/obesity_by_postcode?postcode_search=wn72nx&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used&lt;/h2&gt;
+
+&lt;p&gt;we used the Ward and MSOA tables from here: http://www.noo.org.uk/visualisation&lt;/p&gt;
+
+&lt;p&gt;postcodes from here: https://mapit.mysociety.org/&lt;/p&gt;
+
+&lt;p&gt;Medical Research Council UK90 LMS Tables (unfortunately this is not open data, I had to apply for a licence to use it from the MRC, which was free, and took a mere 9 months) I had a long discussion with the MRC about making it open data, and their response was [NaN].&lt;/p&gt;
+
+&lt;h2 id=&quot;openhealthhub-cic&quot;&gt;openhealthhub CIC&lt;/h2&gt;
+
+&lt;p&gt;open health stuff, sort of.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Apr 2016 14:48:00 +0100</pubDate>
+        <link>http://fredkingham.github.io//datadirectory//2016/04/15/clinical-calculator-api.html</link>
+        <guid isPermaLink="true">http://fredkingham.github.io//datadirectory//2016/04/15/clinical-calculator-api.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

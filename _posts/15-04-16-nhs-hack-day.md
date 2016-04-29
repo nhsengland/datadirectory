@@ -1,5 +1,5 @@
 ---
-layout: nhse_post
+layout: mikes_post
 title: "NHS Hack Day (Open Health Care UK)"
 date: 15-04-2016 13:48 +0000
 description: "Our participants use it all the time"

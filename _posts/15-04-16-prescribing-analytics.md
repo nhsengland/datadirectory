@@ -1,9 +1,9 @@
 ---
-layout: nhse_post
+layout: mikes_post
 title: "Prescribing Analytics ()"
 date: 15-04-2016 13:48 +0000
 description: "Statins etc"
-imageurl: 
+imageurl:
 ---
 <img src="" />
 
@@ -15,5 +15,4 @@ Statins etc
 
 Prescribing
 
-## 
-
+##

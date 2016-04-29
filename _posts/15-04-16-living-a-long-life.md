@@ -1,15 +1,15 @@
 ---
-layout: nhse_post
+layout: mikes_post
 title: "Living a Long Life? (Open Public Services Network)"
 date: 15-04-2016 13:48 +0000
 description: "Please see our white paper that explains this https://www.thersa.org/discover/publications-and-articles/reports/getting-the-message-on-mental-health/ "
-imageurl: 
+imageurl:
 ---
 <img src="" />
 
 ## <a href="https://www.thersa.org/action-and-research/rsa-projects/public-services-and-communities-folder/mental-health/long-life.html/" target="_blank"> Living a Long Life? <i class="fa fa-external-link"></i></a>
 
-Please see our white paper that explains this https://www.thersa.org/discover/publications-and-articles/reports/getting-the-message-on-mental-health/ 
+Please see our white paper that explains this https://www.thersa.org/discover/publications-and-articles/reports/getting-the-message-on-mental-health/
 
 ## Datasets used
 

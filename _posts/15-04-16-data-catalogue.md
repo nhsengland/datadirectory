@@ -1,5 +1,5 @@
 ---
-layout: nhse_post
+layout: mikes_post
 title: "Data Catalogue (NHS England)"
 date: 15-04-2016 13:48 +0000
 description: "We provided a catalogue of the data used by NHS England."

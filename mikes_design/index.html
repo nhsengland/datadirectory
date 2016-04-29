@@ -1,17 +1,6 @@
 ---
-layout: empty
+layout: mikes_layout
 ---
-<html>
-<head>
-    <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/uk.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
-</head>
-<body class="mikes-design">
 <!-- top banner  -->
 <div class="top-banner">
   <div class="grid inner-container">
@@ -30,7 +19,7 @@ layout: empty
 </div>
 <div class="main-container">
   <form class="form-search" style="margin-top: 20px">
-    <div class="form-element"><input type="text"></input></div><!--
+    <div class="form-element"><input data-bind="value: currentFilter, valueUpdate: 'afterkeydown'" type="text"></input></div><!--
     --><div class="form-element"><select>
       <option>find stuff</option>
     </select></div><!--
@@ -40,14 +29,14 @@ layout: empty
     --><div class="form-btn"><a class="btn btn-primary" href="">SEARCH</a></div>
   </form>
   <div class="inner-container" style="margin-top: 30px; text-align: center; font-weight: 500; margin-bottom: 30px">
-    Showing all <span data-bind="text: items().length"></span> projects
+    Showing all <span data-bind="text: filteredItems().length"></span> projects
   </div>
   <div class="project-grid-outer-container">
-    <div data-bind="foreach: items" class="project-grid-inner-container grid"><div class="project-element-outer-container"><div data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }" class="project-element ">
+    <div data-bind="foreach: filteredItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }, attr: { href: url }" class="project-element">
         <div data-bind="text: title" class="project-element-text">
           Prescribing Analytics
         </div>
-    </div></div></div>
+    </a></div></div>
   </div>
 </div>
 <div class="footer">
@@ -64,8 +53,6 @@ layout: empty
   </div>
 </div>
 <div class="base-footer"></div>
-
-
 <script>
   {{ site.posts | jsonify }}
   var json = [
@@ -78,9 +65,21 @@ layout: empty
   {% endfor %}
   ]
 
-  var model = {items: ko.observableArray(json)}
-  ko.applyBindings(model)
+  var AppViewModel = function(){
+      var self = this;
+      this.items = ko.observableArray(json);
+      this.currentFilter = ko.observable();
+      this.filteredItems = ko.computed(function() {
+          if(!self.currentFilter() || !self.currentFilter().length){
+              return self.items();
+          } else {
+              return ko.utils.arrayFilter(self.items(), function(prod) {
+                  return prod.title.toLowerCase().indexOf(self.currentFilter()) !== -1
+              });
+          }
+      });
+  }
 
+  var mpv = new AppViewModel();
+  ko.applyBindings(mpv);
 </script>
-</body>
-</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <!--[if IE 7]> <html lang="en_GB" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en_GB" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en_GB" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en_GB"> <!--<![endif]-->
+  <head>
+    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
+    <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/css/:version:2015-03-25T08:33:17.30/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/font-awesome/css/font-awesome.min.css" />
+    <!--[if ie 7]><link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->
+
+    <meta charset="utf-8" />
+    <title><%= @name %> (<%= @orgname %>)</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+    <!-- <link rel="shortcut icon" href="/images/icons/ckan.ico" /> -->
+    <link rel="stylesheet" href="https://data.england.nhs.uk/css/nhsengland.css" />
+    <link rel="stylesheet" href="https://data.england.nhs.uk/css/introjs.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <header class="super-masthead">
+  <div class="container">
+    <hgroup class="header-strapline" style="width: 510px;">
+      <h1>
+        <h2>Healthcare Open Data Directory</h2>
+      </h1>
+    </hgroup>
+    <hgroup class="header-image">
+      <a class="logo" href="http://www.england.nhs.uk">
+        <img src="https://data.england.nhs.uk/images/nhsengland_logo.png"
+             alt="NHS England Data Catalogue Logo"
+             title="NHS England Data Catalogue Logo"
+             />
+
+      </a>
+    </hgroup>
+  </div>
+</header>
+
+
+<header class="account-masthead" >
+  <div class="container">
+    <nav class="section navigation" >
+      <ul class="nav nav-pills pull-left">
+        <li><a href="/">Data Catalogue</a></li>
+        <li><a href="/datadirectory/">Data Directory</a></li>
+        <li><a href="/datadirectory/about/">About</a></li>
+      </ul>
+      <ul class="nav nav-pills pull-right">
+        <li><a href="/datadirectory/add/">Add a Project</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+      <div role="main">
+    <div class="container">
+      <div class="row">
+        <div class="span8 offset2">
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"><%= @name %> (<%= @orgname %>)</h1>
+    <p class="post-meta"><%= @datestring %></p>
+  </header>
+
+  <article class="post-content">
+    <img src="<%= @imageurl %>" />
+
+## <a href="<%= @url %>" target="_blank"> <%= @name %> <i class="fa fa-external-link"></i></a>
+
+<%= @usage %>
+
+## Datasets used
+
+<%= @datasets %>
+
+## <%= @orgname %>
+
+<%= @orgdescription %>
+  </article>
+
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+  <div class="row">
+    <footer class="pre-footer span12">
+      <ul class="nav nav-pills  pull-left">
+	<li>
+	  &copy; NHS England 2016
+	</li>
+
+	<li>
+	  <a href="http://www.england.nhs.uk/terms-and-conditions/">Terms &amp; Conditions</a>
+	</li>
+	<li>
+	  <a href="http://www.england.nhs.uk/privacy-policy/">Privacy &amp; Cookies</a>
+	</li>
+	<li>
+	  <a href="http://www.england.nhs.uk/comment-policy/">Social Media &amp; Comment Moderation</a>
+	</li>
+	<li>
+	  <a href="http://www.england.nhs.uk/accessibility/">Accessibility</a>
+	</li>
+      </ul>
+    </footer>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+
+    <h2>
+      <h2>NHS England Healthcare Open Data Directory</h2>
+    </h2>
+
+  </div>
+</footer>
+    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+    <style type="text/css" media="screen, projection">
+      @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    </style>
+    <script type="text/javascript">
+      if (typeof(Zenbox) !== "undefined") {
+      Zenbox.init({
+      dropboxID:   "20263731",
+      url:         "https://nhse.zendesk.com",
+      tabTooltip:  "Feedback",
+      tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_feedback.png",
+      tabColor:    "#A00054",
+      tabPosition: "Left"
+      });
+      var zenbox = document.getElementById("zenbox_tab");
+      zenbox.setAttribute('data-intro', 'Click the "Feedback" tab to tell us your thoughts, report bugs and request features.');
+      zenbox.setAttribute('data-position', 'right');
+      }
+    </script>
+
+
+  </body>
+</html>
