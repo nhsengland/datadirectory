@@ -74,7 +74,7 @@ layout: mikes_layout
               return self.items();
           } else {
               return ko.utils.arrayFilter(self.items(), function(prod) {
-                  return prod.title.toLowerCase().indexOf(self.currentFilter().toLowerCase()) !== -1
+                  return prod.title.toLowerCase().indexOf(self.currentFilter()) !== -1
               });
           }
       });

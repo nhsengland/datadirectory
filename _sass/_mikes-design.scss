@@ -1,0 +1,220 @@
+.mikes-design{
+  $primary-colour: #0072c6;
+  $secondary-colour: #a00054;
+  $white: #EEE;
+  $border-radius: 2px;
+  $background-colour: lighten(#e6f2ff, 2%);
+  $line-height: 30px;
+  $light-blue: lighten(#0072c6, 55%);
+  $green-blue: adjust-hue($primary-colour, -15%);
+  $text-color: #111;
+
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 18px;
+
+  @mixin form-element{
+    border-radius: $border-radius;
+    border: 1px solid #BBB;
+    background-color: #FFF;
+    height: $line-height;
+    width: 100%;
+    padding-left: 10px;
+    padding-right : 10px;
+  }
+
+  .form-element{
+    @extend .grid__item;
+    @extend .desk--three-tenths;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .form-search{
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  background-color: $background-colour;
+
+  .inner-container{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(100% - 10px);
+
+      @include grid-media-query(desk) {
+        max-width: 1000px;
+      }
+  }
+
+  .project-grid-outer-container{
+      @extend .inner-container;
+  }
+
+  .project-element-outer-container{
+      @extend .grid__item;
+      @extend .desk--one-third;
+      @extend .lap--one-half;
+      padding: 20px;
+  }
+
+  .project-grid-inner-container{
+      margin-left: -20px;
+      margin-right: -20px;
+  }
+
+  .project-element{
+      min-height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      background-color: $primary-colour;
+      background-position: center;
+      display: block;
+  }
+
+  .project-element-text{
+      font-size: 16px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      width: 100%;
+      color: $white;
+  }
+
+  .project-element-outer-container:nth-child(4n) .project-element-text{
+      background-color: adjust-hue($primary-colour, 5%);
+  }
+
+  .project-element-outer-container:nth-child(4n+1) .project-element-text{
+      background-color: adjust-hue($primary-colour, 15%);
+  }
+
+  .project-element-outer-container:nth-child(4n+2) .project-element-text{
+      background-color: $green-blue;
+  }
+
+  .project-element-outer-container:nth-child(4n+3) .project-element-text{
+      background-color: darken($primary-colour, 10%);
+  }
+
+  .top-banner{
+      background-color: $primary-colour;
+      color: $white;
+      margin-top: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  h1{
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 70px;
+      padding-bottom: 70px;
+
+      strong{
+          font-weight: normal;
+          background-color: $secondary-colour;
+      }
+  }
+
+  h4{
+      color: lighten($text-color, 30%);
+      font-weight: 600;
+  }
+
+  .post-header{
+        h2{
+          text-align: center;
+          color: $primary-colour;
+          text-transform: capitalize;
+        }
+
+        a, h5{
+          color: $green-blue;
+          text-align: center;
+        }
+  }
+
+  .tags-header{
+      border-top: 1px solid darken($white, 30%);
+      border-bottom: 1px solid darken($white, 30%);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+  }
+
+  .main-container{
+      @extend .inner-container;
+  }
+
+  .form-btn{
+    @extend .desk--one-tenth;
+    @extend .grid__item;
+    padding: 0;
+    text-align: center;
+  }
+
+  .btn{
+    -moz-appearance: none;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    height: $line-height;
+    line-height: $line-height;
+    margin: 0px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+
+  }
+
+  .btn-primary{
+      color: $white;
+      background-color: $secondary-colour;
+      &:hover{
+        background-color: darken($secondary-colour, 5%);
+      }
+  }
+
+  .text-centre{
+      text-align: center;
+  }
+
+  select{
+    appearance: none;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    @include form-element;
+  }
+
+  input{
+    @include form-element;
+  }
+
+  .footer{
+      background-color: $light-blue;
+      min-height: 100px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+
+  .base-footer{
+      background-color: $primary-colour;
+      min-height: 200px;
+      width: 100%;
+  }
+
+  hr{
+      border-top: 1px solid #a2a2a2;
+      margin-bottom: 30px;
+  }
+  
+
+}

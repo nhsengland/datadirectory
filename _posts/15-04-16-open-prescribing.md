@@ -1,7 +1,7 @@
 ---
-layout: nhse_post
+layout: mikes_post
 title: "Open Prescribing  (EBM DATA LAB)"
-date: 07-04-2016 11:19 +0000
+date: 15-04-2016 13:48 +0000
 description: "Every month, the NHS in England publishes anonymised data about the drugs prescribed by GPs. But the raw data files are large and unwieldy, with more than 600 million rows. We're making it easier for GPs, managers and everyone to explore - supporting safer, more efficient prescribing."
 imageurl: https://ebmdatalab.net/images/portfolio/openprescribing.png
 ---

@@ -31,7 +31,7 @@ Data can be exported from a Google form via the file->save-> CSV menu.
 ### 3. Transforming data
 
 Data transformations are performed using the Rakefile in this repository. They
-expect the survey output to be named "dataset.csv".
+expect the survey output to be named "expored.data.csv".
 
     rake transform
 
@@ -51,5 +51,6 @@ repository. The script expects the dataset to be available in the file "data.dir
 
 ### 6. Deploying the Directory
 
-The directory is deployed to the Catalogue using the catalogue ansible scripts. See documentation
-there.
+The directory is deployed to the Catalogue using the catalogue ansible scripts.
+
+ansible-playbook -i hosts deploy_directory.yml --vault-password-file ~/.vault.txt

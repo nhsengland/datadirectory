@@ -1,7 +1,7 @@
 ---
-layout: nhse_post
+layout: mikes_post
 title: "Data Catalogue (NHS England)"
-date: 07-04-2016 11:19 +0000
+date: 15-04-2016 13:48 +0000
 description: "We provided a catalogue of the data used by NHS England."
 imageurl: http://www.nextgearcapital.com/wp-content/uploads/2015/11/Big-Data.jpg
 ---
