@@ -50,3 +50,14 @@ $on-laptop:        800px;
         "bootstrap",
         "mikes-design"
 ;
+
+
+
+@font-face {
+  font-family: Sini;
+  src: url('../fonts/sini.eot');
+  src: url('../fonts/sini.woff') format('woff'),
+       url('../fonts/sini.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
