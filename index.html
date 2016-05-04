@@ -2,15 +2,9 @@
 layout: mikes_layout
 ---
 <!-- top banner  -->
+
+{% include top_banner.html %}
 <div class="top-banner">
-  <div class="grid inner-container">
-    <div class="grid__item one-third">
-      Open Health Data<br />Project Showcase
-    </div><div class="grid__item one-third"></div><!--
-    --><div class="grid__item one-third" style="text-align: right">
-      <div class="logo"></div>
-    </div>
-  </div>
   <div class="grid inner-container">
     <h1>
       revealing the products and projects using <br /> <strong>healthcare open data</strong> to make an impact
@@ -19,7 +13,7 @@ layout: mikes_layout
 </div>
 <div class="main-container">
   <form class="form-search" style="margin-top: 20px">
-    <div class="form-element"><input data-bind="value: currentFilter, valueUpdate: 'afterkeydown'" type="text"></input></div><!--
+    <div class="form-element"><input placeholder="Search ..." data-bind="value: currentFilter, valueUpdate: 'afterkeydown'" type="text"></input></div><!--
     --><div class="form-element"><select>
       <option>find stuff</option>
     </select></div><!--
@@ -28,9 +22,13 @@ layout: mikes_layout
     </select></div><!--
     --><div class="form-btn"><a class="btn 2btn-primary" href="">SEARCH</a></div>
   </form>
-  <div class="inner-container" style="margin-top: 30px; text-align: center; font-weight: 500; margin-bottom: 30px">
-    Showing all <span data-bind="text: filteredItems().length"></span> projects
-  </div>
+</div>
+<div class="grid-description">
+  <div data-bind="if: displayedItems().length === items().length" class="grid-description-title">Showing all <span data-bind="text: filteredItems().length"></span> projects</div>
+  <div data-bind="if: displayedItems().length !== items().length" class="grid-description-title">Showing <span data-bind="text: displayedItems().length"></span> out of <span data-bind="text: items().length"></span>  projects</div>
+  <hr>
+</div>
+<div class="main-container">
   <div class="project-grid-outer-container">
     <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
         <img data-bind="attr: {src: img}">
