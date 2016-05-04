@@ -9,10 +9,17 @@
   $green-blue: adjust-hue($primary-colour, -15%);
   $text-color: #111;
   $light-grey: #CCC;
+  $outline: rgb(198, 211, 220);
 
 
   font-size: 18px;
   background-color: $background-colour;
+  -webkit-font-smoothing: antialiased;
+
+  .banner-link, .banner-link:hover{
+     color: white;
+     text-decoration: none;
+  }
 
   @mixin placeholder{
       font-weight: 200;
@@ -38,7 +45,7 @@
 
   @mixin form-element{
     border-radius: $border-radius;
-    border: 1px solid rgb(198, 211, 220);
+    border: 1px solid $outline;
     background-color: #FFF;
     height: $line-height * 1.15;
     width: 100%;
@@ -121,7 +128,7 @@
           width: 100%;
           margin: 0;
           padding: 0;
-          border-top: 1px solid rgb(198, 211, 220);
+          border-top: 1px solid $outline;
       }
   }
 
@@ -218,6 +225,16 @@
       font-weight: 600;
   }
 
+  .page-side-bar{
+      h5{
+        display: block;
+        font-weight: 600;
+        margin-top: 30px;
+      }
+      font-size: $base-font-size * 0.9;
+      color: #666;
+  }
+
   .post-header{
         a, h5{
           color: rgb(0, 173, 198);
@@ -226,10 +243,10 @@
   }
 
   .tags-header{
-      border-top: 1px solid darken($white, 30%);
-      border-bottom: 1px solid darken($white, 30%);
-      padding-top: 10px;
-      padding-bottom: 10px;
+      border-top: 1px solid $outline;
+      border-bottom: 1px solid $outline;
+      padding-top: 14px;
+      padding-bottom: 14px;
       margin-bottom: 30px;
   }
 
@@ -244,28 +261,42 @@
     text-align: center;
   }
 
-  .btn{
+  @mixin button-spacing{
     -moz-appearance: none;
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
     height: $line-height;
-    line-height: $line-height;
     margin: 0px;
-    padding: 0 20px;
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
+    line-height: $line-height;
+  }
 
+  .tag{
+    @include button-spacing;
+    background-color: lighten(desaturate($outline, 5%), 5%);
+    color: lighten($text-color, 30%);
+    margin-right: 10px;
+    font-weight: 400;
+    padding: 0 15px;
+    font-size: 14px;
   }
 
   .btn-primary{
+      font-size: 12px;
+
+      font-weight: 200;
+      margin: 0px;
+      @include button-spacing;
       color: $white;
+      text-transform: uppercase;
+      padding: 0 20px;
       background-color: $secondary-colour;
+      letter-spacing: 1px;
+
       &:hover{
         background-color: darken($secondary-colour, 5%);
       }

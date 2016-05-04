@@ -8,60 +8,35 @@ layout: mikes_layout
       {{ page.title }}
     </h2>
     <h5>
-        <em>by</em> <a href="">An Author</a>
+        <em>by</em> {{ page.author }}
     </h5>
   </div>
   <div class="tags-header">
-    {% for tag in page.tags %} "{{ tag }}" {% endfor %}
-    <div class="grid__item three-quarters"></div><div class="grid__item one-quarter">
-      <a href="" class="btn btn-primary">VISIT THE SITE</a>
+    <div class="grid__item three-quarters">
+    {% for tag in page.tags %}<a class="tag" href="">{{ tag }}</a>{% endfor %}
+    </div><div class="grid__item one-quarter">
+      <a href="" class="btn btn-primary">FIND OUT MORE</a>
     </div>
   </div>
   <div class="main-body">
     <div class="grid__item two-thirds">
       <h4>Introduction</h4>
       <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      {{ page.description }}
       </p>
-      <h4>Impact</h4>
+      {% if page.impact != "" %}
+        <h4>Impact</h4>
+        <p>
+          {{ page.impact }}
+        </p>
+      {% endif %}
+      <h4>Datasets Used</h4>
       <p>
-        {{ content }}
+        {{ page.datasets }}
       </p>
-    </div><div class="grid__item one-third">
+    </div><div class="grid__item one-third page-side-bar">
+      <img src="{{ page.imageurl }}">
+      <h5>More about {{ page.author }}</h5>
+      {{ page.orgdescription }}
     </div>
-    <hr />
-    <div class="grid__item one-half">
-      <img src="{{ page.imageurl }}">"
-      <!-- <img src="{{ post.title }}"> -->
-    </div><div class="grid__item one-half">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-  </div>
 </div>
-
-
-
-
-  <!-- <div role="main">
-    <div class="container">
-      <div class="row">
-        <div class="span8 offset2">
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
-      </div>
-    </div>
-  </div>
-</div> -->
