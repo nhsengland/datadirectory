@@ -3,6 +3,25 @@
 require 'csv'
 require 'erb'
 
+sample_project =   <<-eos
+---
+layout: nhse_post
+title: "<%= @name %>"
+author: <%= @orgname %>
+orgdescription: "<%= @orgdescription %>"
+impact: "<%= @impact %>"
+datasets: "<%= @datasets %>"
+date: <%= @datestring %>
+description: "<%= @usage[0..500] %>"
+imageurl: <%= @imageurl %>
+tags:
+<% @tags.each do | tag | %>
+  - <%= tag %>
+<% end %>
+---
+eos
+
+
 def putty what
   puts "*" * 80
   puts what
@@ -69,7 +88,7 @@ end
 task :generate do
   putty "Generating the Directory website"
   sh "rm -f _posts/*"
-  template = ERB.new File.read("sample_project.erb"), nil, "%"
+  template = ERB.new sample_project, nil, "%"
 
   CSV.foreach('data.directory.csv', :headers => true) do |row|
     rowhash = row.to_hash
