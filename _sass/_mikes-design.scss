@@ -9,7 +9,7 @@
   $green-blue: adjust-hue($primary-colour, -15%);
   $text-color: #111;
 
-  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+
   font-size: 18px;
 
   @mixin form-element{
@@ -215,6 +215,6 @@
       border-top: 1px solid #a2a2a2;
       margin-bottom: 30px;
   }
-  
+
 
 }
