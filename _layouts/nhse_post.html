@@ -1,7 +1,49 @@
 ---
-layout: nhse_default
+layout: mikes_layout
 ---
-  <div role="main">
+{% include top_banner.html %}
+<div class="main-container">
+  <div class="post-header">
+    <h2>
+      {{ page.title }}
+    </h2>
+    <h5>
+        <em>by</em> <a href="">An Author</a>
+    </h5>
+  </div>
+  <div class="tags-header">
+    <div class="grid__item three-quarters"></div><div class="grid__item one-quarter">
+      <a href="" class="btn btn-primary">VISIT THE SITE</a>
+    </div>
+  </div>
+  <div class="main-body">
+    <div class="grid__item two-thirds">
+      <h4>Introduction</h4>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <h4>Impact</h4>
+      <p>
+        {{ content }}
+      </p>
+    </div><div class="grid__item one-third">
+    </div>
+    <hr />
+    <div class="grid__item one-half">
+      <img src="{{ page.imageurl }}">"
+      <!-- <img src="{{ post.title }}"> -->
+    </div><div class="grid__item one-half">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- <div role="main">
     <div class="container">
       <div class="row">
         <div class="span8 offset2">
@@ -21,4 +63,4 @@ layout: nhse_default
       </div>
     </div>
   </div>
-</div>
+</div> -->
