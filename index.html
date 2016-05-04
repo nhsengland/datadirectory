@@ -8,7 +8,7 @@ layout: mikes_layout
       Open Health Data<br />Project Showcase
     </div><div class="grid__item one-third"></div><!--
     --><div class="grid__item one-third" style="text-align: right">
-      <img style="height: 54px" src="https://data.england.nhs.uk/images/nhsengland_logo.png" alt="NHS England Data Catalogue Logo" title="NHS England Data Catalogue Logo" data-intro="Clicking on this logo will always take you back to the homepage (just in case you get lost).">
+      <div class="logo"></div>
     </div>
   </div>
   <div class="grid inner-container">
@@ -73,7 +73,7 @@ layout: mikes_layout
 
   var AppViewModel = function(){
       var self = this;
-      var paginationAmount = 3;
+      var paginationAmount = 9;
       this.items = ko.observableArray(json);
       this.currentFilter = ko.observable();
       this.pageNumber = ko.observable(0);
