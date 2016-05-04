@@ -84,6 +84,28 @@
       background-color: $primary-colour;
       background-position: center;
       display: block;
+      overflow: hidden;
+
+      img{
+        -webkit-transition: all 1s ease; /* Safari and Chrome */
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      &:hover img{
+        -webkit-transform:scale(1.05); /* Safari and Chrome */
+        -moz-transform:scale(1.05); /* Firefox */
+        -ms-transform:scale(1.05); /* IE 9 */
+        -o-transform:scale(1.05); /* Opera */
+         transform:scale(1.05);
+      }
   }
 
   .project-element-text{

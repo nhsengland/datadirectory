@@ -32,9 +32,9 @@ layout: mikes_layout
     Showing all <span data-bind="text: filteredItems().length"></span> projects
   </div>
   <div class="project-grid-outer-container">
-    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }, attr: { href: url }" class="project-element">
+    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
+        <img data-bind="attr: {src: img}">
         <div data-bind="text: title" class="project-element-text">
-          Prescribing Analytics
         </div>
     </a></div></div>
   </div>
