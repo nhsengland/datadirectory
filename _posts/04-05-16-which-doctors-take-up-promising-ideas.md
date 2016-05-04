@@ -2,7 +2,7 @@
 layout: nhse_post
 title: "Which doctors take up promising ideas?"
 author: Nesta
-date: 04-05-2016 16:25 +0000
+date: 04-05-2016 16:29 +0000
 description: "The report looks at early adoption of promising new ideas across primary care in England and argues that analysing open data can help public services gain a greater understanding of their take up of innovations.
 
 Key findings
@@ -10,6 +10,16 @@ Key findings
 No single group of GP practices were serial early adopters of all the innovations reviewed, but groups of early adopters were identified around specific types of innovations.
 Larger GP practices are in a better position to explore and introduce new innovations, while neighb"
 imageurl: http://www.nesta.org.uk/sites/default/files/styles/timeline_360/public/innovation_in_public_services_infographic.jpg?itok=MeYbA2Zk
+tags:
+
+  - ons
+
+  - nhs england
+
+  - hscic
+
+  - prescribing
+
 ---
 <img src="http://www.nesta.org.uk/sites/default/files/styles/timeline_360/public/innovation_in_public_services_infographic.jpg?itok=MeYbA2Zk" />
 

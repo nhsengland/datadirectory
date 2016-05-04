@@ -5,6 +5,10 @@ author: <%= @orgname %>
 date: <%= @datestring %>
 description: "<%= @usage[0..500] %>"
 imageurl: <%= @imageurl %>
+tags:
+<% @tags.each do | tag | %>
+  - <%= tag %>
+<% end %>
 ---
 <img src="<%= @imageurl %>" />
 

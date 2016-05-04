@@ -11,7 +11,7 @@ end
 
 class Project
 
-  def initialize(name, url, usage, orgname, orgdescription, datasets, imageurl)
+  def initialize(name, url, usage, orgname, orgdescription, datasets, imageurl, tags)
     @name           = name
     @url            = url
     @usage          = usage
@@ -21,6 +21,7 @@ class Project
     @date           = Time.now
     @datestring     = @date.strftime("%d-%m-%Y %H:%M +0000")
     @imageurl       = imageurl
+    @tags           = tags.split ','
   end
 
   def slug
@@ -41,7 +42,7 @@ task :transform do
       'name', 'url', 'usage',
       'impact',
       'orgname', 'orgdescription',
-      'datasets', 'imageurl'
+      'datasets', 'imageurl', 'tags',
     ]
     CSV.foreach('exported.data.csv', :headers => true) do |row|
       rowhash = row.to_hash
@@ -57,7 +58,8 @@ task :transform do
         rowhash["What is the name of your organization?"],
         rowhash["What does your organization do?"],
         rowhash["What datasets did you use in your project? (Please include links if possible)"],
-        rowhash["Is there an image that represents your project?"]
+        rowhash["Is there an image that represents your project?"],
+        rowhash["Tags"]
       ]
     end
   end
@@ -76,7 +78,7 @@ task :generate do
       rowhash['name'], rowhash['url'],
       rowhash['usage'], rowhash['orgname'],
       rowhash['orgdescription'],
-      rowhash['datasets'], rowhash['imageurl']
+      rowhash['datasets'], rowhash['imageurl'], rowhash['tags']
     )
 
     puts project.slug
