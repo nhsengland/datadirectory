@@ -30,10 +30,11 @@ end
 
 class Project
 
-  def initialize(name, url, usage, orgname, orgdescription, datasets, imageurl, tags)
+  def initialize(name, url, usage, impact, orgname, orgdescription, datasets, imageurl, tags)
     @name           = name
     @url            = url
     @usage          = usage
+    @impact         = impact
     @orgname        = orgname
     @orgdescription = orgdescription
     @datasets       = datasets
@@ -95,7 +96,8 @@ task :generate do
 
     project  = Project.new(
       rowhash['name'], rowhash['url'],
-      rowhash['usage'], rowhash['orgname'],
+      rowhash['usage'], rowhash['impact'],
+      rowhash['orgname'],
       rowhash['orgdescription'],
       rowhash['datasets'], rowhash['imageurl'], rowhash['tags']
     )
