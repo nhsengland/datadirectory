@@ -1,8 +1,8 @@
 ---
 layout: nhse_post
-title:  Which doctors take up promising ideas?
+title: Which doctors take up promising ideas?
 author: Nesta
-date: 04-05-2016 14:14 +0000
+date: 04-05-2016 14:27 +0000
 description: "The report looks at early adoption of promising new ideas across primary care in England and argues that analysing open data can help public services gain a greater understanding of their take up of innovations.
 
 Key findings
@@ -13,7 +13,7 @@ imageurl: http://www.nesta.org.uk/sites/default/files/styles/timeline_360/public
 ---
 <img src="http://www.nesta.org.uk/sites/default/files/styles/timeline_360/public/innovation_in_public_services_infographic.jpg?itok=MeYbA2Zk" />
 
-## <a href="http://www.nesta.org.uk/publications/which-doctors-take-promising-ideas-new-insights-open-data" target="_blank">  Which doctors take up promising ideas? <i class="fa fa-external-link"></i></a>
+## <a href="http://www.nesta.org.uk/publications/which-doctors-take-promising-ideas-new-insights-open-data" target="_blank"> Which doctors take up promising ideas? <i class="fa fa-external-link"></i></a>
 
 The report looks at early adoption of promising new ideas across primary care in England and argues that analysing open data can help public services gain a greater understanding of their take up of innovations.
 
