@@ -38,15 +38,22 @@ task :transform do
   sh "rm -f data.directory.csv"
   CSV.open('data.directory.csv', 'w') do |dataset|
     dataset << [
-      'name', 'url', 'usage', 'orgname', 'orgdescription',
+      'name', 'url', 'usage',
+      'impact',
+      'orgname', 'orgdescription',
       'datasets', 'imageurl'
     ]
     CSV.foreach('exported.data.csv', :headers => true) do |row|
       rowhash = row.to_hash
+      if rowhash["Include"] != "Yes"
+        next
+      end
+      putty rowhash["What is the name of your project?"]
       dataset << [
         rowhash["What is the name of your project?"],
         rowhash["Does your project have a website?"],
         rowhash["How did you use open health data?"],
+        rowhash["What was the impact of your project?"],
         rowhash["What is the name of your organization?"],
         rowhash["What does your organization do?"],
         rowhash["What datasets did you use in your project? (Please include links if possible)"],
