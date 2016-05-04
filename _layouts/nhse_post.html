@@ -12,6 +12,7 @@ layout: mikes_layout
     </h5>
   </div>
   <div class="tags-header">
+    {% for tag in page.tags %} "{{ tag }}" {% endfor %}
     <div class="grid__item three-quarters"></div><div class="grid__item one-quarter">
       <a href="" class="btn btn-primary">VISIT THE SITE</a>
     </div>
