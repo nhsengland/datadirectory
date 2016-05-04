@@ -8,6 +8,7 @@
   $light-blue: lighten(#0072c6, 55%);
   $green-blue: adjust-hue($primary-colour, -15%);
   $text-color: #111;
+  $light-grey: #CCC;
 
 
   font-size: 18px;
@@ -203,8 +204,8 @@
   .footer{
       background-color: $light-blue;
       min-height: 100px;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 30px;
+      padding-bottom: 30px;
   }
 
   .base-footer{
@@ -218,5 +219,74 @@
       margin-bottom: 30px;
   }
 
+  i.icon{
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+  }
 
+  i.download{
+      background-image: url("/datadirectory/assets/imgs/icon-download-purple.svg");
+  }
+
+  .no-svg i.download{
+      background-image: url("/datadirectory/assets/imgs/icon-download-purple.png");
+  }
+
+  i.submit{
+      background-image: url("/datadirectory/assets/imgs/icon-submit-purple.svg");
+  }
+
+  .no-svg i.submit{
+      background-image: url("/datadirectory/assets/imgs/icon-submit-purple.png");
+  }
+
+  i.feedback{
+      background-image: url("/datadirectory/assets/imgs/icon-feedback-purple.svg");
+  }
+
+  .no-svg i.submit{
+      background-image: url("/datadirectory/assets/imgs/icon-feedback-purple.png");
+  }
+
+  .main-pagination{
+      li{
+          list-style: none;
+          display: inline-block;
+          margin-left: 2.5px;
+          margin-right: 2.5px;
+          cursor: pointer;
+      }
+      li a{
+          padding: 6px 12px;
+          background-color: $background-colour;
+          color: $primary-colour;
+          text-decoration: none;
+          border: 1px solid $light-grey;
+          transition: all 0.2s;
+      }
+
+      li a:hover:not(.disabled){
+          background-color: $light-blue;
+          color: $primary-colour;
+      }
+
+      li a.active:hover:not(.disabled){
+          background-color: darken($primary-colour, 10%);
+          color: $white;
+      }
+
+      li a.active{
+          background-color: $primary-colour;
+          border: 1px solid $primary-colour;
+          color: $white;
+      }
+
+      li a.disabled{
+          color: $light-grey;
+      }
+  }
 }

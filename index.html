@@ -32,26 +32,32 @@ layout: mikes_layout
     Showing all <span data-bind="text: filteredItems().length"></span> projects
   </div>
   <div class="project-grid-outer-container">
-    <div data-bind="foreach: filteredItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }, attr: { href: url }" class="project-element">
+    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }, attr: { href: url }" class="project-element">
         <div data-bind="text: title" class="project-element-text">
           Prescribing Analytics
         </div>
     </a></div></div>
   </div>
+
+  <nav data-bind="if: $root.numPages() > 1" style="text-align: center">
+    <ul class="main-pagination">
+        <li>
+            <a href="#" data-bind="click: function(){ pageNumber(pageNumber() - 1)}, css: {disabled: pageNumber() === 0}">previous</a>
+        </li>
+        <!-- ko foreach: pagesArray -->
+        <li><a href="#" data-bind="click: function(){ $root.pageNumber($index()) }, css: {active: $index() === $root.pageNumber()}">
+          <span data-bind="text: $index() + 1"></span>
+        </a></li>
+        <!-- /ko -->
+        <li>
+            <a href="#" data-bind="click: function(){ pageNumber(pageNumber() + 1)}, css: {disabled: pageNumber() === ($root.pagesArray().length - 1)}">next</a>
+        </li>
+    </ul>
+  </nav>
+
+
 </div>
-<div class="footer">
-  <div class="grid">
-    <div class="grid__item desk--one-third text-centre">
-      <p>Get the data for this search</p>
-      <a class="btn btn-primary">DOWNLOAD JSON</a>
-    </div><div class="grid__item desk--one-third text-centre">
-      <p>Subscribe to updates for this search</p>
-      <a class="btn btn-primary">SUBSCRIBE FOR THIS SEARCH</a>
-    </div><div class="grid__item desk--one-third text-centre">
-      <p>Download all our data</p>
-    </div>
-  </div>
-</div>
+{% include mikes_footer.html %}
 <div class="base-footer"></div>
 <script>
   {{ site.posts | jsonify }}
@@ -67,8 +73,15 @@ layout: mikes_layout
 
   var AppViewModel = function(){
       var self = this;
+      var paginationAmount = 3;
       this.items = ko.observableArray(json);
       this.currentFilter = ko.observable();
+      this.pageNumber = ko.observable(0);
+
+      /*
+        pagination will be done in blocks of 9
+      */
+
       this.filteredItems = ko.computed(function() {
           if(!self.currentFilter() || !self.currentFilter().length){
               return self.items();
@@ -78,8 +91,20 @@ layout: mikes_layout
               });
           }
       });
+
+      this.numPages = ko.computed(function(){
+          return Math.ceil(self.filteredItems().length/paginationAmount);
+      });
+
+      this.displayedItems = ko.computed(function(){
+          var a = self.pageNumber()*paginationAmount;
+          return self.filteredItems().slice(a, a + paginationAmount)
+      });
+
+      this.pagesArray = ko.computed(function(){ return new Array(self.numPages()) });
   }
 
   var mpv = new AppViewModel();
+  window.mpv = mpv;
   ko.applyBindings(mpv);
 </script>
