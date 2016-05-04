@@ -8,9 +8,11 @@
   $light-blue: lighten(#0072c6, 55%);
   $green-blue: adjust-hue($primary-colour, -15%);
   $text-color: #111;
+  $light-grey: #CCC;
 
-  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+
   font-size: 18px;
+  background-color: $background-colour;
 
   @mixin form-element{
     border-radius: $border-radius;
@@ -35,8 +37,6 @@
     margin-right: -5px;
   }
 
-  background-color: $background-colour;
-
   .inner-container{
       margin-left: auto;
       margin-right: auto;
@@ -58,6 +58,19 @@
       padding: 20px;
   }
 
+  .logo{
+      float: right;
+      height: 50px;
+      width: 80px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("/datadirectory/assets/imgs/logo-white.svg");
+  }
+
+  .no-svg .logo{
+      background-image: url("/datadirectory/assets/imgs/logo-white.png");
+  }
+
   .project-grid-inner-container{
       margin-left: -20px;
       margin-right: -20px;
@@ -71,6 +84,28 @@
       background-color: $primary-colour;
       background-position: center;
       display: block;
+      overflow: hidden;
+
+      img{
+        -webkit-transition: all 1s ease; /* Safari and Chrome */
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      &:hover img{
+        -webkit-transform:scale(1.05); /* Safari and Chrome */
+        -moz-transform:scale(1.05); /* Firefox */
+        -ms-transform:scale(1.05); /* IE 9 */
+        -o-transform:scale(1.05); /* Opera */
+         transform:scale(1.05);
+      }
   }
 
   .project-element-text{
@@ -203,8 +238,8 @@
   .footer{
       background-color: $light-blue;
       min-height: 100px;
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 30px;
+      padding-bottom: 30px;
   }
 
   .base-footer{
@@ -218,5 +253,74 @@
       margin-bottom: 30px;
   }
 
+  i.icon{
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+  }
 
+  i.download{
+      background-image: url("/datadirectory/assets/imgs/icon-download-purple.svg");
+  }
+
+  .no-svg i.download{
+      background-image: url("/datadirectory/assets/imgs/icon-download-purple.png");
+  }
+
+  i.submit{
+      background-image: url("/datadirectory/assets/imgs/icon-submit-purple.svg");
+  }
+
+  .no-svg i.submit{
+      background-image: url("/datadirectory/assets/imgs/icon-submit-purple.png");
+  }
+
+  i.feedback{
+      background-image: url("/datadirectory/assets/imgs/icon-feedback-purple.svg");
+  }
+
+  .no-svg i.submit{
+      background-image: url("/datadirectory/assets/imgs/icon-feedback-purple.png");
+  }
+
+  .main-pagination{
+      li{
+          list-style: none;
+          display: inline-block;
+          margin-left: 2.5px;
+          margin-right: 2.5px;
+          cursor: pointer;
+      }
+      li a{
+          padding: 6px 12px;
+          background-color: $background-colour;
+          color: $primary-colour;
+          text-decoration: none;
+          border: 1px solid $light-grey;
+          transition: all 0.2s;
+      }
+
+      li a:hover:not(.disabled){
+          background-color: $light-blue;
+          color: $primary-colour;
+      }
+
+      li a.active:hover:not(.disabled){
+          background-color: darken($primary-colour, 10%);
+          color: $white;
+      }
+
+      li a.active{
+          background-color: $primary-colour;
+          border: 1px solid $primary-colour;
+          color: $white;
+      }
+
+      li a.disabled{
+          color: $light-grey;
+      }
+  }
 }
