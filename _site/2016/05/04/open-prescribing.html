@@ -16,14 +16,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   </head>
-  <body class="mikes-design">
+  <body>
+
     <div class="top-banner">
-  <div class="grid inner-container">
-    <div style="font-size: 21px;" class="grid__item one-third">
-      <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
-    </div><div class="grid__item one-third"></div><!--
-    --><div class="grid__item one-third" style="text-align: right">
-      <div class="logo"></div>
+  <div class="inner-container">
+    <div class="grid">
+      <div style="font-size: 21px;" class="grid__item one-third">
+        <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
+      </div><div class="grid__item one-third"></div><!--
+      --><div class="grid__item one-third" style="text-align: right">
+        <div class="logo"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -39,29 +42,33 @@
       </h5>
     </div>
     <div class="tags-header">
-      <div data-bind="foreach: tags" class="grid__item three-quarters">
-      <a class="tag" data-bind="attr: {href: url}, text: name"></a>
-      </div><div class="grid__item one-quarter">
-        <a href="" class="btn btn-primary">FIND OUT MORE</a>
+      <div class="grid">
+        <div data-bind="foreach: tags" class="grid__item three-quarters">
+        <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+        </div><div class="grid__item one-quarter">
+          <a href="" class="btn btn-primary">FIND OUT MORE</a>
+        </div>
       </div>
     </div>
     <div class="main-body">
-      <div class="grid__item two-thirds">
-        <h4>Introduction</h4>
-        <p>
-        Every month, the NHS in England publishes anonymised data about the drugs prescribed by GPs. But the raw data files are large and unwieldy, with more than 600 million rows. We're making it easier for GPs, managers and everyone to explore - supporting safer, more efficient prescribing.
-        </p>
-        
-        <h4>Datasets Used</h4>
-        <p>
-          http://www.hscic.gov.uk/gpprescribingdata
-        </p>
-      </div><div class="grid__item one-third page-side-bar">
-        <img src="https://ebmdatalab.net/images/portfolio/openprescribing.png">
-        <h5>More about EBM DATA LAB</h5>
-        The EBM Data Lab is a range of projects being designed and built by Dr Ben Goldacre and Anna Powell-Smith at the University of Oxford, with colleagues across the university and around the world.
+      <div class="grid">
+        <div class="grid__item two-thirds">
+          <h4>Introduction</h4>
+          <p>
+          Every month, the NHS in England publishes anonymised data about the drugs prescribed by GPs. But the raw data files are large and unwieldy, with more than 600 million rows. We're making it easier for GPs, managers and everyone to explore - supporting safer, more efficient prescribing.
+          </p>
+          
+          <h4>Datasets Used</h4>
+          <p>
+            http://www.hscic.gov.uk/gpprescribingdata
+          </p>
+        </div><div class="grid__item one-third page-side-bar">
+          <img src="https://ebmdatalab.net/images/portfolio/openprescribing.png">
+          <h5>More about EBM DATA LAB</h5>
+          The EBM Data Lab is a range of projects being designed and built by Dr Ben Goldacre and Anna Powell-Smith at the University of Oxford, with colleagues across the university and around the world.
 We have set out to create interesting, innovative, live, impactful projects using academic and health data. We publish academic papers. But we think academics should collaborate outside academia, and work with data in ways that go beyond static PDFs in academic journals.
 We are based in the Centre for Evidence-Based Medicine, in the Nuffield Department of Primary Care Health Sciences, in the University of Oxford.
+        </div>
       </div>
     </div>
   </div>

@@ -16,14 +16,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   </head>
-  <body class="mikes-design">
+  <body>
+
     <div class="top-banner">
-  <div class="grid inner-container">
-    <div style="font-size: 21px;" class="grid__item one-third">
-      <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
-    </div><div class="grid__item one-third"></div><!--
-    --><div class="grid__item one-third" style="text-align: right">
-      <div class="logo"></div>
+  <div class="inner-container">
+    <div class="grid">
+      <div style="font-size: 21px;" class="grid__item one-third">
+        <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
+      </div><div class="grid__item one-third"></div><!--
+      --><div class="grid__item one-third" style="text-align: right">
+        <div class="logo"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -39,30 +42,34 @@
       </h5>
     </div>
     <div class="tags-header">
-      <div data-bind="foreach: tags" class="grid__item three-quarters">
-      <a class="tag" data-bind="attr: {href: url}, text: name"></a>
-      </div><div class="grid__item one-quarter">
-        <a href="" class="btn btn-primary">FIND OUT MORE</a>
+      <div class="grid">
+        <div data-bind="foreach: tags" class="grid__item three-quarters">
+        <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+        </div><div class="grid__item one-quarter">
+          <a href="" class="btn btn-primary">FIND OUT MORE</a>
+        </div>
       </div>
     </div>
     <div class="main-body">
-      <div class="grid__item two-thirds">
-        <h4>Introduction</h4>
-        <p>
-        We created a REST API which conceals some of the complexity of open data, by removing some of the need to understand the document structure, geographical jargon, and clinical meaning of the raw open data, and enabling simple access to  relevant portions of the data.
+      <div class="grid">
+        <div class="grid__item two-thirds">
+          <h4>Introduction</h4>
+          <p>
+          We created a REST API which conceals some of the complexity of open data, by removing some of the need to understand the document structure, geographical jargon, and clinical meaning of the raw open data, and enabling simple access to  relevant portions of the data.
 As an example, the open data on prevalence of obesity is available as a large Excel file from http://www.noo.org.uk/visualisation. It's organised by region, by LSOA, and MSOA, and by electoral ward (geographical jargon). We felt that
-        </p>
-        
-        <h4>Datasets Used</h4>
-        <p>
-          we used the Ward and MSOA tables from here: http://www.noo.org.uk/visualisation
+          </p>
+          
+          <h4>Datasets Used</h4>
+          <p>
+            we used the Ward and MSOA tables from here: http://www.noo.org.uk/visualisation
 postcodes from here: https://mapit.mysociety.org/
 Medical Research Council UK90 LMS Tables (unfortunately this is not open data, I had to apply for a licence to use it from the MRC, which was free, and took a mere 9 months) I had a long discussion with the MRC about making it open data, and their response was [NaN].
-        </p>
-      </div><div class="grid__item one-third page-side-bar">
-        <img src="http://obesitychallenge.rewiredstate.org/webhook-uploads/1441207772961/cc.jpg">
-        <h5>More about openhealthhub CIC</h5>
-        open health stuff, sort of.
+          </p>
+        </div><div class="grid__item one-third page-side-bar">
+          <img src="http://obesitychallenge.rewiredstate.org/webhook-uploads/1441207772961/cc.jpg">
+          <h5>More about openhealthhub CIC</h5>
+          open health stuff, sort of.
+        </div>
       </div>
     </div>
   </div>

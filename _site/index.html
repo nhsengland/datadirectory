@@ -16,16 +16,19 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   </head>
-  <body class="mikes-design">
+  <body>
+
     <!-- top banner  -->
 
 <div class="top-banner">
-  <div class="grid inner-container">
-    <div style="font-size: 21px;" class="grid__item one-third">
-      <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
-    </div><div class="grid__item one-third"></div><!--
-    --><div class="grid__item one-third" style="text-align: right">
-      <div class="logo"></div>
+  <div class="inner-container">
+    <div class="grid">
+      <div style="font-size: 21px;" class="grid__item one-third">
+        <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
+      </div><div class="grid__item one-third"></div><!--
+      --><div class="grid__item one-third" style="text-align: right">
+        <div class="logo"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -33,7 +36,7 @@
 <div class="top-banner">
   <div class="grid inner-container">
     <h1>
-      revealing the products and projects using <br /> <strong>healthcare open data</strong> to make an impact
+      revealing the products and projects using <br /> <span class="title-highlight">healthcare open data</span> to make an impact
     </h1>
   </div>
 </div>
@@ -50,11 +53,12 @@
 <div class="grid-description">
   <div data-bind="if: displayedItems().length === items().length" class="grid-description-title">Showing all <span data-bind="text: filteredItems().length"></span> projects</div>
   <div data-bind="if: displayedItems().length !== items().length" class="grid-description-title">Showing <span data-bind="text: displayedItems().length"></span> out of <span data-bind="text: items().length"></span>  projects</div>
-  <hr>
+  <hr class="left">
+  <hr class="right">
 </div>
 <div class="main-container">
   <div class="project-grid-outer-container">
-    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid, wrap"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
+    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
         <div class="bg" data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }"></div>
         <div class="project-element-text">
           <p class="org-name" data-bind="text: title" ></p>

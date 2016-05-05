@@ -16,14 +16,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   </head>
-  <body class="mikes-design">
+  <body>
+
     <div class="top-banner">
-  <div class="grid inner-container">
-    <div style="font-size: 21px;" class="grid__item one-third">
-      <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
-    </div><div class="grid__item one-third"></div><!--
-    --><div class="grid__item one-third" style="text-align: right">
-      <div class="logo"></div>
+  <div class="inner-container">
+    <div class="grid">
+      <div style="font-size: 21px;" class="grid__item one-third">
+        <a class="banner-link" href="/datadirectory/">Open Health Data<br />Project Showcase</a>
+      </div><div class="grid__item one-third"></div><!--
+      --><div class="grid__item one-third" style="text-align: right">
+        <div class="logo"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -39,27 +42,31 @@
       </h5>
     </div>
     <div class="tags-header">
-      <div data-bind="foreach: tags" class="grid__item three-quarters">
-      <a class="tag" data-bind="attr: {href: url}, text: name"></a>
-      </div><div class="grid__item one-quarter">
-        <a href="" class="btn btn-primary">FIND OUT MORE</a>
+      <div class="grid">
+        <div data-bind="foreach: tags" class="grid__item three-quarters">
+        <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+        </div><div class="grid__item one-quarter">
+          <a href="" class="btn btn-primary">FIND OUT MORE</a>
+        </div>
       </div>
     </div>
     <div class="main-body">
-      <div class="grid__item two-thirds">
-        <h4>Introduction</h4>
-        <p>
-         RSA OPSN collated publically available data and worked with academic colleagues at the University of Surrey to band CCGs based on the experiences of mental health service users in their area. RSA OPSN have banded them ‘low’, ‘as expected’ and ‘high’ based on our expected outcomes adjusted for population. While these bandings provide an important basis of understanding national trends and where particular attention is required, it is important to note whether ‘as expected’, ‘low’ or ‘high’, acros
-        </p>
-        
-        <h4>Datasets Used</h4>
-        <p>
-          The Quality and Outcomes Framework (QOF) data and local authority data used from 2013/14 and extracted from Public Health England’s Fingertips website Data on mortality rates extracted in October 2015.
-        </p>
-      </div><div class="grid__item one-third page-side-bar">
-        <img src="https://www.thersa.org/globalassets/pdfs/opsn/mental-health-maps/maps_psych-therapies-w-logo-700.jpg">
-        <h5>More about Open Public Services Network</h5>
-        Re-uses and re-analyses open data to hold public services to account and make it better understood by the public
+      <div class="grid">
+        <div class="grid__item two-thirds">
+          <h4>Introduction</h4>
+          <p>
+           RSA OPSN collated publically available data and worked with academic colleagues at the University of Surrey to band CCGs based on the experiences of mental health service users in their area. RSA OPSN have banded them ‘low’, ‘as expected’ and ‘high’ based on our expected outcomes adjusted for population. While these bandings provide an important basis of understanding national trends and where particular attention is required, it is important to note whether ‘as expected’, ‘low’ or ‘high’, acros
+          </p>
+          
+          <h4>Datasets Used</h4>
+          <p>
+            The Quality and Outcomes Framework (QOF) data and local authority data used from 2013/14 and extracted from Public Health England’s Fingertips website Data on mortality rates extracted in October 2015.
+          </p>
+        </div><div class="grid__item one-third page-side-bar">
+          <img src="https://www.thersa.org/globalassets/pdfs/opsn/mental-health-maps/maps_psych-therapies-w-logo-700.jpg">
+          <h5>More about Open Public Services Network</h5>
+          Re-uses and re-analyses open data to hold public services to account and make it better understood by the public
+        </div>
       </div>
     </div>
   </div>
