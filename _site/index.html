@@ -2,15 +2,18 @@
 <html>
   <head>
     <link rel="stylesheet" href="/datadirectory/css/main.css">
-<link rel="stylesheet" href="/datadirectory/assets/js/modernizr.js">
 <!-- used for the remote -->
 <link rel="stylesheet" href="/directory/css/main.css">
-<link rel="stylesheet" href="/directory/assets/js/modernizr.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.css">
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/uk.js"></script>
+<script src="/directory/assets/js/modernizr.js"></script>
 <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   </head>
   <body class="mikes-design">
@@ -34,17 +37,15 @@
     </h1>
   </div>
 </div>
-<div class="main-container">
-  <form class="form-search" style="margin-top: 20px">
-    <div class="form-element"><input placeholder="Search ..." data-bind="value: currentFilter, valueUpdate: 'afterkeydown'" type="text"></input></div><!--
-    --><div class="form-element"><select>
-      <option>find stuff</option>
-    </select></div><!--
-    --><div class="form-element"><select class="select-box">
-      <option>find other stuff</option>
-    </select></div><!--
-    --><div class="form-btn"><a class="btn 2btn-primary" href="">SEARCH</a></div>
-  </form>
+<div class="outer-main-container">
+  <div class="main-container">
+    <form class="form-search">
+      <div class="form-element"><input placeholder="Search ..." data-bind="value: currentFilter, valueUpdate: 'afterkeydown'" type="text"></input></div><!--
+      --><div class="form-element"><select data-bind="value: filterTag, optionsCaption: 'Filter by tag', options: tags, select2: { placeholder: 'Filter by tag', allowClear: true}" class="select2"></select></div><!--
+      --><div class="form-element"><select data-bind="value: filterOrg, optionsCaption: 'Filter by organisation', options: authors, select2: { placeholder: 'Filter by organisation', allowClear: true}" class="select2"></select></div><!--
+      --><div class="form-btn"><a class="btn btn-search" href="">SEARCH</a></div>
+    </form>
+  </div>
 </div>
 <div class="grid-description">
   <div data-bind="if: displayedItems().length === items().length" class="grid-description-title">Showing all <span data-bind="text: filteredItems().length"></span> projects</div>
@@ -53,11 +54,11 @@
 </div>
 <div class="main-container">
   <div class="project-grid-outer-container">
-    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
-        <img data-bind="attr: {src: img}">
+    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid, wrap"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
+        <div class="bg" data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }"></div>
         <div class="project-element-text">
-          <p data-bind="text: title" ></p>
-          <p data-bind="text: author" ></p>
+          <p class="org-name" data-bind="text: title" ></p>
+          <p class="project-name" data-bind="text: author" ></p>
         </div>
     </a></div></div>
   </div>
@@ -77,109 +78,178 @@
         </li>
     </ul>
   </nav>
-
-
 </div>
-<div class="footer">
-  <div class="project-grid-outer-container">
-    <div class="grid__item desk--one-third text-centre">
-      <i class="icon download"></i>
-      <p><b>Download Data</b></p>
-      <p>Get all of the information on this site as Open Data</p>
-      <a class="">Download</a>
-    </div><div class="grid__item desk--one-third text-centre">
-      <i class="icon feedback"></i>
-      <p><b>Give us feedback</b></p>
-      <p>Got ideas or suggestions? <br />Get in touch<p/>
-      <a class="">Feedback</a>
-    </div><div class="grid__item desk--one-third text-centre">
-      <i class="icon submit"></i>
-      <p><b>Submit your project</b></p>
-      <p>Have you worked on a relevant project? Let us know</p>
-      <a href="">Submit</a>
-    </div>
-  </div>
-</div>
-
-<div class="base-footer"></div>
 <script>
-  ["\n","\n","\n","\n","\n","\n","\n","\n"]
+
+  ko.bindingHandlers.select2 = {
+      init: function(el, valueAccessor, allBindingsAccessor, viewModel) {
+        ko.utils.domNodeDisposal.addDisposeCallback(el, function() {
+          $(el).select2('destroy');
+        });
+
+        var allBindings = allBindingsAccessor(),
+            select2 = ko.utils.unwrapObservable(allBindings.select2);
+
+        $(el).select2(select2);
+      },
+      update: function (el, valueAccessor, allBindingsAccessor, viewModel) {
+          var allBindings = allBindingsAccessor();
+
+          if ("value" in allBindings) {
+              if ((allBindings.select2.multiple || el.multiple) && allBindings.value().constructor != Array) {
+                  $(el).val(allBindings.value().split(',')).trigger('change');
+              }
+              else {
+                  $(el).val(allBindings.value()).trigger('change');
+              }
+          } else if ("selectedOptions" in allBindings) {
+              var converted = [];
+              var textAccessor = function(value) { return value; };
+              if ("optionsText" in allBindings) {
+                  textAccessor = function(value) {
+                      var valueAccessor = function (item) { return item; }
+                      if ("optionsValue" in allBindings) {
+                          valueAccessor = function (item) { return item[allBindings.optionsValue]; }
+                      }
+                      var items = $.grep(allBindings.options(), function (e) { return valueAccessor(e) == value});
+                      if (items.length == 0 || items.length > 1) {
+                          return "UNKNOWN";
+                      }
+                      return items[0][allBindings.optionsText];
+                  }
+              }
+              $.each(allBindings.selectedOptions(), function (key, value) {
+                  converted.push({id: value, text: textAccessor(value)});
+              });
+
+              $(el).select2("data", converted);
+          }
+      }
+  };
+
   var json = [
   
       {
         "title"   : "Why Children Die",
         "author"  : "RCPCH",
         "url"     : "/datadirectory//2016/05/04/why-children-die.html",
-        "img"     : "http://www.rcpch.ac.uk/sites/default/files/asset_library/Policy%20and%20Standards/Policy%20Documents/RCPCH_Jh_5911Deaths%20ceropped2.png"
+        "img"     : "http://www.rcpch.ac.uk/sites/default/files/asset_library/Policy%20and%20Standards/Policy%20Documents/RCPCH_Jh_5911Deaths%20ceropped2.png",
+        "tags"    : ["child mortality","ons"]
       } ,
   
       {
         "title"   : "Which doctors take up promising ideas?",
         "author"  : "Nesta",
         "url"     : "/datadirectory//2016/05/04/which-doctors-take-up-promising-ideas.html",
-        "img"     : "http://www.nesta.org.uk/sites/default/files/styles/timeline_360/public/innovation_in_public_services_infographic.jpg?itok=MeYbA2Zk"
+        "img"     : "http://www.nesta.org.uk/sites/default/files/styles/timeline_360/public/innovation_in_public_services_infographic.jpg?itok=MeYbA2Zk",
+        "tags"    : ["ons","nhs england","hscic","prescribing"]
       } ,
   
       {
         "title"   : "Prescribing Analytics",
         "author"  : "Prescribing Analytics",
         "url"     : "/datadirectory//2016/05/04/prescribing-analytics.html",
-        "img"     : "http://bd7a65e2cb448908f934-86a50c88e47af9e1fb58ce0672b5a500.r32.cf3.rackcdn.com/uploads/assets/legacy/PA-screenshot-500wide.jpg"
+        "img"     : "http://bd7a65e2cb448908f934-86a50c88e47af9e1fb58ce0672b5a500.r32.cf3.rackcdn.com/uploads/assets/legacy/PA-screenshot-500wide.jpg",
+        "tags"    : ["ons","nhs england","hscic","prescribing"]
       } ,
   
       {
         "title"   : "Open Prescribing ",
         "author"  : "EBM DATA LAB",
         "url"     : "/datadirectory//2016/05/04/open-prescribing.html",
-        "img"     : "https://ebmdatalab.net/images/portfolio/openprescribing.png"
+        "img"     : "https://ebmdatalab.net/images/portfolio/openprescribing.png",
+        "tags"    : ["ons","nhs england","hscic","prescribing"]
       } ,
   
       {
         "title"   : "Mapping English GP prescribing data",
         "author"  : "Dr Peter J Diggle",
         "url"     : "/datadirectory//2016/05/04/mapping-english-gp-prescribing-data.html",
-        "img"     : "http://bmjopen.bmj.com/content/3/1/e001363/F7.medium.gif"
+        "img"     : "http://bmjopen.bmj.com/content/3/1/e001363/F7.medium.gif",
+        "tags"    : ["prescribing"]
       } ,
   
       {
         "title"   : "Living a Long Life?",
         "author"  : "Open Public Services Network",
         "url"     : "/datadirectory//2016/05/04/living-a-long-life.html",
-        "img"     : "https://www.thersa.org/globalassets/pdfs/opsn/mental-health-maps/maps_psych-therapies-w-logo-700.jpg"
+        "img"     : "https://www.thersa.org/globalassets/pdfs/opsn/mental-health-maps/maps_psych-therapies-w-logo-700.jpg",
+        "tags"    : ["mental health"]
       } ,
   
       {
         "title"   : "GP Prescribing in 2014: Constituency Statistics",
         "author"  : "House of Commons Library",
         "url"     : "/datadirectory//2016/05/04/gp-prescribing-in-2014-constituency-statistics.html",
-        "img"     : "http://researchbriefings.files.parliament.uk/documents/CBP-7161/assets/e5856cb0-9d90-4ffd-8b64-037125226dff.png"
+        "img"     : "http://researchbriefings.files.parliament.uk/documents/CBP-7161/assets/e5856cb0-9d90-4ffd-8b64-037125226dff.png",
+        "tags"    : ["prescribing"]
       } ,
   
       {
         "title"   : "clinical calculator API",
         "author"  : "openhealthhub CIC",
         "url"     : "/datadirectory//2016/05/04/clinical-calculator-api.html",
-        "img"     : "http://obesitychallenge.rewiredstate.org/webhook-uploads/1441207772961/cc.jpg"
+        "img"     : "http://obesitychallenge.rewiredstate.org/webhook-uploads/1441207772961/cc.jpg",
+        "tags"    : ["api","obesity"]
       } 
   
   ]
 
+  function getQueryVariable(variable)
+  {
+         var query = window.location.search.substring(1);
+         var vars = query.split("&");
+         for (var i=0;i<vars.length;i++) {
+                 var pair = vars[i].split("=");
+                 if(pair[0] == variable){return decodeURIComponent(pair[1]);}
+         }
+         return(false);
+  }
+
   var AppViewModel = function(){
       var self = this;
+      /*
+        pagination will be done in blocks of 9
+      */
       var paginationAmount = 9;
       this.items = ko.observableArray(json);
       this.currentFilter = ko.observable();
       this.pageNumber = ko.observable(0);
+      this.tags = ko.observableArray([]);
+      this.authors = ko.observableArray([]);
+      this.filterTag = ko.observable(getQueryVariable("tag"));
+      this.filterOrg = ko.observable(getQueryVariable("org"));
 
-      /*
-        pagination will be done in blocks of 9
-      */
+      _.each(json, function(row){
+          self.tags(_.uniq(self.tags().concat(row.tags)));
+          var authors = self.authors();
+          authors.push(row.author);
+          self.authors(_.uniq(authors));
+      });
+
+      this.tagFilters = ko.observableArray(_.map(this.tags(), function(x, i){
+          return {name: x, id: i}
+      }));
 
       this.filteredItems = ko.computed(function() {
+          var possibleItems = self.items();
+
+          if(self.filterTag()){
+              possibleItems = _.filter(possibleItems, function(x){
+                  return x.tags.indexOf(self.filterTag()) != -1;
+              });
+          }
+
+          if(self.filterOrg()){
+              possibleItems = _.filter(possibleItems, function(x){
+                  return x.author === self.filterOrg();
+              });
+          }
+
           if(!self.currentFilter() || !self.currentFilter().length){
-              return self.items();
+              return possibleItems;
           } else {
-              return ko.utils.arrayFilter(self.items(), function(prod) {
+              return ko.utils.arrayFilter(possibleItems, function(prod) {
                   return prod.title.toLowerCase().indexOf(self.currentFilter().toLowerCase()) !== -1
               });
           }
@@ -202,6 +272,52 @@
   ko.applyBindings(mpv);
 </script>
 
-  </body>
+    <div class="footer">
+  <div class="project-grid-outer-container">
+    <div class="grid__item desk--one-third text-centre">
+      <i class="icon download"></i>
+      <p><b>Download Data</b></p>
+      <p>Get all of the information on this site as Open Data</p>
+      <a class="">Download</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon feedback"></i>
+      <p><b>Give us feedback</b></p>
+      <p>Got ideas or suggestions? <br />Get in touch<p/>
+      <a class="">Feedback</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon submit"></i>
+      <p><b>Submit your project</b></p>
+      <p>Have you worked on a relevant project? Let us know</p>
+      <a href="/datadirectory/add/">Submit</a>
+    </div>
+  </div>
+</div>
+<div class="base-footer">
+  <div class="project-grid-outer-container spaced">
+    <div class="grid">
+      <div class="grid__item desk--one-third">
+      <h5>pages</h5>
+      <a href="/datadirectory/">Home</a>
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      <a href="/datadirectory/about/">About this site</a>
+      </ul>
+      </div><div class="grid__item desk--one-third">
+        <h5>More</h5>
+        <a href="">Data Catalogue</a>
+        <i class="fa fa-circle" aria-hidden="true"></i>
+        <a href="">Code on GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="project-grid-outer-container">
+    <div class="grid">
+      <div class="grid__item desk--one-third small-links">
+          <a href="http://www.england.nhs.uk/terms-and-conditions/">Terms & Conditions</a>
+          <i class="fa fa-circle" aria-hidden="true"></i><a href="https://www.england.nhs.uk/privacy-policy/">Privacy & Cookies</a>
+      </div>
+    </div>
+  </div>
+</div>
 
+  </body>
 </html>

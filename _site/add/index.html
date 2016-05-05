@@ -1,131 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <!--[if IE 7]> <html lang="en_GB" class="ie ie7"> <![endif]-->
-<!--[if IE 8]> <html lang="en_GB" class="ie ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en_GB" class="ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en_GB"> <!--<![endif]-->
   <head>
-    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/html5.min.js"></script><![endif]-->
-    <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
-    <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/css/:version:2015-03-25T08:33:17.30/main.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/font-awesome/css/font-awesome.min.css" />
-    <!--[if ie 7]><link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->
+    <link rel="stylesheet" href="/datadirectory/css/main.css">
+<!-- used for the remote -->
+<link rel="stylesheet" href="/directory/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.css">
 
-    <meta charset="utf-8" />
-    <title>NHS England Open Data Directory</title>
-    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
-
-    <!-- <link rel="shortcut icon" href="/images/icons/ckan.ico" /> -->
-    <link rel="stylesheet" href="https://data.england.nhs.uk/css/nhsengland.css" />
-    <link rel="stylesheet" href="https://data.england.nhs.uk/css/introjs.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/uk.js"></script>
+<script src="/directory/assets/js/modernizr.js"></script>
+<link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   </head>
-
-  <body>
-    <header class="super-masthead">
-  <div class="container">
-    <hgroup class="header-strapline" style="width: 510px;">
-      <h1>
-        <h2>Healthcare Open Data Directory</h2>
-      </h1>
-    </hgroup>
-    <hgroup class="header-image">
-      <a class="logo" href="http://www.england.nhs.uk">
-        <img src="https://data.england.nhs.uk/images/nhsengland_logo.png"
-             alt="NHS England Data Catalogue Logo"
-             title="NHS England Data Catalogue Logo"
-             />
-
-      </a>
-    </hgroup>
-  </div>
-</header>
-
-
-<header class="account-masthead" >
-  <div class="container">
-    <nav class="section navigation" >
-      <ul class="nav nav-pills pull-left">
-        <li><a href="/">Data Catalogue</a></li>
-        <li><a href="/datadirectory/">Data Directory</a></li>
-        <li><a href="/datadirectory/about/">About</a></li>
-      </ul>
-      <ul class="nav nav-pills pull-right">
-        <li><a href="/datadirectory/add/">Add a Project</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+  <body class="mikes-design">
     <div class="container">
-      <center>
-        <iframe src="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform?embedded=true"
-                width="100%"
-                height="2200"
-                frameborder="0" marginheight="0" marginwidth="0"
-                scrolling="no"
-                >
-          Loading...
-        </iframe>
-      </center>
+<meta itemprop="description" content="We're trying to find out examples of people using open health data so that we can understand how open health data is used in practice.
+
+  If you use open health data, we'd like to hear about what you're doing."><meta itemprop="faviconUrl" content="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png"><meta itemprop="url" content="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform?embedded=true&amp;usp=embed_googleplus"><meta itemprop="embedURL" content="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform?embedded=true&amp;usp=embed_googleplus"><meta itemprop="thumbnailUrl" content="https://ssl.gstatic.com/docs/forms/social/social-forms-big-2.png"><meta itemprop="image" content="https://ssl.gstatic.com/docs/forms/social/social-forms-big-2.png"><meta itemprop="imageUrl" content="https://ssl.gstatic.com/docs/forms/social/social-forms-big-2.png"><div class="freebirdFormviewerViewFormContentWrapper"><div class="freebirdFormviewerViewFormBanner freebirdHeaderMast"></div><div class="freebirdFormviewerViewCenteredContent"><form action="https://docs.google.com/a/openhealthcare.org.uk/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/formResponse?embedded=true" target="_self" method="POST" id="mG61Hd"><div class="freebirdFormviewerViewFormCard"><div class="freebirdFormviewerViewAccentBanner freebirdAccentBackground"></div><div class="freebirdFormviewerViewFormContent"><div class="freebirdFormviewerViewHeaderHeader"><div class="freebirdFormviewerViewHeaderTitleRow"><div class="freebirdFormviewerViewHeaderTitle" dir="auto" role="heading">Open Health Data Usage</div></div><div class="freebirdFormviewerViewHeaderDescription" dir="auto">We're trying to find out examples of people using open health data so that we can understand how open health data is used in practice. <p>If you use open health data, we'd like to hear about what you're doing.</p></div><div class="freebirdFormviewerViewHeaderRequiredLegend" aria-hidden="true" dir="auto">*Required</div></div><div class="freebirdFormviewerViewItemList" role="list"><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-required="true" data-input="L9xHkb" data-item-id="776193496"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.776193496">What is the name of your project? <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-hidden="true">*</span></div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.776193496" dir="auto"></div></div></div><div class="freebirdFormviewerViewItemsTextItemWrapper"><div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPaperinputMainContent exportContent"><div class="quantumWizTextinputPaperinputContentArea"><input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="What is the name of your project?" aria-describedby="i.desc.776193496 i.err.776193496" name="Open Health Data Usage" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Your answer</div><div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div></div></div><div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div></div></div><input type="hidden" name="entry.512655649" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.776193496" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-input="L9xHkb" data-item-id="108069428"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.108069428">Does your project have a website?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.108069428" dir="auto">We'd like to be able to link people to your project later on - if it's online please provide the url</div></div></div><div class="freebirdFormviewerViewItemsTextItemWrapper"><div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPaperinputMainContent exportContent"><div class="quantumWizTextinputPaperinputContentArea"><input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Does your project have a website?" aria-describedby="i.desc.108069428 i.err.108069428" name="Open Health Data Usage" value="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Your answer</div><div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div></div></div><div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div></div></div><input type="hidden" name="entry.708178265" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.108069428" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-required="true" data-input="L9xHkb" data-item-id="1994928450"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.1994928450">How did you use open health data? <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-hidden="true">*</span></div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1994928450" dir="auto">We're looking to understand what your project does, what it's for, and how you used open health data.</div></div></div><div class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPapertextareaMainContent exportContent"><div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Your answer</div><div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" rows="1" tabindex="0" aria-label="How did you use open health data?" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" required="" name="Open Health Data Usage" dir="auto" data-initial-dir="auto" data-initial-value=""></textarea></div><div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div></div><div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div></div><input type="hidden" name="entry.1834717205" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1994928450" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-required="true" data-input="L9xHkb" data-item-id="651480290"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.651480290">What was the impact of your project? <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-hidden="true">*</span></div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.651480290" dir="auto">We're trying to understand what happens next after people create their projects.</div></div></div><div class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPapertextareaMainContent exportContent"><div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Your answer</div><div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" rows="1" tabindex="0" aria-label="What was the impact of your project?" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" required="" name="Open Health Data Usage" dir="auto" data-initial-dir="auto" data-initial-value=""></textarea></div><div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div></div><div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div></div><input type="hidden" name="entry.363300254" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.651480290" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-required="true" data-input="L9xHkb" data-item-id="1226976781"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.1226976781">What datasets did you use in your project? (Please include links if possible) <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-hidden="true">*</span></div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1226976781" dir="auto">We're trying to find out what currently available datasets people are finding most useful, and also map the space of open health data usage</div></div></div><div class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPapertextareaMainContent exportContent"><div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Your answer</div><div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" rows="1" tabindex="0" aria-label="What datasets did you use in your project? (Please include links if possible)" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" required="" name="Open Health Data Usage" dir="auto" data-initial-dir="auto" data-initial-value=""></textarea></div><div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div></div><div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div></div><input type="hidden" name="entry.417999427" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1226976781" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-input="L9xHkb" data-item-id="1247304205"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.1247304205">Is there an image that represents your project?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1247304205" dir="auto">We'd like show images that represent projects if we're linking to them. If you have a logo or screenshot of your project online, please provide a link here</div></div></div><div class="freebirdFormviewerViewItemsTextItemWrapper"><div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPaperinputMainContent exportContent"><div class="quantumWizTextinputPaperinputContentArea"><input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Is there an image that represents your project?" aria-describedby="i.desc.1247304205 i.err.1247304205" name="Open Health Data Usage" value="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Your answer</div><div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div></div></div><div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div></div></div><input type="hidden" name="entry.1128056462" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1247304205" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-input="L9xHkb" data-item-id="1075838547"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.1075838547">What is the name of your organization?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1075838547" dir="auto">If your project wasn't related to an organization that's ok too</div></div></div><div class="freebirdFormviewerViewItemsTextItemWrapper"><div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPaperinputMainContent exportContent"><div class="quantumWizTextinputPaperinputContentArea"><input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="What is the name of your organization?" aria-describedby="i.desc.1075838547 i.err.1075838547" name="Open Health Data Usage" value="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Your answer</div><div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div></div></div><div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div></div></div><input type="hidden" name="entry.1453720621" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1075838547" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-input="L9xHkb" data-item-id="428737686"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.428737686">What does your organization do?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.428737686" dir="auto"></div></div></div><div class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPapertextareaMainContent exportContent"><div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Your answer</div><div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" rows="1" tabindex="0" aria-label="What does your organization do?" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="Open Health Data Usage" dir="auto" data-initial-dir="auto" data-initial-value=""></textarea></div><div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div></div><div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div></div><input type="hidden" name="entry.1945899149" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.428737686" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-input="L9xHkb" data-item-id="1862697614"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.1862697614">If your organization is a company, what is your company number?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1862697614" dir="auto">This lets us understand what kind of companies are using open health data</div></div></div><div class="freebirdFormviewerViewItemsTextItemWrapper"><div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPaperinputMainContent exportContent"><div class="quantumWizTextinputPaperinputContentArea"><input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="If your organization is a company, what is your company number?" aria-describedby="i.desc.1862697614 i.err.1862697614" name="Open Health Data Usage" value="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Your answer</div><div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div></div></div><div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div></div></div><input type="hidden" name="entry.1482676608" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1862697614" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-input="L9xHkb" data-item-id="157087231"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.157087231">How should we contact you?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.157087231" dir="auto">Just in case we want to get in touch to find out more. An email would be super.</div></div></div><div class="freebirdFormviewerViewItemsTextItemWrapper"><div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPaperinputMainContent exportContent"><div class="quantumWizTextinputPaperinputContentArea"><input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="How should we contact you?" aria-describedby="i.desc.157087231 i.err.157087231" name="Open Health Data Usage" value="" dir="auto" data-initial-dir="auto" data-initial-value=""><div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Your answer</div><div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div></div></div><div jsname="ty6ygf" class="quantumWizTextinputPaperinputHint exportHint"></div></div></div><input type="hidden" name="entry.1991283473" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.157087231" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem" jsname="ibnC6b" jscontroller="hIYTQc" jsaction="JIbuQc:qzJD1c;sPvj8e:e4JwSe" data-other-input="qSV85" data-other-hidden="MfYA1e" data-item-id="1069968120"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.1069968120">Do you mind us publishing your contact details so people can get in touch with you about your project?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1069968120" dir="auto"></div></div></div><div jsname="JNdkSc" role="group" aria-label="Do you mind us publishing your contact details so people can get in touch with you about your project?" aria-describedby="i.desc.1069968120 i.err.1069968120 i.req.1069968120"><div jsname="MPu53c" jscontroller="GJQA8b" jsaction="JIbuQc:aj0Jcf" data-value="Yes, feel free to publish these contact details." class="freebirdFormviewerViewItemsCheckboxChoice"><label class="docssharedWizToggleLabeledContainer"><div class="quantumWizTogglePapercheckboxEl docssharedWizToggleLabeledControl freebirdThemedCheckbox freebirdFormviewerViewItemsCheckboxControl" jscontroller="EcW08c" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; keydown:I481le; contextmenu:mg9Pef" jsshadow="" jsname="FkQz1b" aria-label="Yes, feel free to publish these contact details." tabindex="0" role="checkbox" aria-checked="false"><div class="quantumWizTogglePapercheckboxInk exportInk"></div><div class="quantumWizTogglePapercheckboxInnerBox"></div><div class="quantumWizTogglePapercheckboxCheckMarkContainer"><div class="quantumWizTogglePapercheckboxCheckMark"><div class="quantumWizTogglePapercheckboxShort"></div><div class="quantumWizTogglePapercheckboxLong"></div></div></div></div><div class="docssharedWizToggleLabeledContent"><div class="docssharedWizToggleLabeledPrimaryText"><span dir="auto" class="docssharedWizToggleLabeledLabelText freebirdFormviewerViewItemsCheckboxLabel">Yes, feel free to publish these contact details.</span></div></div></label><input type="hidden" name="entry.138215021" jsname="ekGZBc" disabled=""></div></div><div id="i.req.1069968120" class="screenreaderOnly"></div><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1069968120" role="alert"></div></div><div role="listitem" class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" jsname="ibnC6b" jscontroller="rDGJeb" jsaction="sPvj8e:e4JwSe,vwKRrd;" data-input="L9xHkb" data-item-id="1608175941"><div class="freebirdFormviewerViewItemsItemItemheader"><div class="freebirdFormviewerViewItemsItemItemTitleContainer"><div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" aria-describedby="i.desc.1608175941">Any other comments / feedback for us?</div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1608175941" dir="auto">Have we forgotten anything? Was anything on this form confusing? Just want to say hello?</div></div></div><div class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow="" jsname="W85ice"><div class="quantumWizTextinputPapertextareaMainContent exportContent"><div class="quantumWizTextinputPapertextareaPlaceholder exportLabel" jsname="LwH6nd">Your answer</div><div class="quantumWizTextinputPapertextareaContentArea exportContentArea"><textarea class="quantumWizTextinputPapertextareaInput exportTextarea" jsname="YPqjbf" rows="1" tabindex="0" aria-label="Any other comments / feedback for us?" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" name="Open Health Data Usage" dir="auto" data-initial-dir="auto" data-initial-value=""></textarea></div><div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div><div jsname="XmnwAc" class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div></div><div jsname="ty6ygf" class="quantumWizTextinputPapertextareaHint exportHint"></div></div><input type="hidden" name="entry.122399783" jsname="L9xHkb"><div jsname="XbIQze" class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1608175941" role="alert"></div></div></div><div class="freebirdFormviewerViewNavigationNavControls" jscontroller="lSvzH" jsaction="rcuQ6b:npT2md;JIbuQc:V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe)" data-shuffle-seed="-7690505240092304491"><div class="freebirdFormviewerViewNavigationButtonsAndProgress"><div class="freebirdFormviewerViewNavigationButtons"><div role="button" class="quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow="" jsname="M2UYVd" tabindex="0"><div class="quantumWizButtonPaperbuttonRipple exportInk" jsname="ksKsZd"></div><div class="quantumWizButtonPaperbuttonFocusOverlay"></div><content class="quantumWizButtonPaperbuttonContent"><span class="quantumWizButtonPaperbuttonLabel">Submit</span></content></div></div></div><div class="freebirdFormviewerViewNavigationPasswordWarning">Never submit passwords through Google Forms.</div></div><input type="hidden" name="fvv" value="1"><input type="hidden" name="draftResponse" value="[,,&quot;-7690505240092304491&quot;]
+  "><input type="hidden" name="pageHistory" value="0"><input type="hidden" name="fbzx" value="-7690505240092304491"></div></div></form><div><div class="freebirdFormviewerViewFooterDisclaimer freebirdFormviewerViewFooterNoTextDecoration freebirdDisclaimerColor">This form was created inside Open Healthcare UK. <a href="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/reportabuse?source=https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform?embedded%3Dtrue">Report Abuse</a> - <a href="http://www.google.com/accounts/TOS">Terms of Service</a> - <a href="http://www.google.com/google-d-s/terms.html">Additional Terms</a></div><div class="freebirdFormviewerViewFooterImageContainer freebirdFormviewerViewFooterPageBreak"><a href="//www.google.com/forms/about/?utm_source=product&amp;utm_medium=forms_logo&amp;utm_campaign=forms"><img src="//ssl.gstatic.com/docs/forms/google_forms_logo_lockup_2.svg" alt="Google Forms"></a></div></div></div></div><script type="text/javascript">var FB_PUBLIC_LOAD_DATA_ = ["1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs",["We're trying to find out examples of people using open health data so that we can understand how open health data is used in practice. \n\nIf you use open health data, we'd like to hear about what you're doing.",[[776193496,"What is the name of your project?",,0,[[512655649,,1]
+  ]
+  ]
+  ,[108069428,"Does your project have a website?","We'd like to be able to link people to your project later on - if it's online please provide the url",0,[[708178265,,0]
+  ]
+  ]
+  ,[1994928450,"How did you use open health data?","We're looking to understand what your project does, what it's for, and how you used open health data.",1,[[1834717205,,1]
+  ]
+  ]
+  ,[651480290,"What was the impact of your project?","We're trying to understand what happens next after people create their projects.",1,[[363300254,,1]
+  ]
+  ]
+  ,[1226976781,"What datasets did you use in your project? (Please include links if possible)","We're trying to find out what currently available datasets people are finding most useful, and also map the space of open health data usage",1,[[417999427,,1]
+  ]
+  ]
+  ,[1247304205,"Is there an image that represents your project?","We'd like show images that represent projects if we're linking to them. If you have a logo or screenshot of your project online, please provide a link here",0,[[1128056462,,0]
+  ]
+  ]
+  ,[1075838547,"What is the name of your organization?","If your project wasn't related to an organization that's ok too",0,[[1453720621,,0]
+  ]
+  ]
+  ,[428737686,"What does your organization do?",,1,[[1945899149,,0]
+  ]
+  ]
+  ,[1862697614,"If your organization is a company, what is your company number?","This lets us understand what kind of companies are using open health data",0,[[1482676608,,0]
+  ]
+  ]
+  ,[157087231,"How should we contact you?","Just in case we want to get in touch to find out more. An email would be super.",0,[[1991283473,,0]
+  ]
+  ]
+  ,[1069968120,"Do you mind us publishing your contact details so people can get in touch with you about your project?",,4,[[138215021,[["Yes, feel free to publish these contact details.",,,,0]
+  ]
+  ,0]
+  ]
+  ]
+  ,[1608175941,"Any other comments / feedback for us?","Have we forgotten anything? Was anything on this form confusing? Just want to say hello?",1,[[122399783,,0]
+  ]
+  ]
+  ]
+  ,["Thanks for taking time to let us know about your project",0,0,1,0]
+  ,,[,,,,,["google red",,[[219,68,55,,2]
+  ,[244,199,195]
+  ,[251,233,231]
+  ,[255,138,128]
+  ,[219,68,55]
+  ]
+  ]
+  ]
+  ,[0,0]
+  ,,,"Open Health Data Usage",17,[0,0,0]
+  ,,,,,[2]
+  ]
+  ,"/forms","Open Health Data Usage","openhealthcare.org.uk",["1pKm-RTVJh2fnd9Ujgrs_FriG9ONBQtxjVEWaw57NSIU",3,["371456710"]
+  ]
+  ,[[1,"https://docs.google.com/[domain]spreadsheet/ccc?key\u003d[key]\u0026usp\u003d[usp]#gid\u003dform"]
+  ,[2,"//www.google.com/fusiontables/data?docid\u003d[key]"]
+  ,[3,"https://docs.google.com/[domain]spreadsheets/d/[key]?usp\u003d[usp]#gid\u003d[grid]"]
+  ]
+  ,"0","Open Healthcare UK",0,1,"openhealthcare.org.uk","Open Healthcare UK",1]
+  ;</script><script id="base-js" src="https://www.gstatic.com/_/freebird/_/js/k=freebird.v.en_GB.RsWnWDqfzjY.O/m=viewer_base/rt=j/d=1/rs=AMjVe6hL450Uch7j1y05aIP2uhJvjL4yxg"></script>
 </div>
 
-    <div class="container">
-  <div class="row">
-    <footer class="pre-footer span12">
-      <ul class="nav nav-pills  pull-left">
-	<li>
-	  &copy; NHS England 2016
-	</li>
-
-	<li>
-	  <a href="http://www.england.nhs.uk/terms-and-conditions/">Terms &amp; Conditions</a>
-	</li>
-	<li>
-	  <a href="http://www.england.nhs.uk/privacy-policy/">Privacy &amp; Cookies</a>
-	</li>
-	<li>
-	  <a href="http://www.england.nhs.uk/comment-policy/">Social Media &amp; Comment Moderation</a>
-	</li>
-	<li>
-	  <a href="http://www.england.nhs.uk/accessibility/">Accessibility</a>
-	</li>
-      </ul>
-    </footer>
+    <div class="footer">
+  <div class="project-grid-outer-container">
+    <div class="grid__item desk--one-third text-centre">
+      <i class="icon download"></i>
+      <p><b>Download Data</b></p>
+      <p>Get all of the information on this site as Open Data</p>
+      <a class="">Download</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon feedback"></i>
+      <p><b>Give us feedback</b></p>
+      <p>Got ideas or suggestions? <br />Get in touch<p/>
+      <a class="">Feedback</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon submit"></i>
+      <p><b>Submit your project</b></p>
+      <p>Have you worked on a relevant project? Let us know</p>
+      <a href="/datadirectory/add/">Submit</a>
+    </div>
   </div>
 </div>
-
-<footer class="site-footer">
-  <div class="container">
-
-    <h2>
-      <h2>NHS England Healthcare Open Data Directory</h2>
-    </h2>
-
+<div class="base-footer">
+  <div class="project-grid-outer-container spaced">
+    <div class="grid">
+      <div class="grid__item desk--one-third">
+      <h5>pages</h5>
+      <a href="/datadirectory/">Home</a>
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      <a href="/datadirectory/about/">About this site</a>
+      </ul>
+      </div><div class="grid__item desk--one-third">
+        <h5>More</h5>
+        <a href="">Data Catalogue</a>
+        <i class="fa fa-circle" aria-hidden="true"></i>
+        <a href="">Code on GitHub</a>
+      </div>
+    </div>
   </div>
-</footer>
-    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
-    <style type="text/css" media="screen, projection">
-      @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
-    </style>
-    <script type="text/javascript">
-      if (typeof(Zenbox) !== "undefined") {
-      Zenbox.init({
-      dropboxID:   "20263731",
-      url:         "https://nhse.zendesk.com",
-      tabTooltip:  "Feedback",
-      tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_feedback.png",
-      tabColor:    "#A00054",
-      tabPosition: "Left"
-      });
-      var zenbox = document.getElementById("zenbox_tab");
-      zenbox.setAttribute('data-intro', 'Click the "Feedback" tab to tell us your thoughts, report bugs and request features.');
-      zenbox.setAttribute('data-position', 'right');
-      }
-    </script>
-
+  <div class="project-grid-outer-container">
+    <div class="grid">
+      <div class="grid__item desk--one-third small-links">
+          <a href="http://www.england.nhs.uk/terms-and-conditions/">Terms & Conditions</a>
+          <i class="fa fa-circle" aria-hidden="true"></i><a href="https://www.england.nhs.uk/privacy-policy/">Privacy & Cookies</a>
+      </div>
+    </div>
+  </div>
+</div>
 
   </body>
 </html>

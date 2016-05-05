@@ -2,15 +2,18 @@
 <html>
   <head>
     <link rel="stylesheet" href="/datadirectory/css/main.css">
-<link rel="stylesheet" href="/datadirectory/assets/js/modernizr.js">
 <!-- used for the remote -->
 <link rel="stylesheet" href="/directory/css/main.css">
-<link rel="stylesheet" href="/directory/assets/js/modernizr.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.css">
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/uk.js"></script>
+<script src="/directory/assets/js/modernizr.js"></script>
 <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
   </head>
   <body class="mikes-design">
@@ -25,47 +28,108 @@
   </div>
 </div>
 
-<div class="main-container">
-  <div class="post-header">
-    <h2>
-      Mapping English GP prescribing data
-    </h2>
-    <h5>
-        <em>by</em> Dr Peter J Diggle
-    </h5>
-  </div>
-  <div class="tags-header">
-    <div class="grid__item three-quarters">
-    <a class="tag" href="">prescribing</a>
-    </div><div class="grid__item one-quarter">
-      <a href="" class="btn btn-primary">FIND OUT MORE</a>
+<div class="outer-main-container">
+  <div class="main-container">
+    <div class="post-header">
+      <h2>
+        Mapping English GP prescribing data
+      </h2>
+      <h5>
+          <em>by</em> Dr Peter J Diggle
+      </h5>
     </div>
-  </div>
-  <div class="main-body">
-    <div class="grid__item two-thirds">
-      <h4>Introduction</h4>
-      <p>
-      Objective The aim of this paper was to show that easily interpretable maps of local and national prescribing data, available from open sources, can be used to demonstrate meaningful variations in prescribing performance.
-Design The prescription dispensing data from the National Health Service (NHS) Information Centre for the medications metformin hydrochloride and methylphenidate were compared with reported incidence data for the conditions, diabetes and attention deficit hyperactivity disorder,
-      </p>
-      
-        <h4>Impact</h4>
+    <div class="tags-header">
+      <div data-bind="foreach: tags" class="grid__item three-quarters">
+      <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+      </div><div class="grid__item one-quarter">
+        <a href="" class="btn btn-primary">FIND OUT MORE</a>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="grid__item two-thirds">
+        <h4>Introduction</h4>
         <p>
-          Results The spatial mapping demonstrates that several areas in England have substantially and significantly higher spending per person on metformin and methyphenidate. North Kent and the Wirral have substantially and significantly higher spending per child on methyphenidate.
-Conclusions It is possible, using open source data, to use statistical methods to distinguish chance fluctuations in prescribing from genuine differences in prescribing rates. The results can be interactively mapped at a fine spatial resolution down to individual GP practices in England. This process could be automated and reported in real time. This can inform decision-making and could enable earlier detection of emergent phenomena.
+        Objective The aim of this paper was to show that easily interpretable maps of local and national prescribing data, available from open sources, can be used to demonstrate meaningful variations in prescribing performance.
+Design The prescription dispensing data from the National Health Service (NHS) Information Centre for the medications metformin hydrochloride and methylphenidate were compared with reported incidence data for the conditions, diabetes and attention deficit hyperactivity disorder,
         </p>
-      
-      <h4>Datasets Used</h4>
-      <p>
-        GP Prescribing Data
-      </p>
-    </div><div class="grid__item one-third page-side-bar">
-      <img src="http://bmjopen.bmj.com/content/3/1/e001363/F7.medium.gif">
-      <h5>More about Dr Peter J Diggle</h5>
-      
+        
+          <h4>Impact</h4>
+          <p>
+            Results The spatial mapping demonstrates that several areas in England have substantially and significantly higher spending per person on metformin and methyphenidate. North Kent and the Wirral have substantially and significantly higher spending per child on methyphenidate.
+Conclusions It is possible, using open source data, to use statistical methods to distinguish chance fluctuations in prescribing from genuine differences in prescribing rates. The results can be interactively mapped at a fine spatial resolution down to individual GP practices in England. This process could be automated and reported in real time. This can inform decision-making and could enable earlier detection of emergent phenomena.
+          </p>
+        
+        <h4>Datasets Used</h4>
+        <p>
+          GP Prescribing Data
+        </p>
+      </div><div class="grid__item one-third page-side-bar">
+        <img src="http://bmjopen.bmj.com/content/3/1/e001363/F7.medium.gif">
+        <h5>More about Dr Peter J Diggle</h5>
+        
+      </div>
     </div>
+  </div>
+</div>
+<script>
+  var tagNames = ["prescribing"]
+  var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
+  var tags = [];
+
+  _.each(tagNames, function(tagName, index){
+      tags.push({name: tagName, url: urls[index]});
+  });
+  var mpv = {tags: tags};
+  ko.applyBindings(mpv);
+  window.mpv = mpv;
+</script>
+
+    <div class="footer">
+  <div class="project-grid-outer-container">
+    <div class="grid__item desk--one-third text-centre">
+      <i class="icon download"></i>
+      <p><b>Download Data</b></p>
+      <p>Get all of the information on this site as Open Data</p>
+      <a class="">Download</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon feedback"></i>
+      <p><b>Give us feedback</b></p>
+      <p>Got ideas or suggestions? <br />Get in touch<p/>
+      <a class="">Feedback</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon submit"></i>
+      <p><b>Submit your project</b></p>
+      <p>Have you worked on a relevant project? Let us know</p>
+      <a href="/datadirectory/add/">Submit</a>
+    </div>
+  </div>
+</div>
+<div class="base-footer">
+  <div class="project-grid-outer-container spaced">
+    <div class="grid">
+      <div class="grid__item desk--one-third">
+      <h5>pages</h5>
+      <a href="/datadirectory/">Home</a>
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      <a href="/datadirectory/about/">About this site</a>
+      </ul>
+      </div><div class="grid__item desk--one-third">
+        <h5>More</h5>
+        <a href="">Data Catalogue</a>
+        <i class="fa fa-circle" aria-hidden="true"></i>
+        <a href="">Code on GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="project-grid-outer-container">
+    <div class="grid">
+      <div class="grid__item desk--one-third small-links">
+          <a href="http://www.england.nhs.uk/terms-and-conditions/">Terms & Conditions</a>
+          <i class="fa fa-circle" aria-hidden="true"></i><a href="https://www.england.nhs.uk/privacy-policy/">Privacy & Cookies</a>
+      </div>
+    </div>
+  </div>
 </div>
 
   </body>
-
 </html>
