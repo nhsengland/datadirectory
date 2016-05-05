@@ -1,0 +1,51 @@
+@mixin link-colour($some-colour){
+    color: $some-colour;
+    &:hover, &:visited{
+        color: $some-colour;
+        text-decoration: none;
+    }
+}
+
+@mixin placeholder{
+    font-weight: 200;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #9B9B9B;
+}
+
+@mixin gradient{
+  background: $background-colour; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(231, 242, 250, 1), rgba(231, 242, 250, 0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(231, 242, 250, 1), rgba(231, 242, 250, 0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(231, 242, 250, 1), rgba(231, 242, 250, 0)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(231, 242, 250, 1), rgba(231, 242, 250, 0)); /* Standard syntax */
+}
+
+@mixin form-element{
+  border-radius: $border-radius;
+  border: 1px solid $outline;
+  background-color: #FFF;
+  height: $line-height * 1.15;
+  width: 100%;
+  padding-left: 10px;
+  padding-right : 10px;
+  color: $input-colour;
+}
+
+@mixin button-spacing{
+  -moz-appearance: none;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  line-height: $line-height;
+  -webkit-transition: all 0.2s ease; /* Safari and Chrome */
+  -moz-transition: all 0.2s ease; /* Firefox */
+  -ms-transition: all 0.2s ease; /* IE 9 */
+  -o-transition: all 0.2s ease; /* Opera */
+  transition: all 0.2s ease;
+}

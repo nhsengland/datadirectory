@@ -1,0 +1,70 @@
+input::-webkit-input-placeholder {
+  @include placeholder;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  @include placeholder;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  @include placeholder;
+}
+
+input:-ms-input-placeholder {
+  @include placeholder;
+}
+
+.form-element{
+  @extend .grid__item;
+  @extend .desk--three-tenths;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+
+body{
+  .select2-container--default .select2-search--dropdown .select2-search__field{
+      @include form-element;
+      background: linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow{
+      top: 4px;
+  }
+
+  .select2-selection.select2-selection--single{
+      @include form-element;
+      @include placeholder;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered{
+      padding-top: 3px;
+      color: $input-colour;
+  }
+
+  .select2-dropdown{
+      border: 1px solid $outline !important   ;
+  }
+
+  .select2-results__option{
+      color: $input-colour;
+      font-size: 16px;
+  }
+}
+
+.form-search{
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-top: 20px;
+}
+
+select{
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  @include form-element;
+}
+
+input{
+  @include form-element;
+}
