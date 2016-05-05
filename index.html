@@ -26,14 +26,13 @@ layout: nhse_default
   <div data-bind="if: displayedItems().length !== items().length" class="grid-description-title">Showing <span data-bind="text: displayedItems().length"></span> out of <span data-bind="text: items().length"></span>  projects</div>
   <hr>
 </div>
-<div class="outer-main-container">
 <div class="main-container">
   <div class="project-grid-outer-container">
-    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
-        <img data-bind="attr: {src: img}">
+    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid, wrap"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
+        <div class="bg" data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }"></div>
         <div class="project-element-text">
-          <p data-bind="text: title" ></p>
-          <p data-bind="text: author" ></p>
+          <p class="org-name" data-bind="text: title" ></p>
+          <p class="project-name" data-bind="text: author" ></p>
         </div>
     </a></div></div>
   </div>
@@ -53,9 +52,6 @@ layout: nhse_default
         </li>
     </ul>
   </nav>
-
-
-</div>
 </div>
 <script>
 

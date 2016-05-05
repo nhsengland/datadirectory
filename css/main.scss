@@ -8,9 +8,10 @@
 // Our variables
 $base-font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
 $font-family-sans-serif: $base-font-family;
-$base-font-size:   16px;
+$base-font-size:   19px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$line-height: 30px;
 
 $spacing-unit:     30px;
 
@@ -26,14 +27,6 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -45,7 +38,6 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "layout",
         "syntax-highlighting",
         "css-wizardry-grids",
         "bootstrap",

@@ -140,6 +140,20 @@
   .project-grid-inner-container{
   }
 
+  .org-name{
+        font-size: 10px;
+        line-height: 6px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 0;
+  }
+
+  .project-name{
+        font-size: 14px;
+        color: $white;
+        margin-bottom: 0;
+  }
+
   .grid-description{
       position: relative;
       text-align: center;
@@ -177,7 +191,11 @@
       overflow: hidden;
       margin-bottom: 20px;
 
-      img{
+      .bg{
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        height: calc(100% - 50px);
+        width: 100%;
         -webkit-transition: all 1s ease; /* Safari and Chrome */
         -moz-transition: all 1s ease; /* Firefox */
         -ms-transition: all 1s ease; /* IE 9 */
@@ -185,12 +203,14 @@
         transition: all 1s ease;
         backface-visibility: hidden;
         transform: translateZ(0);
+        -webkit-transform: translateZ(0);
         height: 100%;
         position: absolute;
         top: 0;
+        filter: none;
       }
 
-      &:hover img{
+      &:hover .bg{
         -webkit-transform:scale(1.02); /* Safari and Chrome */
         -moz-transform:scale(1.02); /* Firefox */
         -ms-transform:scale(1.02); /* IE 9 */
@@ -204,7 +224,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      padding: 20px;
+      padding: 25px 20px;
       width: 100%;
       color: $white;
   }
