@@ -9,7 +9,7 @@ We have set out to create interesting, innovative, live, impactful projects usin
 We are based in the Centre for Evidence-Based Medicine, in the Nuffield Department of Primary Care Health Sciences, in the University of Oxford."
 impact: ""
 datasets: "http://www.hscic.gov.uk/gpprescribingdata"
-date: 04-05-2016 16:59 +0000
+date: 04-05-2016 17:42 +0000
 description: "Every month, the NHS in England publishes anonymised data about the drugs prescribed by GPs. But the raw data files are large and unwieldy, with more than 600 million rows. We're making it easier for GPs, managers and everyone to explore - supporting safer, more efficient prescribing."
 imageurl: https://ebmdatalab.net/images/portfolio/openprescribing.png
 tags:
