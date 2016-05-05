@@ -2,42 +2,44 @@
 layout: nhse_default
 ---
 {% include top_banner.html %}
-<div class="main-container">
-  <div class="post-header">
-    <h2>
-      {{ page.title }}
-    </h2>
-    <h5>
-        <em>by</em> {{ page.author }}
-    </h5>
-  </div>
-  <div class="tags-header">
-    <div data-bind="foreach: tags" class="grid__item three-quarters">
-    <a class="tag" data-bind="attr: {href: url}, text: name"></a>
-    </div><div class="grid__item one-quarter">
-      <a href="" class="btn btn-primary">FIND OUT MORE</a>
+<div class="outer-main-container">
+  <div class="main-container">
+    <div class="post-header">
+      <h2>
+        {{ page.title }}
+      </h2>
+      <h5>
+          <em>by</em> {{ page.author }}
+      </h5>
     </div>
-  </div>
-  <div class="main-body">
-    <div class="grid__item two-thirds">
-      <h4>Introduction</h4>
-      <p>
-      {{ page.description }}
-      </p>
-      {% if page.impact %}
-        <h4>Impact</h4>
+    <div class="tags-header">
+      <div data-bind="foreach: tags" class="grid__item three-quarters">
+      <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+      </div><div class="grid__item one-quarter">
+        <a href="" class="btn btn-primary">FIND OUT MORE</a>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="grid__item two-thirds">
+        <h4>Introduction</h4>
         <p>
-          {{ page.impact }}
+        {{ page.description }}
         </p>
-      {% endif %}
-      <h4>Datasets Used</h4>
-      <p>
-        {{ page.datasets }}
-      </p>
-    </div><div class="grid__item one-third page-side-bar">
-      <img src="{{ page.imageurl }}">
-      <h5>More about {{ page.author }}</h5>
-      {{ page.orgdescription }}
+        {% if page.impact %}
+          <h4>Impact</h4>
+          <p>
+            {{ page.impact }}
+          </p>
+        {% endif %}
+        <h4>Datasets Used</h4>
+        <p>
+          {{ page.datasets }}
+        </p>
+      </div><div class="grid__item one-third page-side-bar">
+        <img src="{{ page.imageurl }}">
+        <h5>More about {{ page.author }}</h5>
+        {{ page.orgdescription }}
+      </div>
     </div>
   </div>
 </div>

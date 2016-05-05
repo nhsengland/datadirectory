@@ -101,6 +101,7 @@
   .form-search{
     margin-left: -5px;
     margin-right: -5px;
+    padding-top: 20px;
   }
 
   .inner-container{
@@ -252,7 +253,8 @@
       text-align: center;
       font-size: 48px;
       color: $primary-colour;
-      margin-top: 40px;
+      padding-top: 40px;
+      margin-top: 0;
   }
 
   h4{
@@ -285,6 +287,10 @@
       margin-bottom: 30px;
   }
 
+  .outer-main-container{
+      position: relative;
+  }
+
   .main-container{
       @extend .inner-container;
   }
@@ -294,10 +300,10 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 20px;
-      background-color: red;
+      height: 40px;
       content: " ";
-      // @include gradient;
+      z-index: -1;
+      @include gradient;
   }
 
   .form-btn{
