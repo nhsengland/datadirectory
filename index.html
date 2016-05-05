@@ -24,6 +24,7 @@ layout: nhse_default
   <div data-bind="if: displayedItems().length !== items().length" class="grid-description-title">Showing <span data-bind="text: displayedItems().length"></span> out of <span data-bind="text: items().length"></span>  projects</div>
   <hr>
 </div>
+<div class="outer-main-container">
 <div class="main-container">
   <div class="project-grid-outer-container">
     <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
@@ -52,6 +53,7 @@ layout: nhse_default
   </nav>
 
 
+</div>
 </div>
 <script>
 
