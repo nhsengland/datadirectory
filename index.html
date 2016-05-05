@@ -53,8 +53,6 @@ layout: nhse_default
 
 
 </div>
-{% include mikes_footer.html %}
-<div class="base-footer"></div>
 <script>
 
   ko.bindingHandlers.select2 = {
@@ -121,7 +119,7 @@ layout: nhse_default
          var vars = query.split("&");
          for (var i=0;i<vars.length;i++) {
                  var pair = vars[i].split("=");
-                 if(pair[0] == variable){return pair[1];}
+                 if(pair[0] == variable){return decodeURIComponent(pair[1]);}
          }
          return(false);
   }
@@ -137,8 +135,8 @@ layout: nhse_default
       this.pageNumber = ko.observable(0);
       this.tags = ko.observableArray([]);
       this.authors = ko.observableArray([]);
-      this.filterTag = ko.observable();
-      this.filterOrg = ko.observable();
+      this.filterTag = ko.observable(getQueryVariable("tag"));
+      this.filterOrg = ko.observable(getQueryVariable("org"));
 
       _.each(json, function(row){
           self.tags(_.uniq(self.tags().concat(row.tags)));
@@ -162,7 +160,7 @@ layout: nhse_default
 
           if(self.filterOrg()){
               possibleItems = _.filter(possibleItems, function(x){
-                  return x.tags.indexOf(self.filterOrg()) != -1;
+                  return x.author === self.filterOrg();
               });
           }
 

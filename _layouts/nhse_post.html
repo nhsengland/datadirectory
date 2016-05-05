@@ -12,8 +12,8 @@ layout: nhse_default
     </h5>
   </div>
   <div class="tags-header">
-    <div class="grid__item three-quarters">
-    {% for tag in page.tags %}<a class="tag" href="">{{ tag }}</a>{% endfor %}
+    <div data-bind="foreach: tags" class="grid__item three-quarters">
+    <a class="tag" data-bind="attr: {href: url}, text: name"></a>
     </div><div class="grid__item one-quarter">
       <a href="" class="btn btn-primary">FIND OUT MORE</a>
     </div>
@@ -39,4 +39,17 @@ layout: nhse_default
       <h5>More about {{ page.author }}</h5>
       {{ page.orgdescription }}
     </div>
+  </div>
 </div>
+<script>
+  var tagNames = [{% for tag in page.tags %}"{{ tag }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]
+  var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
+  var tags = [];
+
+  _.each(tagNames, function(tagName, index){
+      tags.push({name: tagName, url: urls[index]});
+  });
+  var mpv = {tags: tags};
+  ko.applyBindings(mpv);
+  window.mpv = mpv;
+</script>

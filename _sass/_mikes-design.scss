@@ -113,7 +113,6 @@
       @extend .grid__item;
       @extend .desk--one-third;
       @extend .lap--one-half;
-      padding: 20px;
   }
 
   .logo{
@@ -130,8 +129,6 @@
   }
 
   .project-grid-inner-container{
-      margin-left: -20px;
-      margin-right: -20px;
   }
 
   .grid-description{
@@ -169,6 +166,7 @@
       background-position: center;
       display: block;
       overflow: hidden;
+      margin-bottom: 20px;
 
       img{
         -webkit-transition: all 1s ease; /* Safari and Chrome */
@@ -357,13 +355,47 @@
       background-color: $light-blue;
       min-height: 100px;
       padding-top: 30px;
+      margin-top: 30px;
       padding-bottom: 30px;
   }
 
   .base-footer{
       background-color: $primary-colour;
       min-height: 200px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       width: 100%;
+      color: $white;
+      font-size: $base-font-size;
+
+      h5{
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: $base-font-size;
+      }
+
+      a{
+          color: $white;
+          text-decoration: underline;
+          display: inline-block;
+      }
+      i{
+          font-size: 6px;
+          margin-bottom: 3px;
+          vertical-align: middle;
+          display: inline-block;
+          margin-left: 5px;
+          margin-right: 5px;
+      }
+
+      .small-links{
+          font-size: $base-font-size * 0.8;
+          margin-bottom: 80px;
+      }
+  }
+
+  .spaced{
+      margin-bottom: 40px;
   }
 
   hr{
@@ -441,4 +473,5 @@
           color: $light-grey;
       }
   }
+
 }
