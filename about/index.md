@@ -1,6 +1,7 @@
 ---
-layout: nhse_post
+layout: nhse_about
 ---
+
 ## Purpose
 
 The goal of the Healthcare Open Data Directory is to enable people and organisations to publicise innovative examples of the reuse of open heath data.
