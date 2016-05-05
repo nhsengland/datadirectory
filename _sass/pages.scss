@@ -162,11 +162,6 @@ h1{
     font-size: 48px;
     margin-top: 5px;
     padding-bottom: 40px;
-
-    strong{
-        font-weight: normal;
-        background-color: $secondary-colour;
-    }
 }
 
 h2{
@@ -211,6 +206,13 @@ h2{
 
 .main-container{
     @extend .inner-container;
+}
+
+.title-highlight{
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $secondary-colour;
 }
 
 .main-container::before{
