@@ -62,6 +62,34 @@
     margin-bottom: 5px;
   }
 
+  .select2-container--default .select2-search--dropdown .select2-search__field{
+      @include form-element;
+      background: linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow{
+      top: 4px;
+  }
+
+  .select2-selection.select2-selection--single{
+      @include form-element;
+      @include placeholder;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered{
+      padding-top: 3px;
+      color: #555;
+  }
+
+  .select2-dropdown{
+      border: 1px solid $outline !important   ;
+  }
+
+  .select2-results__option{
+      color: #555;
+      font-size: 16px;
+  }
+
   .form-search{
     margin-left: -5px;
     margin-right: -5px;
@@ -267,7 +295,6 @@
     border-radius: 6px;
     box-sizing: border-box;
     cursor: pointer;
-    height: $line-height;
     margin: 0px;
     text-align: center;
     text-decoration: none;
@@ -283,23 +310,32 @@
     font-weight: 400;
     padding: 0 15px;
     font-size: 14px;
+    height: $line-height;
+  }
+
+  .btn{
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0px;
+    @include button-spacing;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0 20px;
+    background-color: $secondary-colour;
+    letter-spacing: 1px;
+
+    &:hover{
+      background-color: darken($secondary-colour, 5%);
+    }
   }
 
   .btn-primary{
-      font-size: 12px;
+      height: $line-height;
+  }
 
-      font-weight: 200;
-      margin: 0px;
-      @include button-spacing;
-      color: $white;
-      text-transform: uppercase;
-      padding: 0 20px;
-      background-color: $secondary-colour;
-      letter-spacing: 1px;
-
-      &:hover{
-        background-color: darken($secondary-colour, 5%);
-      }
+  .btn.btn-search{
+      height: $line-height * 1.15;
+      padding-top: 2px;
   }
 
   .text-centre{

@@ -1,5 +1,5 @@
 ---
-layout: mikes_layout
+layout: nhse_default
 ---
 <!-- top banner  -->
 
@@ -14,13 +14,9 @@ layout: mikes_layout
 <div class="main-container">
   <form class="form-search" style="margin-top: 20px">
     <div class="form-element"><input placeholder="Search ..." data-bind="value: currentFilter, valueUpdate: 'afterkeydown'" type="text"></input></div><!--
-    --><div class="form-element"><select>
-      <option>find stuff</option>
-    </select></div><!--
-    --><div class="form-element"><select class="select-box">
-      <option>find other stuff</option>
-    </select></div><!--
-    --><div class="form-btn"><a class="btn 2btn-primary" href="">SEARCH</a></div>
+    --><div class="form-element"><select data-bind="value: filterTag, optionsCaption: 'Filter by tag', options: tags, select2: { placeholder: 'Filter by tag', allowClear: true}" class="select2"></select></div><!--
+    --><div class="form-element"><select data-bind="value: filterOrg, optionsCaption: 'Filter by organisation', options: authors, select2: { placeholder: 'Filter by organisation', allowClear: true}" class="select2"></select></div><!--
+    --><div class="form-btn"><a class="btn btn-search" href="">SEARCH</a></div>
   </form>
 </div>
 <div class="grid-description">
@@ -60,34 +56,120 @@ layout: mikes_layout
 {% include mikes_footer.html %}
 <div class="base-footer"></div>
 <script>
-  {{ site.posts | jsonify }}
+
+  ko.bindingHandlers.select2 = {
+      init: function(el, valueAccessor, allBindingsAccessor, viewModel) {
+        ko.utils.domNodeDisposal.addDisposeCallback(el, function() {
+          $(el).select2('destroy');
+        });
+
+        var allBindings = allBindingsAccessor(),
+            select2 = ko.utils.unwrapObservable(allBindings.select2);
+
+        $(el).select2(select2);
+      },
+      update: function (el, valueAccessor, allBindingsAccessor, viewModel) {
+          var allBindings = allBindingsAccessor();
+
+          if ("value" in allBindings) {
+              if ((allBindings.select2.multiple || el.multiple) && allBindings.value().constructor != Array) {
+                  $(el).val(allBindings.value().split(',')).trigger('change');
+              }
+              else {
+                  $(el).val(allBindings.value()).trigger('change');
+              }
+          } else if ("selectedOptions" in allBindings) {
+              var converted = [];
+              var textAccessor = function(value) { return value; };
+              if ("optionsText" in allBindings) {
+                  textAccessor = function(value) {
+                      var valueAccessor = function (item) { return item; }
+                      if ("optionsValue" in allBindings) {
+                          valueAccessor = function (item) { return item[allBindings.optionsValue]; }
+                      }
+                      var items = $.grep(allBindings.options(), function (e) { return valueAccessor(e) == value});
+                      if (items.length == 0 || items.length > 1) {
+                          return "UNKNOWN";
+                      }
+                      return items[0][allBindings.optionsText];
+                  }
+              }
+              $.each(allBindings.selectedOptions(), function (key, value) {
+                  converted.push({id: value, text: textAccessor(value)});
+              });
+
+              $(el).select2("data", converted);
+          }
+      }
+  };
+
   var json = [
   {% for post in site.posts %}
       {
         "title"   : "{{ post.title }}",
         "author"  : "{{ post.author }}",
         "url"     : "{{ post.url | prepend: site.baseurl }}",
-        "img"     : "{{ post.imageurl }}"
+        "img"     : "{{ post.imageurl }}",
+        "tags"    : [{% for tag in post.tags %}"{{ tag }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}]
       } {% if forloop.last %}{% else %},{% endif %}
   {% endfor %}
   ]
 
+  function getQueryVariable(variable)
+  {
+         var query = window.location.search.substring(1);
+         var vars = query.split("&");
+         for (var i=0;i<vars.length;i++) {
+                 var pair = vars[i].split("=");
+                 if(pair[0] == variable){return pair[1];}
+         }
+         return(false);
+  }
+
   var AppViewModel = function(){
       var self = this;
+      /*
+        pagination will be done in blocks of 9
+      */
       var paginationAmount = 9;
       this.items = ko.observableArray(json);
       this.currentFilter = ko.observable();
       this.pageNumber = ko.observable(0);
+      this.tags = ko.observableArray([]);
+      this.authors = ko.observableArray([]);
+      this.filterTag = ko.observable();
+      this.filterOrg = ko.observable();
 
-      /*
-        pagination will be done in blocks of 9
-      */
+      _.each(json, function(row){
+          self.tags(_.uniq(self.tags().concat(row.tags)));
+          var authors = self.authors();
+          authors.push(row.author);
+          self.authors(_.uniq(authors));
+      });
+
+      this.tagFilters = ko.observableArray(_.map(this.tags(), function(x, i){
+          return {name: x, id: i}
+      }));
 
       this.filteredItems = ko.computed(function() {
+          var possibleItems = self.items();
+
+          if(self.filterTag()){
+              possibleItems = _.filter(possibleItems, function(x){
+                  return x.tags.indexOf(self.filterTag()) != -1;
+              });
+          }
+
+          if(self.filterOrg()){
+              possibleItems = _.filter(possibleItems, function(x){
+                  return x.tags.indexOf(self.filterOrg()) != -1;
+              });
+          }
+
           if(!self.currentFilter() || !self.currentFilter().length){
-              return self.items();
+              return possibleItems;
           } else {
-              return ko.utils.arrayFilter(self.items(), function(prod) {
+              return ko.utils.arrayFilter(possibleItems, function(prod) {
                   return prod.title.toLowerCase().indexOf(self.currentFilter().toLowerCase()) !== -1
               });
           }
