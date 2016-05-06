@@ -15,6 +15,7 @@ date: <%= @datestring %>
 description: "<%= @usage[0..500] %>"
 imageurl: <%= @imageurl %>
 external_link: <%= @url %>
+order: <%= @order %>
 tags:
 <% @tags.each do | tag | %>
   - <%= tag %>
@@ -31,7 +32,7 @@ end
 
 class Project
 
-  def initialize(name, url, usage, impact, orgname, orgdescription, datasets, imageurl, tags)
+  def initialize(name, url, usage, impact, orgname, orgdescription, datasets, imageurl, tags, order)
     @name           = name
     @url            = url
     @usage          = usage
@@ -43,6 +44,7 @@ class Project
     @datestring     = @date.strftime("%d-%m-%Y %H:%M +0000")
     @imageurl       = imageurl
     @tags           = tags.split ','
+    @order          = order
   end
 
   def slug
@@ -64,6 +66,7 @@ task :transform do
       'impact',
       'orgname', 'orgdescription',
       'datasets', 'imageurl', 'tags',
+      'order'
     ]
     CSV.foreach('exported.data.csv', :headers => true) do |row|
       rowhash = row.to_hash
@@ -80,7 +83,8 @@ task :transform do
         rowhash["What does your organization do?"],
         rowhash["Datasets"],
         rowhash["Is there an image that represents your project?"],
-        rowhash["Tags"]
+        rowhash["Tags"],
+        rowhash["Order"]
       ]
     end
   end
@@ -100,7 +104,8 @@ task :generate do
       rowhash['usage'], rowhash['impact'],
       rowhash['orgname'],
       rowhash['orgdescription'],
-      rowhash['datasets'], rowhash['imageurl'], rowhash['tags']
+      rowhash['datasets'], rowhash['imageurl'], rowhash['tags'],
+      rowhash['order']
     )
 
     puts project.slug

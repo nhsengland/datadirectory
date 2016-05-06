@@ -9,7 +9,7 @@ Using open data, this report charts where, when and which GP practices across En
 
 The report is based on the analysis of open datasets from the Health and Social Care Information Centre, demographic data, as well as qualitative and quantitative research. "
 datasets: "* [Prescribing data ](http://www.hscic.gov.uk/gpprescribingdata) is from the monthly files published by the HSCIC"
-date: 06-05-2016 12:33 +0000
+date: 06-05-2016 12:40 +0000
 description: "The report looks at early adoption of promising new ideas across primary care in England and argues that analysing open data can help public services gain a greater understanding of their take up of innovations.
 
 Key findings
@@ -18,6 +18,7 @@ No single group of GP practices were serial early adopters of all the innovation
 Larger GP practices are in a better position to explore and introduce new innovations, while neighb"
 imageurl: http://www.nesta.org.uk/sites/default/files/styles/timeline_360/public/innovation_in_public_services_infographic.jpg?itok=MeYbA2Zk
 external_link: http://www.nesta.org.uk/publications/which-doctors-take-promising-ideas-new-insights-open-data
+order: 2
 tags:
 
   - ons
