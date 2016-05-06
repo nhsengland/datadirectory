@@ -3,15 +3,15 @@
   <head>
     <link rel="stylesheet" href="/datadirectory/css/main.css">
 <!-- used for the remote -->
+
 <link rel="stylesheet" href="/directory/css/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.css">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/uk.js"></script>
-<script src="/directory/assets/js/modernizr.js"></script>
+<script src="/datadirectory/assets/js/modernizr.js"></script>
 <link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
@@ -209,6 +209,42 @@
          return(false);
   }
 
+  function locationWrapper(variable, toSet){
+      // doesn't deal with multiple results of the same key in the
+      // url because this can't happen in this app
+      var windowArray = window.location.search.substring(1).split("&");
+      var windowDict = {};
+
+      _.each(windowArray, function(queryStringBit){
+          var pair = queryStringBit.split("=");
+
+          if(pair[0].length){
+              windowDict[pair[0]] = decodeURIComponent(pair[1]);
+          }
+      });
+
+      if(toSet){
+          windowDict[variable] = encodeURIComponent(toSet);
+          var newQueryString = "?"
+          _.each(windowDict, function(v, k){
+              newQueryString = newQueryString + k + "=" + v + "&"
+          });
+
+          newQueryString = newQueryString.substring(0, newQueryString.length - 1);
+          debugger;
+
+          if (Modernizr.history){
+              history.replaceState({}, "NHS England", newQueryString);
+          }
+          else{
+              window.location.search = newQueryString;
+          }
+      }
+      else{
+          return windowDict[variable];
+      }
+  }
+
   var AppViewModel = function(){
       var self = this;
       /*
@@ -220,8 +256,16 @@
       this.pageNumber = ko.observable(0);
       this.tags = ko.observableArray([]);
       this.authors = ko.observableArray([]);
-      this.filterTag = ko.observable(getQueryVariable("tag"));
-      this.filterOrg = ko.observable(getQueryVariable("org"));
+      this.filterTag = ko.observable(locationWrapper("tag"));
+      this.filterOrg = ko.observable(locationWrapper("org"));
+
+      this.filterTag.subscribe(function(newValue){
+          locationWrapper("tag", newValue);
+      });
+
+      this.filterOrg.subscribe(function(newValue){
+          locationWrapper("org", newValue);
+      });
 
       _.each(json, function(row){
           self.tags(_.uniq(self.tags().concat(row.tags)));

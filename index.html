@@ -124,6 +124,42 @@ layout: nhse_default
          return(false);
   }
 
+  function locationWrapper(variable, toSet){
+      // doesn't deal with multiple results of the same key in the
+      // url because this can't happen in this app
+      var windowArray = window.location.search.substring(1).split("&");
+      var windowDict = {};
+
+      _.each(windowArray, function(queryStringBit){
+          var pair = queryStringBit.split("=");
+
+          if(pair[0].length){
+              windowDict[pair[0]] = decodeURIComponent(pair[1]);
+          }
+      });
+
+      if(toSet){
+          windowDict[variable] = encodeURIComponent(toSet);
+          var newQueryString = "?"
+          _.each(windowDict, function(v, k){
+              newQueryString = newQueryString + k + "=" + v + "&"
+          });
+
+          newQueryString = newQueryString.substring(0, newQueryString.length - 1);
+          debugger;
+
+          if (Modernizr.history){
+              history.replaceState({}, "NHS England", newQueryString);
+          }
+          else{
+              window.location.search = newQueryString;
+          }
+      }
+      else{
+          return windowDict[variable];
+      }
+  }
+
   var AppViewModel = function(){
       var self = this;
       /*
@@ -135,8 +171,16 @@ layout: nhse_default
       this.pageNumber = ko.observable(0);
       this.tags = ko.observableArray([]);
       this.authors = ko.observableArray([]);
-      this.filterTag = ko.observable(getQueryVariable("tag"));
-      this.filterOrg = ko.observable(getQueryVariable("org"));
+      this.filterTag = ko.observable(locationWrapper("tag"));
+      this.filterOrg = ko.observable(locationWrapper("org"));
+
+      this.filterTag.subscribe(function(newValue){
+          locationWrapper("tag", newValue);
+      });
+
+      this.filterOrg.subscribe(function(newValue){
+          locationWrapper("org", newValue);
+      });
 
       _.each(json, function(row){
           self.tags(_.uniq(self.tags().concat(row.tags)));
