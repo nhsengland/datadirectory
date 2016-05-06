@@ -14,16 +14,16 @@ layout: nhse_default
     </div>
     <div class="tags-header">
       <div class="grid">
-        <div data-bind="foreach: tags" class="grid__item three-quarters">
+        <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
         <a class="tag" data-bind="attr: {href: url}, text: name"></a>
-        </div><div class="grid__item one-quarter">
+      </div><div class="grid__item one-quarter palm--one-half align-right">
           <a href="{{ page.external_link }}" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
         </div>
       </div>
     </div>
     <div class="main-body">
       <div class="grid">
-        <div class="grid__item two-thirds">
+        <div class="grid__item two-thirds palm--one-whole">
           <h4>Introduction</h4>
           <p>
           {{ page.description | markdownify }}
@@ -40,7 +40,7 @@ layout: nhse_default
             {{ page.datasets | markdownify }}
           </p>
           {% endif %}
-        </div><div class="grid__item one-third page-side-bar">
+        </div><div class="grid__item one-third palm--one-whole page-side-bar">
           <img src="{{ page.imageurl }}">
           <h5>More about {{ page.author }}</h5>
           {{ page.orgdescription }}

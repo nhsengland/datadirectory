@@ -48,4 +48,12 @@ h1{
     font-weight: 300;
     margin-top: 5px;
     padding-bottom: 40px;
+
+    @include grid-media-query(palm) {
+        font-size: 30px;
+    }
+}
+
+.align-right{
+    text-align: right;
 }

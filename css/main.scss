@@ -37,6 +37,13 @@ $light-grey: #CCC;
 $outline: rgb(198, 211, 220);
 $input-colour: #4E555A;
 
+$breakpoints: (
+    'palm' '(max-width: 680px)',
+    'lap' '(min-width: 680px) and (max-width: 1023px)',
+    'portable' '(max-width: 1023px)',
+    'desk' '(min-width: 1024px)'
+);
+
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
@@ -48,11 +55,11 @@ $input-colour: #4E555A;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "css-wizardry-grids",
         "mixins",
         "normalize",
         "base",
         "syntax-highlighting",
-        "css-wizardry-grids",
         "pages",
         "forms"
 ;

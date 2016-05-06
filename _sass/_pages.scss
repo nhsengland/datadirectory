@@ -1,8 +1,20 @@
 .banner-link, .banner-link:hover{
    @include link-colour($white);
    text-decoration: none;
+   font-size: 21px;
+
+   @include grid-media-query(palm) {
+      font-size: 14px;
+   }
 }
 
+body #zenbox_tab{
+    top: 40%;
+
+    @include grid-media-query(portable) {
+        display: none !important;
+    }
+}
 
 .inner-container{
     margin-left: auto;
