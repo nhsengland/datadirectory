@@ -235,11 +235,12 @@
          return(false);
   }
 
-  function locationWrapper(variable, toSet){
+  function locationWrapper(variable, update, toSet){
       // doesn't deal with multiple results of the same key in the
       // url because this can't happen in this app
       var windowArray = window.location.search.substring(1).split("&");
       var windowDict = {};
+      var newQueryString;
 
       _.each(windowArray, function(queryStringBit){
           var pair = queryStringBit.split("=");
@@ -249,17 +250,25 @@
           }
       });
 
-      if(toSet){
+      if(update){
           windowDict[variable] = encodeURIComponent(toSet);
-          var newQueryString = "?"
-          _.each(windowDict, function(v, k){
-              newQueryString = newQueryString + k + "=" + v + "&"
-          });
 
-          newQueryString = newQueryString.substring(0, newQueryString.length - 1);
-          debugger;
+          if(_.size(windowDict) === 1 && !toSet){
+            newQueryString = "";
+          }
+          else{
+            newQueryString = "?"
+            _.each(windowDict, function(v, k){
+                newQueryString = newQueryString + k + "=" + v + "&"
+            });
+
+            newQueryString = newQueryString.substring(0, newQueryString.length - 1);
+          }
 
           if (Modernizr.history){
+              if(!newQueryString.length){
+                  newQueryString = location.href.split("?")[0];
+              }
               history.replaceState({}, "NHS England", newQueryString);
           }
           else{
@@ -286,11 +295,11 @@
       this.filterOrg = ko.observable(locationWrapper("org"));
 
       this.filterTag.subscribe(function(newValue){
-          locationWrapper("tag", newValue);
+          locationWrapper("tag", true, newValue);
       });
 
       this.filterOrg.subscribe(function(newValue){
-          locationWrapper("org", newValue);
+          locationWrapper("org", true, newValue);
       });
 
       _.each(json, function(row){
