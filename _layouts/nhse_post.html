@@ -34,10 +34,12 @@ layout: nhse_default
               {{ page.impact }}
             </p>
           {% endif %}
+          {% if page.datasets != "" %}
           <h4>Datasets Used</h4>
           <p>
             {{ page.datasets | markdownify }}
           </p>
+          {% endif %}
         </div><div class="grid__item one-third page-side-bar">
           <img src="{{ page.imageurl }}">
           <h5>More about {{ page.author }}</h5>
