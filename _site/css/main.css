@@ -1252,6 +1252,8 @@ h2 {
   padding-bottom: 30px; }
   .footer p {
     margin-bottom: 0; }
+  .footer .btn {
+    margin-top: 10px; }
 
 .base-footer {
   background-color: #0072c6;

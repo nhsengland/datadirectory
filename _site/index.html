@@ -376,17 +376,17 @@
       <i class="icon download"></i>
       <p><b>Download Data</b></p>
       <p>Get all of the information on this site as Open Data</p>
-      <a class="" href="https://data.england.nhs/dataset/datadirectory">Download</a>
+      <a href="https://data.england.nhs/dataset/datadirectory" class="btn btn-primary">Download</a>
     </div><div class="grid__item desk--one-third text-centre">
       <i class="icon feedback"></i>
       <p><b>Give us feedback</b></p>
       <p>Got ideas or suggestions? <br />Get in touch<p/>
-      <a class="">Feedback</a>
+      <a href="" id="feedback" class="btn btn-primary">Feedback</a>
     </div><div class="grid__item desk--one-third text-centre">
       <i class="icon submit"></i>
       <p><b>Submit your project</b></p>
       <p>Have you worked on a relevant project? Let us know</p>
-      <a href="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform" target="_blank">Submit</a>
+      <a href="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform" class="btn btn-primary" target="_blank">Submit</a>
     </div>
   </div>
 </div>
@@ -416,6 +416,44 @@
     </div>
   </div>
 </div>
+<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+<style type="text/css" media="screen, projection">
+  @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+</style>
+<script type="text/javascript">
+  if (typeof(Zenbox) !== "undefined") {
+  Zenbox.init({
+  dropboxID:   "20263731",
+  url:         "https://nhse.zendesk.com",
+  tabTooltip:  "Feedback",
+  tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_feedback.png",
+  tabColor:    "#A00054",
+  tabPosition: "Left"
+  });
+  var zenbox = document.getElementById("zenbox_tab");
+  zenbox.setAttribute('data-intro', 'Click the "Feedback" tab to tell us your thoughts, report bugs and request features.');
+  zenbox.setAttribute('data-position', 'right');
+  }
+</script>
+<script>
+  $("#feedback").click(function(){
+      window.Zenbox.show();
+      $("#zenbox_body").css("height", 400);
+  });
+</script>
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-51757615-1', 'england.nhs.uk');
+      ga('send', 'pageview');
+    </script>
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/jquery.min.js"></script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/fanstatic/base/:version:2015-03-25T08:33:17.30/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/related-item.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script>
 
   </body>
 </html>
