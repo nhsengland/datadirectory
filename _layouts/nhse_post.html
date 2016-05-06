@@ -17,7 +17,7 @@ layout: nhse_default
         <div data-bind="foreach: tags" class="grid__item three-quarters">
         <a class="tag" data-bind="attr: {href: url}, text: name"></a>
         </div><div class="grid__item one-quarter">
-          <a href="" class="btn btn-primary">FIND OUT MORE</a>
+          <a href="{{ page.external_link }}" class="btn btn-primary">FIND OUT MORE</a>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@ layout: nhse_default
           {% endif %}
           <h4>Datasets Used</h4>
           <p>
-            {{ page.datasets }}
+            {{ page.datasets | markdownify }}
           </p>
         </div><div class="grid__item one-third page-side-bar">
           <img src="{{ page.imageurl }}">
