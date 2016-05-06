@@ -26,12 +26,12 @@ layout: nhse_default
         <div class="grid__item two-thirds">
           <h4>Introduction</h4>
           <p>
-          {{ page.description }}
+          {{ page.description | markdownify }}
           </p>
           {% if page.impact != "" %}
             <h4>Impact</h4>
             <p>
-              {{ page.impact }}
+              {{ page.impact | markdownify }}
             </p>
           {% endif %}
           <h4>Datasets Used</h4>
