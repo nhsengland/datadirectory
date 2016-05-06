@@ -218,7 +218,8 @@ h1 {
   font-family: Sini, sans-serif;
   text-transform: uppercase;
   text-align: center;
-  font-size: 48px;
+  font-size: 46px;
+  font-weight: 300;
   margin-top: 5px;
   padding-bottom: 40px; }
 
@@ -891,7 +892,7 @@ h1 {
   .desk--one-fifth, .desk--two-tenths {
     width: 20%; }
 
-  .desk--two-fifths, .desk--four-tenths {
+  .desk--two-fifths, .desk--four-tenths, .form-element {
     width: 40%; }
 
   .desk--three-fifths, .desk--six-tenths {
@@ -930,7 +931,7 @@ h1 {
   .desk--one-tenth, .form-btn {
     width: 10%; }
 
-  .desk--three-tenths, .form-element {
+  .desk--three-tenths {
     width: 30%; }
 
   .desk--seven-tenths {
