@@ -4,7 +4,9 @@ Open Prescribing ,https://openprescribing.net/,"Every month, the NHS in England 
 We have set out to create interesting, innovative, live, impactful projects using academic and health data. We publish academic papers. But we think academics should collaborate outside academia, and work with data in ways that go beyond static PDFs in academic journals.
 
 We are based in the Centre for Evidence-Based Medicine, in the Nuffield Department of Primary Care Health Sciences, in the University of Oxford.","* [Prescribing data ](http://www.hscic.gov.uk/gpprescribingdata) is from the monthly files published by the HSCIC
+
 * [Practice list sizes](https://apps.nhsbsa.nhs.uk/infosystems/welcome) are from the NHS Business Service Authority's Information Portal.
+
 * [BNF Codes](https://apps.nhsbsa.nhs.uk/infosystems/welcome) are from the NHS Business Service Authority's Information Portal.",https://ebmdatalab.net/images/portfolio/openprescribing.png,"ons,nhs england,hscic,prescribing"
 Prescribing Analytics,http://www.prescribinganalytics.com/,"We combined raw prescription data with expert guidance from qualified doctors and medical researchers, cross-checked against NICE guidelines and other best practice, to develop reasonable assumptions about where prescribing choices may be driving excess spending. We investigated statins as the first area to look at, since the guidance is generally straightforward in that area and well-documented: in almost all cases, generic simvastatin is the recommended best-value option, and is enormously cheaper than branded alternatives.
 
