@@ -14,6 +14,7 @@ datasets: "<%= @datasets %>"
 date: <%= @datestring %>
 description: "<%= @usage[0..500] %>"
 imageurl: <%= @imageurl %>
+external_link: <%= @url %>
 tags:
 <% @tags.each do | tag | %>
   - <%= tag %>
@@ -77,7 +78,7 @@ task :transform do
         rowhash["What was the impact of your project?"],
         rowhash["What is the name of your organization?"],
         rowhash["What does your organization do?"],
-        rowhash["What datasets did you use in your project? (Please include links if possible)"],
+        rowhash["Datasets"],
         rowhash["Is there an image that represents your project?"],
         rowhash["Tags"]
       ]
