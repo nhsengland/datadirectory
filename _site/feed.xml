@@ -4,10 +4,10 @@
     <title>NHS England Open Data Directory</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://yourdomain.com/datadirectory//</link>
-    <atom:link href="http://yourdomain.com/datadirectory//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 06 May 2016 13:46:02 +0100</pubDate>
-    <lastBuildDate>Fri, 06 May 2016 13:46:02 +0100</lastBuildDate>
+    <link>http://yourdomain.com/datadirectory/</link>
+    <atom:link href="http://yourdomain.com/datadirectory/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 09 May 2016 15:49:13 +0100</pubDate>
+    <lastBuildDate>Mon, 09 May 2016 15:49:13 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -15,8 +15,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/why-children-die.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/why-children-die.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/why-children-die.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/why-children-die.html</guid>
         
         <category>child mortality</category>
         
@@ -30,8 +30,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/which-doctors-take-up-promising-ideas.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/which-doctors-take-up-promising-ideas.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/which-doctors-take-up-promising-ideas.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/which-doctors-take-up-promising-ideas.html</guid>
         
         <category>ons</category>
         
@@ -49,8 +49,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/prescribing-analytics.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/prescribing-analytics.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/prescribing-analytics.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/prescribing-analytics.html</guid>
         
         <category>ons</category>
         
@@ -68,8 +68,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/parkinsons-disease-measurement.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/parkinsons-disease-measurement.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/parkinsons-disease-measurement.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/parkinsons-disease-measurement.html</guid>
         
         <category>parkinsons</category>
         
@@ -85,8 +85,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/open-prescribing.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/open-prescribing.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/open-prescribing.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/open-prescribing.html</guid>
         
         <category>ons</category>
         
@@ -104,8 +104,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/mapping-english-gp-prescribing-data.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/mapping-english-gp-prescribing-data.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/mapping-english-gp-prescribing-data.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/mapping-english-gp-prescribing-data.html</guid>
         
         <category>prescribing</category>
         
@@ -117,8 +117,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/living-a-long-life.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/living-a-long-life.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/living-a-long-life.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/living-a-long-life.html</guid>
         
         <category>mental health</category>
         
@@ -130,8 +130,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/health-maps-wales.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/health-maps-wales.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/health-maps-wales.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/health-maps-wales.html</guid>
         
         <category>wales</category>
         
@@ -147,8 +147,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/gp-prescribing-in-2014-constituency-statistics.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/gp-prescribing-in-2014-constituency-statistics.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/gp-prescribing-in-2014-constituency-statistics.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/gp-prescribing-in-2014-constituency-statistics.html</guid>
         
         <category>prescribing</category>
         
@@ -160,8 +160,8 @@
         <description>
 </description>
         <pubDate>Fri, 06 May 2016 13:40:00 +0100</pubDate>
-        <link>http://yourdomain.com/datadirectory//2016/05/06/clinical-calculator-api.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/datadirectory//2016/05/06/clinical-calculator-api.html</guid>
+        <link>http://yourdomain.com/datadirectory/2016/05/06/clinical-calculator-api.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/05/06/clinical-calculator-api.html</guid>
         
         <category>api</category>
         
