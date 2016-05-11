@@ -76,14 +76,14 @@
   </div>
 </div>
 <div class="grid-description">
-  <div data-bind="if: displayedItems().length === items().length" class="grid-description-title">Showing all <span data-bind="text: filteredItems().length"></span> projects</div>
-  <div data-bind="if: displayedItems().length !== items().length" class="grid-description-title">Showing <span data-bind="text: displayedItems().length"></span> out of <span data-bind="text: items().length"></span>  projects</div>
+  <div data-bind="if: filteredItems().length === items.length" class="grid-description-title">Showing all <span data-bind="text: filteredItems().length"></span> projects</div>
+  <div data-bind="if: filteredItems().length !== items.length" class="grid-description-title">Showing <span data-bind="text: filteredItems().length"></span> out of <span data-bind="text: items.length"></span>  projects</div>
   <hr class="left">
   <hr class="right">
 </div>
 <div class="main-container">
   <div class="project-grid-outer-container">
-    <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
+    <div data-bind="foreach: filteredItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
         <div class="bg" data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }"></div>
         <div class="project-element-text">
           <p class="org-name" data-bind="text: author" ></p>
@@ -109,6 +109,30 @@
   </nav>
 </div>
 <script>
+
+  ko.extenders.fadeWrapper = function(target) {
+      //create a writable computed observable to intercept writes to our observable
+      var result = ko.pureComputed({
+          read: target,  //always return the original observables value
+          write: function(newValue) {
+              var $container = $(".project-grid-outer-container");
+              if(!$container.css("opacity") == "0"){
+                $container.css("opacity", 0);
+                $container.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+                    // code to execute after transition ends
+                    target(newValue);
+                    $container.css("opacity", 1);
+                });
+              }
+          }
+      });
+
+      //initialize with current value to make sure it is rounded appropriately
+      result(target());
+
+      //return the new computed observable
+      return result;
+  };
 
   if(!Modernizr.touch){
     ko.bindingHandlers.select2 = {
@@ -317,7 +341,10 @@
           }
       }
       else{
-          return windowDict[variable];
+          var result = windowDict[variable];
+            if(result !== "undefined"){
+              return result;
+          }
       }
   }
 
@@ -327,8 +354,7 @@
         pagination will be done in blocks of 9
       */
       var paginationAmount = 9;
-      this.items = ko.observableArray(json);
-      this.currentFilter = ko.observable();
+      this.items = json;
       this.pageNumber = ko.observable(0);
       this.tags = ko.observableArray([]);
       this.authors = ko.observableArray([]);
@@ -343,6 +369,14 @@
           locationWrapper("org", true, newValue);
       });
 
+      this.fadeOut = function(){
+          $(".main-container").fadeOut();
+      }
+
+      this.fadeIn = function(){
+          $(".main-container").fadeOut(function(){ $(".main-container").fadeIn(); });
+      }
+
       _.each(json, function(row){
           self.tags(_.uniq(self.tags().concat(row.tags)));
           var authors = self.authors();
@@ -354,37 +388,42 @@
           return {name: x, id: i}
       }));
 
-      this.filteredItems = ko.computed(function() {
-          var possibleItems = self.items();
+      this.filteredItems = ko.observableArray().extend({ fadeWrapper: true });
 
-          if(self.filterTag()){
+      this.filteredItemsSubscription = ko.computed(function() {
+          var possibleItems = self.items.slice();
+          var filterOrg = self.filterOrg();
+          var filterTag = self.filterTag();
+
+          if(filterTag){
               possibleItems = _.filter(possibleItems, function(x){
-                  return x.tags.indexOf(self.filterTag()) != -1;
+                  return x.tags.indexOf(filterTag) != -1;
               });
           }
 
-          if(self.filterOrg()){
+          if(filterOrg){
               possibleItems = _.filter(possibleItems, function(x){
-                  return x.author === self.filterOrg();
+                  return x.author === filterOrg;
               });
           }
+          return possibleItems;
+      });
 
-          if(!self.currentFilter() || !self.currentFilter().length){
-              return possibleItems;
-          } else {
-              return ko.utils.arrayFilter(possibleItems, function(prod) {
-                  return prod.title.toLowerCase().indexOf(self.currentFilter().toLowerCase()) !== -1
-              });
-          }
+      this.paginatedItems = ko.computed(function(){
+        var a = self.pageNumber()*paginationAmount;
+        return self.filteredItemsSubscription().slice(a, a + paginationAmount)
+      });
+
+      this.filteredItems = ko.observableArray().extend({ fadeWrapper: true });
+
+      this.filteredItems(this.paginatedItems());
+
+      this.paginatedItems.subscribe(function(x){
+            self.filteredItems(x);
       });
 
       this.numPages = ko.computed(function(){
-          return Math.ceil(self.filteredItems().length/paginationAmount);
-      });
-
-      this.displayedItems = ko.computed(function(){
-          var a = self.pageNumber()*paginationAmount;
-          return self.filteredItems().slice(a, a + paginationAmount)
+          return Math.ceil(self.filteredItemsSubscription().length/paginationAmount);
       });
 
       this.pagesArray = ko.computed(function(){ return new Array(self.numPages()) });

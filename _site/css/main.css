@@ -1025,6 +1025,17 @@ body #zenbox_tab {
 .no-svg .logo {
   background-image: url("/datadirectory/assets/imgs/logo-white.png"); }
 
+.project-grid-outer-container {
+  -webkit-transition: all 0.3s ease;
+  /* Safari and Chrome */
+  -moz-transition: all 0.3s ease;
+  /* Firefox */
+  -ms-transition: all 0.3s ease;
+  /* IE 9 */
+  -o-transition: all 0.3s ease;
+  /* Opera */
+  transition: all 0.3s ease; }
+
 .org-name {
   font-size: 10px;
   line-height: 12px;

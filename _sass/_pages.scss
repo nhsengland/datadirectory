@@ -51,7 +51,12 @@ body #zenbox_tab{
     background-image: url("/datadirectory/assets/imgs/logo-white.png");
 }
 
-.project-grid-inner-container{
+.project-grid-outer-container{
+    -webkit-transition: all 0.3s ease; /* Safari and Chrome */
+    -moz-transition: all 0.3s ease; /* Firefox */
+    -ms-transition: all 0.3s ease; /* IE 9 */
+    -o-transition: all 0.3s ease; /* Opera */
+    transition: all 0.3s ease;
 }
 
 .org-name{
@@ -227,6 +232,7 @@ h2{
 
 .main-container{
     @extend .inner-container;
+
 }
 
 .title-highlight{
