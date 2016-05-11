@@ -92,7 +92,7 @@ body #zenbox_tab{
         width: 100%;
         margin: 0;
         padding: 0;
-        border-top: 1px solid #DDE2E5;
+        border-top: 1px solid $rule-colour;
         border-bottom: none;
     }
 }
@@ -205,15 +205,16 @@ h2{
 
 .post-header{
       a, h5{
-        color: rgb(0, 173, 198);
+        color: $nhs-aqua-blue;
         text-align: center;
         font-weight: 200;
+        margin: -14px 0 24px;
       }
 }
 
 .tags-header{
-    border-top: 1px solid $outline;
-    border-bottom: 1px solid $outline;
+    border-top: 1px solid $rule-colour;
+    border-bottom: 1px solid $rule-colour;
     padding-top: 14px;
     padding-bottom: 14px;
     margin-bottom: 30px;
@@ -254,10 +255,10 @@ h2{
 
 .tag{
   @include button-spacing;
-  background-color: lighten(desaturate($outline, 5%), 5%);
+  background-color: $light-blue;
 
   &:hover{
-    background-color: desaturate($outline, 5%);
+    background-color: darken($light-blue, 5%);
   }
   margin-right: 10px;
   font-weight: 400;
@@ -273,7 +274,7 @@ h2{
   margin: 0px;
   @include button-spacing;
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 0 12px;
   background-color: $secondary-colour;
   letter-spacing: 1px;
   @include link-colour($white);
