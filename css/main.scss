@@ -31,10 +31,11 @@ $white: #FFF;
 $border-radius: 5px;
 $background-colour: $white;
 $line-height: 30px;
-$light-blue: lighten(#0072c6, 55%);
-$green-blue: adjust-hue($primary-colour, -15%);
-$light-grey: #CCC;
-$outline: rgb(198, 211, 220);
+$light-blue: #E7F1F8;
+$green-blue: #00adc6;
+$light-grey: #CFD5D9;
+$outline: #C6D3DC;
+$rule-colour: #DDE2E5;
 $input-colour: #4E555A;
 
 $breakpoints: (
