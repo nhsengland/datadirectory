@@ -57,3 +57,21 @@ h1{
 .align-right{
     text-align: right;
 }
+
+a:link, a:visited {
+    color: $primary-colour;
+    text-decoration: underline;
+}
+
+a.banner-link:link, a.banner-link:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:focus, a:active, a:hover {
+    text-decoration: none;
+}
+
+.main-content ul, .main-content ol {
+    margin-left: 1em;
+}

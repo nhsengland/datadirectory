@@ -1,10 +1,12 @@
 .banner-link, .banner-link:hover{
    @include link-colour($white);
    text-decoration: none;
-   font-size: 21px;
+   font-size: 22px;
+   line-height: 1;
 
    @include grid-media-query(palm) {
-      font-size: 14px;
+      font-size: 16px;
+      line-height: 1;
    }
 }
 
@@ -54,7 +56,7 @@ body #zenbox_tab{
 
 .org-name{
       font-size: 10px;
-      line-height: 6px;
+      line-height: 12px;
       color: $white;
       text-transform: uppercase;
       margin-bottom: 0;
@@ -62,6 +64,7 @@ body #zenbox_tab{
 
 .project-name{
       font-size: 14px;
+      line-height: 1;
       color: $white;
       margin-bottom: 0;
 }
@@ -69,8 +72,8 @@ body #zenbox_tab{
 .grid-description{
     position: relative;
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 24px;
+    margin-top: 24px;
     .grid-description-title{
         font-size: 18px;
         z-index: 20;
@@ -89,7 +92,7 @@ body #zenbox_tab{
         width: 100%;
         margin: 0;
         padding: 0;
-        border-top: 1px solid $outline;
+        border-top: 1px solid $rule-colour;
         border-bottom: none;
     }
 }
@@ -144,19 +147,19 @@ body #zenbox_tab{
 }
 
 .project-element-outer-container:nth-child(4n) .project-element-text{
-    background-color: adjust-hue($primary-colour, 5%);
+    background-color: $primary-colour;
 }
 
 .project-element-outer-container:nth-child(4n+1) .project-element-text{
-    background-color: adjust-hue($primary-colour, 15%);
+    background-color: $nhs-light-blue;
 }
 
 .project-element-outer-container:nth-child(4n+2) .project-element-text{
-    background-color: $green-blue;
+    background-color: $nhs-aqua-blue;
 }
 
 .project-element-outer-container:nth-child(4n+3) .project-element-text{
-    background-color: darken($primary-colour, 10%);
+    background-color: $nhs-dark-blue;
 }
 
 .top-banner{
@@ -176,8 +179,13 @@ h1{
     padding-bottom: 40px;
 }
 
+.top-banner h1 {
+   padding: 8px 0 42px;
+}
+
 h2{
     font-family: Sini, sans-serif;
+    font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     font-size: 48px;
@@ -198,15 +206,16 @@ h2{
 
 .post-header{
       a, h5{
-        color: rgb(0, 173, 198);
+        color: $nhs-aqua-blue;
         text-align: center;
         font-weight: 200;
+        margin: -14px 0 24px;
       }
 }
 
 .tags-header{
-    border-top: 1px solid $outline;
-    border-bottom: 1px solid $outline;
+    border-top: 1px solid $rule-colour;
+    border-bottom: 1px solid $rule-colour;
     padding-top: 14px;
     padding-bottom: 14px;
     margin-bottom: 30px;
@@ -232,7 +241,7 @@ h2{
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 83px;
     content: " ";
     z-index: -1;
     @include gradient;
@@ -247,10 +256,10 @@ h2{
 
 .tag{
   @include button-spacing;
-  background-color: lighten(desaturate($outline, 5%), 5%);
+  background-color: $light-blue;
 
   &:hover{
-    background-color: desaturate($outline, 5%);
+    background-color: darken($light-blue, 5%);
   }
   margin-right: 10px;
   font-weight: 400;
@@ -266,7 +275,7 @@ h2{
   margin: 0px;
   @include button-spacing;
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 0 12px;
   background-color: $secondary-colour;
   letter-spacing: 1px;
   @include link-colour($white);
@@ -292,9 +301,8 @@ h2{
 .footer{
     background-color: $light-blue;
     min-height: 100px;
-    padding-top: 30px;
+    padding: 40px 0 52px;
     margin-top: 30px;
-    padding-bottom: 30px;
 
     p{
       margin-bottom: 0;
@@ -312,12 +320,12 @@ h2{
     padding-bottom: 30px;
     width: 100%;
     color: $white;
-    font-size: $base-font-size;
+    font-size: 16px;
 
     h5{
       font-weight: 600;
       text-transform: capitalize;
-      font-size: $base-font-size;
+      font-size: 16px;
     }
 
     a{
@@ -333,9 +341,13 @@ h2{
         margin-left: 5px;
         margin-right: 5px;
     }
+    
+    #legal {
+       padding-top: 24px;
+    }
 
     .small-links{
-        font-size: $base-font-size * 0.8;
+        font-size: 14px;
         margin-bottom: 80px;
     }
 }
@@ -383,7 +395,11 @@ i.feedback{
 }
 
 .main-pagination{
+   padding: 24px 0 36px
+   
     li{
+        font-size: 14px;
+        font-weight: bold;
         list-style: none;
         display: inline-block;
         margin-left: 2.5px;
@@ -391,7 +407,7 @@ i.feedback{
         cursor: pointer;
     }
     li a{
-        padding: 6px 12px;
+        padding: 6px 10px;
         background-color: $background-colour;
         color: $primary-colour;
         text-decoration: none;
