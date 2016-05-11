@@ -147,19 +147,19 @@ body #zenbox_tab{
 }
 
 .project-element-outer-container:nth-child(4n) .project-element-text{
-    background-color: adjust-hue($primary-colour, 5%);
+    background-color: $primary-colour;
 }
 
 .project-element-outer-container:nth-child(4n+1) .project-element-text{
-    background-color: adjust-hue($primary-colour, 15%);
+    background-color: $nhs-light-blue;
 }
 
 .project-element-outer-container:nth-child(4n+2) .project-element-text{
-    background-color: $green-blue;
+    background-color: $nhs-aqua-blue;
 }
 
 .project-element-outer-container:nth-child(4n+3) .project-element-text{
-    background-color: darken($primary-colour, 10%);
+    background-color: $nhs-dark-blue;
 }
 
 .top-banner{
