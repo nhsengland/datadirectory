@@ -341,7 +341,7 @@ h2{
         margin-left: 5px;
         margin-right: 5px;
     }
-    
+
     #legal {
        padding-top: 24px;
     }
@@ -394,9 +394,13 @@ i.feedback{
     background-image: url("/datadirectory/assets/imgs/icon-feedback-purple.png");
 }
 
+
 .main-pagination{
-   padding: 24px 0 36px
-   
+
+    ul {
+       padding: 24px 0 36px
+    }
+
     li{
         font-size: 14px;
         font-weight: bold;
