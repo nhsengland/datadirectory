@@ -86,8 +86,8 @@
     <div data-bind="foreach: displayedItems" class="project-grid-inner-container grid"><div class="project-element-outer-container"><a data-bind="attr: { href: url }" class="project-element">
         <div class="bg" data-bind="style: { backgroundImage: 'url(\'' + img + '\')' }"></div>
         <div class="project-element-text">
-          <p class="org-name" data-bind="text: title" ></p>
-          <p class="project-name" data-bind="text: author" ></p>
+          <p class="org-name" data-bind="text: author" ></p>
+          <p class="project-name" data-bind="text: title" ></p>
         </div>
     </a></div></div>
   </div>
@@ -95,7 +95,7 @@
   <nav data-bind="if: $root.numPages() > 1" style="text-align: center">
     <ul class="main-pagination">
         <li>
-            <a href="#" data-bind="click: function(){ pageNumber(pageNumber() - 1)}, css: {disabled: pageNumber() === 0}">previous</a>
+            <a href="#" data-bind="click: function(){ pageNumber(pageNumber() - 1)}, css: {disabled: pageNumber() === 0}">Previous</a>
         </li>
         <!-- ko foreach: pagesArray -->
         <li><a href="#" data-bind="click: function(){ $root.pageNumber($index()) }, css: {active: $index() === $root.pageNumber()}">
@@ -103,7 +103,7 @@
         </a></li>
         <!-- /ko -->
         <li>
-            <a href="#" data-bind="click: function(){ pageNumber(pageNumber() + 1)}, css: {disabled: pageNumber() === ($root.pagesArray().length - 1)}">next</a>
+            <a href="#" data-bind="click: function(){ pageNumber(pageNumber() + 1)}, css: {disabled: pageNumber() === ($root.pagesArray().length - 1)}">Next</a>
         </li>
     </ul>
   </nav>

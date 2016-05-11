@@ -62,7 +62,12 @@ a:link, a:visited {
     color: $primary-colour;
     text-decoration: underline;
 }
-    
+
+a.banner-link:link, a.banner-link:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
 a:focus, a:active, a:hover {
     text-decoration: none;
 }
