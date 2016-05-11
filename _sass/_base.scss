@@ -57,3 +57,12 @@ h1{
 .align-right{
     text-align: right;
 }
+
+a:link, a:visited {
+    color: $primary-colour;
+    text-decoration: underline;
+}
+    
+a:focus, a:active, a:hover {
+    text-decoration: none;
+}
