@@ -1025,7 +1025,7 @@ body #zenbox_tab {
 .no-svg .logo {
   background-image: url("/datadirectory/assets/imgs/logo-white.png"); }
 
-.project-grid-outer-container {
+.project-grid-inner-container {
   -webkit-transition: all 0.3s ease;
   /* Safari and Chrome */
   -moz-transition: all 0.3s ease;

@@ -76,8 +76,7 @@
   </div>
 </div>
 <div class="grid-description">
-  <div data-bind="if: filteredItems().length === items.length" class="grid-description-title">Showing all <span data-bind="text: filteredItems().length"></span> projects</div>
-  <div data-bind="if: filteredItems().length !== items.length" class="grid-description-title">Showing <span data-bind="text: filteredItems().length"></span> out of <span data-bind="text: items.length"></span>  projects</div>
+  <div class="grid-description-title" data-bind="text: display_title"></div>
   <hr class="left">
   <hr class="right">
 </div>
@@ -115,7 +114,7 @@
       var result = ko.pureComputed({
           read: target,  //always return the original observables value
           write: function(newValue) {
-              var $container = $(".project-grid-outer-container");
+              var $container = $(".project-grid-inner-container");
               if(!$container.css("opacity") == "0"){
                 $container.css("opacity", 0);
                 $container.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
@@ -384,10 +383,6 @@
           self.authors(_.uniq(authors));
       });
 
-      this.tagFilters = ko.observableArray(_.map(this.tags(), function(x, i){
-          return {name: x, id: i}
-      }));
-
       this.filteredItems = ko.observableArray().extend({ fadeWrapper: true });
 
       this.filteredItemsSubscription = ko.computed(function() {
@@ -417,6 +412,45 @@
       this.filteredItems = ko.observableArray().extend({ fadeWrapper: true });
 
       this.filteredItems(this.paginatedItems());
+
+      this.display_title = ko.computed(function(){
+           var getSubject = function(){
+            if(self.filterTag() && self.filterOrg()){
+                return self.filterTag() + " & " + self.filterOrg()
+            }
+            else{
+                var subject = self.filterOrg() || self.filterTag();
+                return subject;
+            }
+          }
+
+          var subject = getSubject();
+          var afterPagination = self.paginatedItems().length
+          var beforePagination = self.filteredItemsSubscription().length
+          var result;
+          var projects = " project";
+
+          if(afterPagination != 1){
+              projects = projects + "s"
+          }
+
+
+          if(!beforePagination){
+              result = "Sorry there are no projects"
+          }
+          else if(beforePagination === afterPagination){
+              result = "Showing all " + afterPagination + projects;
+          }
+          else{
+              result = "Showing " + afterPagination + " out of " + beforePagination + projects;
+          }
+
+          if(subject){
+              result = result + " for " + subject;
+          }
+
+          return result;
+      });
 
       this.paginatedItems.subscribe(function(x){
             self.filteredItems(x);
