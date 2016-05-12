@@ -263,8 +263,13 @@ h2{
 .tag{
   @include button-spacing;
   background-color: $light-blue;
+  
+  &:active, &:visited {
+    color: $text-colour;
+    text-decoration: none;  
+  }
 
-  &:hover{
+  &:hover, &:active, &:focus{
     background-color: darken($light-blue, 5%);
   }
   margin-right: 10px;
@@ -322,7 +327,7 @@ h2{
 .base-footer{
     background-color: $primary-colour;
     min-height: 200px;
-    padding-top: 30px;
+    padding-top: 36px;
     padding-bottom: 30px;
     width: 100%;
     color: $white;
@@ -402,11 +407,8 @@ i.feedback{
 
 
 .main-pagination{
-
-    ul {
-       padding: 24px 0 36px
-    }
-
+    padding: 24px 0 36px
+   
     li{
         font-size: 14px;
         font-weight: bold;
