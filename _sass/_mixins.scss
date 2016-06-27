@@ -30,6 +30,10 @@
   padding-left: 10px;
   padding-right : 10px;
   color: $input-colour;
+
+  &.error{
+    border-color: $error-colour;
+  }
 }
 
 @mixin button-spacing{

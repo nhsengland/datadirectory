@@ -108,7 +108,7 @@
   </nav>
 </div>
 <script>
-
+(function(){
   ko.extenders.fadeWrapper = function(target) {
       //create a writable computed observable to intercept writes to our observable
       var result = ko.pureComputed({
@@ -464,8 +464,8 @@
   }
 
   var mpv = new AppViewModel();
-  window.mpv = mpv;
   ko.applyBindings(mpv);
+}());
 </script>
 
     <div class="footer">
