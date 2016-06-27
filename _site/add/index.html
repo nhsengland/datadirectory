@@ -126,22 +126,21 @@
         </div>
         <div class="long-form">
           <label>
-            If your organization is a company, what is your company number?
+            If your organisation is a company, what is your company number?
             <small class="help-text">This lets us understand what kind of companies are using open health data</small>
-            <textarea data-bind="value: form.companyNumber"></textarea>
+            <input data-bind="value: form.companyNumber" type="text">
           </label>
         </div>
         <div class="long-form">
           <label>
-            How should we contact you?
+            <div class="required">How should we contact you?</div>
             <small class="help-text">Just in case we want to get in touch to find out more. An email would be super.</small>
-            <textarea data-bind="value: form.email"></textarea>
-          </label>
+            <input data-bind="value: form.email, css: {error: invalid.email}" type="text">
         </div>
         <div class="long-form">
           <label>
             Do you mind us publishing your contact details so people can get in touch with you about your project?
-            <input data-bind="value: form.contactable" type="checkbox">
+            <input data-bind="checked: form.contactable" type="checkbox">
           </label>
         </div>
         <div class="long-form">
@@ -165,9 +164,9 @@
 <script>
   (function(){
       var AppViewModel = function(){
-        var requiredFields = ["name", "how", "impact"];
+        var requiredFields = ["name", "how", "impact", "email"];
         var self = this;
-        this.form = {};
+        this.form = {contactable: false};
         this.invalid = {};
         this.errored = ko.observable(false);
 
@@ -199,15 +198,33 @@
            return isValid;
         }
 
+        var camelCaseToSpace = function(someStr){
+            return someStr.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })
+        }
+
         this.postForm = function(){
           if(self.isValid()){
             // post
-            var postDict = {};
-            _.each(self.form, function(v, k){
-                postDict["z_" + k] = ko.utils.unwrapObservable(v);
-            });
+            var postDict = {
+                z_name: ko.utils.unwrapObservable(self.form.name),
+                z_email: ko.utils.unwrapObservable(self.form.email),
+                z_subject: "Data directory form",
+            };
 
-            $.post('http://ohcucontakt.deadpansincerity.com/data-dictionary.php', postDict).then(
+            other_values = _.filter(self.form, function(v, k){
+                if(k === "name" || k === "email"){
+                   return false;
+                }
+                return true;
+            })
+
+            postDict.z_description = _.map(self.form, function(v, k){
+              if(k !== "name" && k !== "email"){
+                return(camelCaseToSpace(k) + ": " + ko.utils.unwrapObservable(v));
+              }
+            }).join("\n");
+
+            $.post('http://ohcucontakt.deadpansincerity.com/former.php', postDict).then(
               function(){ window.location.href = "/datadirectory" }
             )
             return false;
@@ -238,7 +255,7 @@
       <i class="icon submit"></i>
       <p><b>Submit your project</b></p>
       <p>Have you worked on a relevant project? Let us know</p>
-      <a href="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform" class="btn btn-primary" target="_blank">Submit</a>
+      <a href="/datadirectoryadd" class="btn btn-primary" target="_blank">Submit</a>
     </div>
   </div>
 </div>
