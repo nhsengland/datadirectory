@@ -1,3 +1,10 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 input::-webkit-input-placeholder {
   @include placeholder;
 }
@@ -67,4 +74,30 @@ select{
 
 input{
   @include form-element;
+}
+
+.long-form{
+  @extend .grid__item;
+  @extend .desk--two-thirds;
+  margin-top: 30px;
+
+  .help-text{
+    display: block;
+    color: lighten($text-colour, 20%);
+  }
+
+  textarea{
+    display: block;
+    @include form-element;
+    min-height: 100px;
+  }
+}
+
+.required::after{
+    content: "*";
+    color: $error-colour;
+}
+
+.error{
+  color: $error-colour;
 }

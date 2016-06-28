@@ -144,7 +144,7 @@
  * 4. Full-width unless told to behave otherwise.
  * 5. Required to combine fluid widths and fixed gutters.
  */
-.grid__item, .project-element-outer-container, .form-btn, .form-element {
+.grid__item, .project-element-outer-container, .form-btn, .form-element, .long-form {
   display: inline-block;
   /* [1] */
   padding-left: 24px;
@@ -167,7 +167,7 @@
 .grid--rev {
   direction: rtl;
   text-align: left; }
-  .grid--rev > .grid__item, .grid--rev > .project-element-outer-container, .grid--rev > .form-btn, .grid--rev > .form-element {
+  .grid--rev > .grid__item, .grid--rev > .project-element-outer-container, .grid--rev > .form-btn, .grid--rev > .form-element, .grid--rev > .long-form {
     direction: ltr;
     text-align: left; }
 
@@ -177,7 +177,7 @@
  */
 .grid--full {
   margin-left: 0; }
-  .grid--full > .grid__item, .grid--full > .project-element-outer-container, .grid--full > .form-btn, .grid--full > .form-element {
+  .grid--full > .grid__item, .grid--full > .project-element-outer-container, .grid--full > .form-btn, .grid--full > .form-element, .grid--full > .long-form {
     padding-left: 0; }
 
 /**
@@ -185,7 +185,7 @@
  */
 .grid--right {
   text-align: right; }
-  .grid--right > .grid__item, .grid--right > .project-element-outer-container, .grid--right > .form-btn, .grid--right > .form-element {
+  .grid--right > .grid__item, .grid--right > .project-element-outer-container, .grid--right > .form-btn, .grid--right > .form-element, .grid--right > .long-form {
     text-align: left; }
 
 /**
@@ -194,17 +194,17 @@
  */
 .grid--center {
   text-align: center; }
-  .grid--center > .grid__item, .grid--center > .project-element-outer-container, .grid--center > .form-btn, .grid--center > .form-element {
+  .grid--center > .grid__item, .grid--center > .project-element-outer-container, .grid--center > .form-btn, .grid--center > .form-element, .grid--center > .long-form {
     text-align: left; }
 
 /**
  * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
  * `.grid`.
  */
-.grid--middle > .grid__item, .grid--middle > .project-element-outer-container, .grid--middle > .form-btn, .grid--middle > .form-element {
+.grid--middle > .grid__item, .grid--middle > .project-element-outer-container, .grid--middle > .form-btn, .grid--middle > .form-element, .grid--middle > .long-form {
   vertical-align: middle; }
 
-.grid--bottom > .grid__item, .grid--bottom > .project-element-outer-container, .grid--bottom > .form-btn, .grid--bottom > .form-element {
+.grid--bottom > .grid__item, .grid--bottom > .project-element-outer-container, .grid--bottom > .form-btn, .grid--bottom > .form-element, .grid--bottom > .long-form {
   vertical-align: bottom; }
 
 /**
@@ -212,7 +212,7 @@
  */
 .grid--narrow {
   margin-left: -12px; }
-  .grid--narrow > .grid__item, .grid--narrow > .project-element-outer-container, .grid--narrow > .form-btn, .grid--narrow > .form-element {
+  .grid--narrow > .grid__item, .grid--narrow > .project-element-outer-container, .grid--narrow > .form-btn, .grid--narrow > .form-element, .grid--narrow > .long-form {
     padding-left: 12px; }
 
 /**
@@ -220,7 +220,7 @@
  */
 .grid--wide {
   margin-left: -48px; }
-  .grid--wide > .grid__item, .grid--wide > .project-element-outer-container, .grid--wide > .form-btn, .grid--wide > .form-element {
+  .grid--wide > .grid__item, .grid--wide > .project-element-outer-container, .grid--wide > .form-btn, .grid--wide > .form-element, .grid--wide > .long-form {
     padding-left: 48px; }
 
 /*------------------------------------*\
@@ -650,7 +650,7 @@
   .desk--one-third, .desk--two-sixths, .desk--four-twelfths, .project-element-outer-container {
     width: 33.333%; }
 
-  .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
+  .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths, .long-form {
     width: 66.666%; }
 
   /**
@@ -1283,6 +1283,10 @@ h2 {
     text-decoration: none; }
   .btn:hover {
     background-color: #870047; }
+  .btn.btn-lg {
+    padding: 0 24px;
+    font-size: 14px;
+    height: 40px; }
 
 .btn-primary {
   height: 30px; }
@@ -1396,6 +1400,12 @@ i.feedback {
 .main-pagination li a.disabled {
   color: #CFD5D9; }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
 input::-webkit-input-placeholder {
   font-weight: normal;
   font-size: 14px;
@@ -1437,6 +1447,8 @@ body .select2-container--default .select2-search--dropdown .select2-search__fiel
   padding-right: 10px;
   color: #4E555A;
   background: linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0; }
+  body .select2-container--default .select2-search--dropdown .select2-search__field.error {
+    border-color: #D30C08; }
 body .select2-container--default .select2-selection--single .select2-selection__arrow {
   top: 4px; }
 body .select2-selection.select2-selection--single {
@@ -1452,6 +1464,8 @@ body .select2-selection.select2-selection--single {
   font-size: 14px;
   letter-spacing: 0px;
   color: #9B9B9B; }
+  body .select2-selection.select2-selection--single.error {
+    border-color: #D30C08; }
 body .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding-top: 3px;
   color: #4E555A; }
@@ -1480,6 +1494,8 @@ select {
   padding-left: 10px;
   padding-right: 10px;
   color: #4E555A; }
+  select.error {
+    border-color: #D30C08; }
 
 input {
   border-radius: 5px;
@@ -1490,6 +1506,34 @@ input {
   padding-left: 10px;
   padding-right: 10px;
   color: #4E555A; }
+  input.error {
+    border-color: #D30C08; }
+
+.long-form {
+  margin-top: 30px; }
+  .long-form .help-text {
+    display: block;
+    color: #7e8890; }
+  .long-form textarea {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #C6D3DC;
+    background-color: #FFF;
+    height: 34.5px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #4E555A;
+    min-height: 100px; }
+    .long-form textarea.error {
+      border-color: #D30C08; }
+
+.required::after {
+  content: "*";
+  color: #D30C08; }
+
+.error {
+  color: #D30C08; }
 
 @font-face {
   font-family: Sini;

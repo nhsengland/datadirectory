@@ -108,7 +108,7 @@
   </nav>
 </div>
 <script>
-
+(function(){
   ko.extenders.fadeWrapper = function(target) {
       //create a writable computed observable to intercept writes to our observable
       var result = ko.pureComputed({
@@ -464,8 +464,8 @@
   }
 
   var mpv = new AppViewModel();
-  window.mpv = mpv;
   ko.applyBindings(mpv);
+}());
 </script>
 
     <div class="footer">
@@ -484,7 +484,7 @@
       <i class="icon submit"></i>
       <p><b>Submit your project</b></p>
       <p>Have you worked on a relevant project? Let us know</p>
-      <a href="https://docs.google.com/forms/d/1InfCEnXBVXJIf_29XxaS28t7jkfojYDGkb7-7_phDKs/viewform" class="btn btn-primary" target="_blank">Submit</a>
+      <a href="/datadirectory/add" class="btn btn-primary" target="_blank">Submit</a>
     </div>
   </div>
 </div>
