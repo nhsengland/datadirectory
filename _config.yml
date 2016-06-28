@@ -9,6 +9,7 @@ baseurl: "/datadirectory" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+exclude: [Rakefile, Gemfile, Gemfile.lock, README.md, vendor]
 
 # Build settings
 markdown: kramdown
