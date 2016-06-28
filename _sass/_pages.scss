@@ -294,6 +294,7 @@ h2{
     padding: 0 24px;
     font-size: 14px;
     height: 40px;
+    line-height: 38px;
   }
 }
 
@@ -450,4 +451,10 @@ i.feedback{
     li a.disabled{
         color: $light-grey;
     }
+}
+
+
+.success-btn{
+  margin-top: 27px;
+  margin-bottom: 100px;
 }
