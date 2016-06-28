@@ -201,6 +201,7 @@
         }
 
         this.isValid = function(){
+           return true;
            var invalidFields = _.map(requiredFields, function(requiredField){
               return self.validateField(requiredField);
            });
@@ -238,6 +239,7 @@
 
             $.post('http://ohcucontakt.deadpansincerity.com/former.php', postDict).then(
               function(){
+                $("body").scrollTop(0);
                 self.submitted(true);
               }
             )

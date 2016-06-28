@@ -147,6 +147,7 @@ layout: nhse_default
         }
 
         this.isValid = function(){
+           return true;
            var invalidFields = _.map(requiredFields, function(requiredField){
               return self.validateField(requiredField);
            });
@@ -184,6 +185,7 @@ layout: nhse_default
 
             $.post('http://ohcucontakt.deadpansincerity.com/former.php', postDict).then(
               function(){
+                $("body").scrollTop(0);
                 self.submitted(true);
               }
             )
