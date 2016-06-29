@@ -4,7 +4,7 @@ layout: nhse_default
 
 {% include top_banner.html %}
 <div class="outer-main-container">
-  <div class="main-container">
+  <div data-bind="ifnot: submitted" class="main-container">
     <h2>Open Health Data Usage</h2>
     <form data-bind="submit: postForm">
       <div class="grid">
@@ -79,8 +79,8 @@ layout: nhse_default
         </div>
         <div class="long-form">
           <label>
-            <div class="required">How should we contact you?</div>
-            <small class="help-text">Just in case we want to get in touch to find out more. An email would be super.</small>
+            <div class="required">What is your email address?</div>
+            <small class="help-text">Just in case we want to get in touch to find out more.</small>
             <input data-bind="value: form.email, css: {error: invalid.email}" type="text">
         </div>
         <div class="long-form">
@@ -106,6 +106,17 @@ layout: nhse_default
       </div>
     </div>
   </form>
+  </div>
+  <div data-bind="if: submitted" class="main-container">
+    <h2>Thank You!</h2>
+    <h4 class="text-centre">
+      We appreciate your input, we'll take a look and hopfully get in touch
+      with you soon
+    </h4>
+    <div class="grid text-centre">
+        <a href="{{ site.baseurl }}" class="btn btn-primary btn-lg success-btn">Back to the data directory</a>
+    </div>
+  </div>
 </div>
 <script>
   (function(){
@@ -115,6 +126,7 @@ layout: nhse_default
         this.form = {contactable: false};
         this.invalid = {};
         this.errored = ko.observable(false);
+        this.submitted = ko.observable(false);
 
         _.each(requiredFields, function(requiredField){
           self.form[requiredField] = ko.observable("");
@@ -135,6 +147,7 @@ layout: nhse_default
         }
 
         this.isValid = function(){
+           return true;
            var invalidFields = _.map(requiredFields, function(requiredField){
               return self.validateField(requiredField);
            });
@@ -171,7 +184,10 @@ layout: nhse_default
             }).join("\n");
 
             $.post('http://ohcucontakt.deadpansincerity.com/former.php', postDict).then(
-              function(){ window.location.href = "{{ site.baseurl }}" }
+              function(){
+                $("body").scrollTop(0);
+                self.submitted(true);
+              }
             )
             return false;
           }
@@ -180,7 +196,6 @@ layout: nhse_default
         }
       }
       var mpv = new AppViewModel();
-      window.mpv = mpv;
       ko.applyBindings(mpv);
   }());
 </script>
