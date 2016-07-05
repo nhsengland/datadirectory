@@ -237,7 +237,7 @@
               }
             }).join("\n");
 
-            $.post('http://datadirectorycontact.openhealthcare.org.uk/datadirectory.php', postDict).then(
+            $.post(//datadirectory/contact/index.php', postDict).then(
               function(){
                 $("body").scrollTop(0);
                 self.submitted(true);
