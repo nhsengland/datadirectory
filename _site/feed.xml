@@ -6,9 +6,169 @@
 </description>
     <link>http://yourdomain.com/datadirectory/</link>
     <atom:link href="http://yourdomain.com/datadirectory/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 05 Jul 2016 14:12:29 +0100</pubDate>
-    <lastBuildDate>Tue, 05 Jul 2016 14:12:29 +0100</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Tue, 05 Jul 2016 14:13:00 +0100</pubDate>
+    <lastBuildDate>Tue, 05 Jul 2016 14:13:00 +0100</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Why Children Die</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/why-children-die.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/why-children-die.html</guid>
+        
+        <category>child mortality</category>
+        
+        <category>ons</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Which doctors take up promising ideas?</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/which-doctors-take-up-promising-ideas.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/which-doctors-take-up-promising-ideas.html</guid>
+        
+        <category>ons</category>
+        
+        <category>nhs england</category>
+        
+        <category>hscic</category>
+        
+        <category>prescribing</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Student Data Labs</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/student-data-labs.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/student-data-labs.html</guid>
+        
+        <category>hscic</category>
+        
+        <category>diabetes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Prescribing Analytics</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/prescribing-analytics.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/prescribing-analytics.html</guid>
+        
+        <category>ons</category>
+        
+        <category>nhs england</category>
+        
+        <category>hscic</category>
+        
+        <category>prescribing</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Parkinson&#39;s Disease Measurement</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/parkinsons-disease-measurement.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/parkinsons-disease-measurement.html</guid>
+        
+        <category>parkinsons</category>
+        
+        <category>mapping</category>
+        
+        <category>prescribing</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Open Prescribing </title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/open-prescribing.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/open-prescribing.html</guid>
+        
+        <category>ons</category>
+        
+        <category>nhs england</category>
+        
+        <category>hscic</category>
+        
+        <category>prescribing</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mapping English GP prescribing data</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/mapping-english-gp-prescribing-data.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/mapping-english-gp-prescribing-data.html</guid>
+        
+        <category>prescribing</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Living a Long Life?</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/living-a-long-life.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/living-a-long-life.html</guid>
+        
+        <category>mental health</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Health Maps Wales</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/health-maps-wales.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/health-maps-wales.html</guid>
+        
+        <category>wales</category>
+        
+        <category>mortality</category>
+        
+        <category>cancer</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>GP Prescribing in 2014: Constituency Statistics</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Jul 2016 15:11:00 +0100</pubDate>
+        <link>http://yourdomain.com/datadirectory/2016/07/05/gp-prescribing-in-2014-constituency-statistics.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/datadirectory/2016/07/05/gp-prescribing-in-2014-constituency-statistics.html</guid>
+        
+        <category>prescribing</category>
+        
+        
+      </item>
     
   </channel>
 </rss>
