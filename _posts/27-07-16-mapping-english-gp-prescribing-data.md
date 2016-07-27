@@ -7,7 +7,7 @@ impact: "Results The spatial mapping demonstrates that several areas in England 
 
 Conclusions It is possible, using open source data, to use statistical methods to distinguish chance fluctuations in prescribing from genuine differences in prescribing rates. The results can be interactively mapped at a fine spatial resolution down to individual GP practices in England. This process could be automated and reported in real time. This can inform decision-making and could enable earlier detection of emergent phenomena."
 datasets: "* [Prescribing data ](http://www.hscic.gov.uk/gpprescribingdata) is from the monthly files published by the HSCIC"
-date: 05-07-2016 14:11 +0000
+date: 27-07-2016 12:06 +0000
 description: "Objective The aim of this paper was to show that easily interpretable maps of local and national prescribing data, available from open sources, can be used to demonstrate meaningful variations in prescribing performance.
 
 Design The prescription dispensing data from the National Health Service (NHS) Information Centre for the medications metformin hydrochloride and methylphenidate were compared with reported incidence data for the conditions, diabetes and attention deficit hyperactivity disorder,"
