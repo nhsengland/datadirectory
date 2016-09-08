@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
+  <title>Health Maps Wales</title>
+
 <meta name="description" content="Open Health Data Project Showcase">
 <meta name="keywords" content="Open data,open,data,nhs">
 <meta name="author" content="NHS England">
@@ -61,10 +64,10 @@
   <div class="main-container">
     <div class="post-header">
       <h2>
-        Student Data Labs
+        Health Maps Wales
       </h2>
       <h5>
-          <em>by</em> Student Data Labs
+          <em>by</em> NHS Wales Informatics Service Information Services
       </h5>
     </div>
     <div class="tags-header">
@@ -72,7 +75,7 @@
         <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
         <a class="tag" data-bind="attr: {href: url}, text: name"></a>
       </div><div class="grid__item one-quarter palm--one-half align-right">
-          <a href="http://studentdatalabs.com/" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
+          <a href="http://www.infoandstats.wales.nhs.uk/page.cfm?orgid=869&pid=40976" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
         </div>
       </div>
     </div>
@@ -80,27 +83,22 @@
       <div class="grid">
         <div class="grid__item two-thirds palm--one-whole">
           <h4>Introduction</h4>
-          <p>In February Student Data Labs ran a Health Innovation Lab as part of the Leeds Digital Festival at the Leeds Institute for Data Analytics. The aim here was to teach practical data science skills whilst tackling Type 2 Diabetes in Leeds. Open health data and Leeds-based organisations like the Health and Social Care Information Centre (HSCIC), who have one of the largest repositories of open data in Europe, were integral to the success of the Lab. We are very lucky to be based in a city that is at</p>
-
-          
-            <h4>Impact</h4>
-            <p>Through the Health Innovation, university students were given the opportunity to learn real world data skills and do some good along the way. The practical nature of the Labs enabled university students from all backgrounds to get involved with civic data projects. Some of these data projects went on to become more long-term. For example, one of our practical exercises involved using open prescription data to forecast demand for Diabetes medication across the city. Another mapped the prevalence of Diabetes at CCG level in England.
-The Health Innovation Lab saw Student Data Labs collaborate with a variety of amazing organisations in the region from digital innovation agencies like mHealth Habitat to Leeds Data Mill, the HSCIC and Leeds Beckett. Our ultimate aim is to create social impact with the data projects and we’re working with dynamic and innovative organisations to try and make this happen.</p>
+          <p>Health Maps Wales is an interactive tool that can be used to explore a variety of health indicators grouped under broad categories, such as cancer, common procedures and causes of injury. The maps allow the user to explore data at their geographic area of choice (where available), to look at trends and to compare areas against a Wales comparison figure. Indicators are available at Middle Super Output Area (MSOA), Upper Super Output Area (USOA), Unitary Authority (UA) and Local Health Board (LHB) </p>
 
           
           
         </div><div class="grid__item one-third palm--one-whole page-side-bar">
-          <img src="https://studentdatalabs.files.wordpress.com/2016/01/newlogo4.png?w=138&h=138">
-          <h5>More about Student Data Labs</h5>
-          Based in Leeds and established in November 2015, Student Data Labs envisions a future where more university students can gain highly sought-after data skills that prepare them for entering the labour market upon graduation. The Labs run free data-driven Innovation Labs that offer a collaborative space for students from a variety of academic backgrounds to undertake real-world data projects - learning practical and highly employable skills whilst working on civic problems. Our Data Lab Volunteers are given the chance to learn about open source tools like R as well as the data science process from asking questions of open data through to exploration, modelling and data visualisation.
-We have held two successful events at the Leeds Institute for Data Analytics: a Health Innovation Lab and a Vision Zero Innovation Lab. The first focused on tackling Type 2 Diabetes and the second explored how to reduce the number of road fatalities to zero in Leeds. Student Data Labs is highly collaborative and interdisciplinary - we bring professionals and students from a diverse set of backgrounds together to tackle wicked problems in the city. 
+          <img src="http://www.infoandstats.wales.nhs.uk/documents/869/Health_Maps_Wales_logo_verysmall.png">
+          <h5>More about NHS Wales Informatics Service Information Services</h5>
+          The NHS Wales Informatics Service's Information Services Division (ISD) is responsible for the collection, management, and analysis of data held in a number of national databases, and the production and distribution of information derived from these databases. Specialist staff in the unit also provide advice in the fields of data standards and clinical coding.
+We manage and maintain some of the main NHS Wales national databases including those for secondary care, child health, births, deaths and the NHS Wales Administrative Register. The unit provides information services to support the requirements of NHS, Government and other Public Bodies, Researchers and the General Public.
         </div>
       </div>
     </div>
   </div>
 </div>
 <script>
-  var tagNames = ["hscic","diabetes"]
+  var tagNames = ["wales","mortality","cancer"]
   var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
   var tags = [];
 

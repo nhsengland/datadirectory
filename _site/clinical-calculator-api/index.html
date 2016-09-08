@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
 
-  <title>NHS England Data Directory</title>
+  <title>clinical calculator API</title>
 
 <meta name="description" content="Open Health Data Project Showcase">
 <meta name="keywords" content="Open data,open,data,nhs">
@@ -62,25 +62,59 @@
 
 <div class="outer-main-container">
   <div class="main-container">
-    <h2>About</h2>
-    <div class="grid">
-      <div class="grid__item desk--two-thirds">
-        <h4 id="purpose">Purpose</h4>
+    <div class="post-header">
+      <h2>
+        clinical calculator API
+      </h2>
+      <h5>
+          <em>by</em> openhealthhub CIC
+      </h5>
+    </div>
+    <div class="tags-header">
+      <div class="grid">
+        <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
+        <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+      </div><div class="grid__item one-quarter palm--one-half align-right">
+          <a href="https://github.com/open-health-hub/clinical_calculator_api" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="grid">
+        <div class="grid__item two-thirds palm--one-whole">
+          <h4>Introduction</h4>
+          <p>We created a REST API which conceals some of the complexity of open data, by removing some of the need to understand the document structure, geographical jargon, and clinical meaning of the raw open data, and enabling simple access to  relevant portions of the data.
+As an example, the open data on prevalence of obesity is available as a large Excel file from http://www.noo.org.uk/visualisation. It’s organised by region, by LSOA, and MSOA, and by electoral ward (geographical jargon). We felt that</p>
 
-<p>The goal of the Healthcare Open Data Directory is to enable people and organisations to publicise innovative examples of the reuse of open heath data.</p>
+          
+          
+          <h4>Datasets Used</h4>
+          <ul>
+  <li><a href="http://www.noo.org.uk/visualisation">MSOA NCMP child obesity prevalence</a> NCMP obesity prevalence data for Reception (age 4-5 years) and Year 6 (age 10-11 years) children.</li>
+</ul>
 
-<p>This information will enable detailed impact analyses of open health data in the UK and abroad and in turn grow the evidence base for further policy decisions, prioritisations and investments in datasets for re-use.</p>
-
-<h4 id="the-challenge">The Challenge</h4>
-
-<p>The key strength of open data is that it is freely available for any use and redistribution.  However, this openness also makes analysing and measuring the impacts of open data challenging.  There are some case studies that are frequently referred to but not always documented or collated in one place.  Essentially, we don’t have a way to record who uses what open healthcare data and the exciting impacts they achieve.</p>
-
-<p>The Healthcare Open Data Directory builds on pioneering analysis of organisations working with open data in the UK healthcare sector.  It will become a growing resource to promote and publicise the users of open data, their innovative products or methods, shine a spotlight on winners of key initiatives or awards, and enable them to better find one another to share experiences or to collaborate.</p>
-
+          
+        </div><div class="grid__item one-third palm--one-whole page-side-bar">
+          <img src="http://obesitychallenge.rewiredstate.org/webhook-uploads/1441207772961/cc.jpg">
+          <h5>More about openhealthhub CIC</h5>
+          open health stuff, sort of.
+        </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  var tagNames = ["api","obesity"]
+  var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
+  var tags = [];
+
+  _.each(tagNames, function(tagName, index){
+      tags.push({name: tagName, url: urls[index]});
+  });
+  var mpv = {tags: tags};
+  ko.applyBindings(mpv);
+  window.mpv = mpv;
+</script>
 
     <div class="footer">
   <div class="project-grid-outer-container">

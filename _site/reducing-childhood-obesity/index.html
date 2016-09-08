@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
+  <title>Reducing Childhood Obesity</title>
+
 <meta name="description" content="Open Health Data Project Showcase">
 <meta name="keywords" content="Open data,open,data,nhs">
 <meta name="author" content="NHS England">
@@ -61,10 +64,10 @@
   <div class="main-container">
     <div class="post-header">
       <h2>
-        Mapping English GP prescribing data
+        Reducing Childhood Obesity
       </h2>
       <h5>
-          <em>by</em> Dr Peter J Diggle
+          <em>by</em> Data Flock
       </h5>
     </div>
     <div class="tags-header">
@@ -72,7 +75,7 @@
         <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
         <a class="tag" data-bind="attr: {href: url}, text: name"></a>
       </div><div class="grid__item one-quarter palm--one-half align-right">
-          <a href="http://bmjopen.bmj.com/content/3/1/e001363.full" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
+          <a href="http://insights.dataflock.co.uk/138_wards_reducing_childhood_obesity/" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
         </div>
       </div>
     </div>
@@ -80,33 +83,36 @@
       <div class="grid">
         <div class="grid__item two-thirds palm--one-whole">
           <h4>Introduction</h4>
-          <p>Objective The aim of this paper was to show that easily interpretable maps of local and national prescribing data, available from open sources, can be used to demonstrate meaningful variations in prescribing performance.
-Design The prescription dispensing data from the National Health Service (NHS) Information Centre for the medications metformin hydrochloride and methylphenidate were compared with reported incidence data for the conditions, diabetes and attention deficit hyperactivity disorder,</p>
+          <p>We looked at data relating to Childhood Obesity, taking data from a range of sources to find trends in the data, with a final focus on Bradford. Looking at the national picture we found that only 138 wards out of 7,618 wards in England had reduced the levels of childhood obesity from when children start primary school to when they finish, aged 10/11.
+Looking at 2008/09 data when children start in reception class (aged 5) the average rate of obesity across the country is 9.323%. When the same chi</p>
 
           
             <h4>Impact</h4>
-            <p>Results The spatial mapping demonstrates that several areas in England have substantially and significantly higher spending per person on metformin and methyphenidate. North Kent and the Wirral have substantially and significantly higher spending per child on methyphenidate.
-Conclusions It is possible, using open source data, to use statistical methods to distinguish chance fluctuations in prescribing from genuine differences in prescribing rates. The results can be interactively mapped at a fine spatial resolution down to individual GP practices in England. This process could be automated and reported in real time. This can inform decision-making and could enable earlier detection of emergent phenomena.</p>
+            <p>We have increased awareness around the issues of Childhood Obesity in a hyper-local setting, enabling local CCG’s and Councils to understand the topic in more detail</p>
 
           
           
           <h4>Datasets Used</h4>
           <ul>
-  <li><a href="http://www.hscic.gov.uk/gpprescribingdata">Prescribing data </a> is from the monthly files published by the HSCIC</li>
+  <li><a href="https://www.noo.org.uk/data_sources/child/national_child_measurement_programme">Childhood obesity data</a></li>
+  <li><a href="http://digital.nhs.uk/qof-online">Adult obesity data</a></li>
+  <li><a href="https://www.gov.uk/government/organisations/department-for-education">GCSE results data</a></li>
+  <li><a href="https://www.ons.gov.uk">LSOA, Ward, and population estimates</a></li>
+  <li><a href="http://ratings.food.gov.uk">Takeaway restaurants</a></li>
 </ul>
 
           
         </div><div class="grid__item one-third palm--one-whole page-side-bar">
-          <img src="http://bmjopen.bmj.com/content/3/1/e001363/F7.medium.gif">
-          <h5>More about Dr Peter J Diggle</h5>
-          
+          <img src="http://insights.dataflock.co.uk/wp-content/uploads/sites/2/2016/09/Childhood_Obesity.jpeg">
+          <h5>More about Data Flock</h5>
+          Data Flock provide expert data insight for organisations and companies who want to use information to further their goals.
         </div>
       </div>
     </div>
   </div>
 </div>
 <script>
-  var tagNames = ["prescribing"]
+  var tagNames = ["obesity"]
   var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
   var tags = [];
 

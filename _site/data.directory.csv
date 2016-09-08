@@ -86,3 +86,29 @@ Student Data Labs,http://studentdatalabs.com/,"In February Student Data Labs ran
 The Health Innovation Lab saw Student Data Labs collaborate with a variety of amazing organisations in the region from digital innovation agencies like mHealth Habitat to Leeds Data Mill, the HSCIC and Leeds Beckett. Our ultimate aim is to create social impact with the data projects and we're working with dynamic and innovative organisations to try and make this happen.",Student Data Labs,"Based in Leeds and established in November 2015, Student Data Labs envisions a future where more university students can gain highly sought-after data skills that prepare them for entering the labour market upon graduation. The Labs run free data-driven Innovation Labs that offer a collaborative space for students from a variety of academic backgrounds to undertake real-world data projects - learning practical and highly employable skills whilst working on civic problems. Our Data Lab Volunteers are given the chance to learn about open source tools like R as well as the data science process from asking questions of open data through to exploration, modelling and data visualisation. 
 
 We have held two successful events at the Leeds Institute for Data Analytics: a Health Innovation Lab and a Vision Zero Innovation Lab. The first focused on tackling Type 2 Diabetes and the second explored how to reduce the number of road fatalities to zero in Leeds. Student Data Labs is highly collaborative and interdisciplinary - we bring professionals and students from a diverse set of backgrounds together to tackle wicked problems in the city. ",,https://studentdatalabs.files.wordpress.com/2016/01/newlogo4.png?w=138&h=138,"hscic,diabetes",
+The Diabetes Challenge,http://insights.dataflock.co.uk/diabetes-challenge/,"Looking at Type 2 Diabetes, we focussed our attention on the initial drugs given to patients when the initial diet change is not effective. These drugs are Metformin, Sulfonylureas, and “other drugs” and can be found in the Prescribing Data from NHS Digital.
+
+Our focus was on Bradford CCG's where we calculated that a potential £2.5m per year saving could be realised by prescribing excersize as an intervention before drugs. The excersize would take place at local council sports centres, generating £1m per year for the council in class fees. Our suggestion was to also include a practice nurse at the sports classes to not only help patients, but to also take regular readings from patients (fitbit, bloods, weight, etc) to feed back into the system.","The insight was well received by Bradford CCG's, and by the senior leadership team at Bradford Council and we are hoping to work closely to create a pilot project.",Data Flock,Data Flock provide expert data insight for organisations and companies who want to use information to further their goals.,"* [Prescribing data](http://digital.nhs.uk/gpprescribingdata)
+
+* CCG shapefiles
+
+* Ward shapefiles
+
+* LSOA to Ward lookups
+
+* GP Practice locations
+
+* Sports centre locations
+
+* National diabetes audit",http://www.dataflock.co.uk/wp-content/uploads/2016/09/Presentation.001-3.jpeg,"diabetes,prescribing",
+Reducing Childhood Obesity,http://insights.dataflock.co.uk/138_wards_reducing_childhood_obesity/,"We looked at data relating to Childhood Obesity, taking data from a range of sources to find trends in the data, with a final focus on Bradford. Looking at the national picture we found that only 138 wards out of 7,618 wards in England had reduced the levels of childhood obesity from when children start primary school to when they finish, aged 10/11.
+
+Looking at 2008/09 data when children start in reception class (aged 5) the average rate of obesity across the country is 9.323%. When the same children finish primary school in 2013/14 (aged 10/11), their average rate of obesity has risen to 17.969%. In Ilkeston central council ward, in Erewash Borough Council childhood obesity rose from 5% to 32.6% within 6 years. We found that this wasn't an anomaly as there were 68 other wards whose childhood obesity rates have increased by more than 400%.","We have increased awareness around the issues of Childhood Obesity in a hyper-local setting, enabling local CCG's and Councils to understand the topic in more detail",Data Flock,Data Flock provide expert data insight for organisations and companies who want to use information to further their goals.,"* [Childhood obesity data](https://www.noo.org.uk/data_sources/child/national_child_measurement_programme)
+
+* [Adult obesity data](http://digital.nhs.uk/qof-online)
+
+* [GCSE results data](https://www.gov.uk/government/organisations/department-for-education)
+
+* [LSOA, Ward, and population estimates](https://www.ons.gov.uk)
+
+* [Takeaway restaurants](http://ratings.food.gov.uk)",http://insights.dataflock.co.uk/wp-content/uploads/sites/2/2016/09/Childhood_Obesity.jpeg,obesity,

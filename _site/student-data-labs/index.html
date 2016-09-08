@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
 
-  <title>NHS England Data Directory</title>
+  <title>Student Data Labs</title>
 
 <meta name="description" content="Open Health Data Project Showcase">
 <meta name="keywords" content="Open data,open,data,nhs">
@@ -62,25 +62,58 @@
 
 <div class="outer-main-container">
   <div class="main-container">
-    <h2>About</h2>
-    <div class="grid">
-      <div class="grid__item desk--two-thirds">
-        <h4 id="purpose">Purpose</h4>
+    <div class="post-header">
+      <h2>
+        Student Data Labs
+      </h2>
+      <h5>
+          <em>by</em> Student Data Labs
+      </h5>
+    </div>
+    <div class="tags-header">
+      <div class="grid">
+        <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
+        <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+      </div><div class="grid__item one-quarter palm--one-half align-right">
+          <a href="http://studentdatalabs.com/" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="grid">
+        <div class="grid__item two-thirds palm--one-whole">
+          <h4>Introduction</h4>
+          <p>In February Student Data Labs ran a Health Innovation Lab as part of the Leeds Digital Festival at the Leeds Institute for Data Analytics. The aim here was to teach practical data science skills whilst tackling Type 2 Diabetes in Leeds. Open health data and Leeds-based organisations like the Health and Social Care Information Centre (HSCIC), who have one of the largest repositories of open data in Europe, were integral to the success of the Lab. We are very lucky to be based in a city that is at </p>
 
-<p>The goal of the Healthcare Open Data Directory is to enable people and organisations to publicise innovative examples of the reuse of open heath data.</p>
+          
+            <h4>Impact</h4>
+            <p>Through the Health Innovation, university students were given the opportunity to learn real world data skills and do some good along the way. The practical nature of the Labs enabled university students from all backgrounds to get involved with civic data projects. Some of these data projects went on to become more long-term. For example, one of our practical exercises involved using open prescription data to forecast demand for Diabetes medication across the city. Another mapped the prevalence of Diabetes at CCG level in England.
+The Health Innovation Lab saw Student Data Labs collaborate with a variety of amazing organisations in the region from digital innovation agencies like mHealth Habitat to Leeds Data Mill, the HSCIC and Leeds Beckett. Our ultimate aim is to create social impact with the data projects and we’re working with dynamic and innovative organisations to try and make this happen.</p>
 
-<p>This information will enable detailed impact analyses of open health data in the UK and abroad and in turn grow the evidence base for further policy decisions, prioritisations and investments in datasets for re-use.</p>
-
-<h4 id="the-challenge">The Challenge</h4>
-
-<p>The key strength of open data is that it is freely available for any use and redistribution.  However, this openness also makes analysing and measuring the impacts of open data challenging.  There are some case studies that are frequently referred to but not always documented or collated in one place.  Essentially, we don’t have a way to record who uses what open healthcare data and the exciting impacts they achieve.</p>
-
-<p>The Healthcare Open Data Directory builds on pioneering analysis of organisations working with open data in the UK healthcare sector.  It will become a growing resource to promote and publicise the users of open data, their innovative products or methods, shine a spotlight on winners of key initiatives or awards, and enable them to better find one another to share experiences or to collaborate.</p>
-
+          
+          
+        </div><div class="grid__item one-third palm--one-whole page-side-bar">
+          <img src="https://studentdatalabs.files.wordpress.com/2016/01/newlogo4.png?w=138&h=138">
+          <h5>More about Student Data Labs</h5>
+          Based in Leeds and established in November 2015, Student Data Labs envisions a future where more university students can gain highly sought-after data skills that prepare them for entering the labour market upon graduation. The Labs run free data-driven Innovation Labs that offer a collaborative space for students from a variety of academic backgrounds to undertake real-world data projects - learning practical and highly employable skills whilst working on civic problems. Our Data Lab Volunteers are given the chance to learn about open source tools like R as well as the data science process from asking questions of open data through to exploration, modelling and data visualisation.
+We have held two successful events at the Leeds Institute for Data Analytics: a Health Innovation Lab and a Vision Zero Innovation Lab. The first focused on tackling Type 2 Diabetes and the second explored how to reduce the number of road fatalities to zero in Leeds. Student Data Labs is highly collaborative and interdisciplinary - we bring professionals and students from a diverse set of backgrounds together to tackle wicked problems in the city. 
+        </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  var tagNames = ["hscic","diabetes"]
+  var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
+  var tags = [];
+
+  _.each(tagNames, function(tagName, index){
+      tags.push({name: tagName, url: urls[index]});
+  });
+  var mpv = {tags: tags};
+  ko.applyBindings(mpv);
+  window.mpv = mpv;
+</script>
 
     <div class="footer">
   <div class="project-grid-outer-container">

@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
+  <title>The Diabetes Challenge</title>
+
 <meta name="description" content="Open Health Data Project Showcase">
 <meta name="keywords" content="Open data,open,data,nhs">
 <meta name="author" content="NHS England">
@@ -61,10 +64,10 @@
   <div class="main-container">
     <div class="post-header">
       <h2>
-        clinical calculator API
+        The Diabetes Challenge
       </h2>
       <h5>
-          <em>by</em> openhealthhub CIC
+          <em>by</em> Data Flock
       </h5>
     </div>
     <div class="tags-header">
@@ -72,7 +75,7 @@
         <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
         <a class="tag" data-bind="attr: {href: url}, text: name"></a>
       </div><div class="grid__item one-quarter palm--one-half align-right">
-          <a href="https://github.com/open-health-hub/clinical_calculator_api" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
+          <a href="http://insights.dataflock.co.uk/diabetes-challenge/" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
         </div>
       </div>
     </div>
@@ -80,28 +83,38 @@
       <div class="grid">
         <div class="grid__item two-thirds palm--one-whole">
           <h4>Introduction</h4>
-          <p>We created a REST API which conceals some of the complexity of open data, by removing some of the need to understand the document structure, geographical jargon, and clinical meaning of the raw open data, and enabling simple access to  relevant portions of the data.
-As an example, the open data on prevalence of obesity is available as a large Excel file from http://www.noo.org.uk/visualisation. It’s organised by region, by LSOA, and MSOA, and by electoral ward (geographical jargon). We felt that</p>
+          <p>Looking at Type 2 Diabetes, we focussed our attention on the initial drugs given to patients when the initial diet change is not effective. These drugs are Metformin, Sulfonylureas, and “other drugs” and can be found in the Prescribing Data from NHS Digital.
+Our focus was on Bradford CCG’s where we calculated that a potential £2.5m per year saving could be realised by prescribing excersize as an intervention before drugs. The excersize would take place at local council sports centres, generating</p>
+
+          
+            <h4>Impact</h4>
+            <p>The insight was well received by Bradford CCG’s, and by the senior leadership team at Bradford Council and we are hoping to work closely to create a pilot project.</p>
 
           
           
           <h4>Datasets Used</h4>
           <ul>
-  <li><a href="http://www.noo.org.uk/visualisation">MSOA NCMP child obesity prevalence</a> NCMP obesity prevalence data for Reception (age 4-5 years) and Year 6 (age 10-11 years) children.</li>
+  <li><a href="http://digital.nhs.uk/gpprescribingdata">Prescribing data</a></li>
+  <li>CCG shapefiles</li>
+  <li>Ward shapefiles</li>
+  <li>LSOA to Ward lookups</li>
+  <li>GP Practice locations</li>
+  <li>Sports centre locations</li>
+  <li>National diabetes audit</li>
 </ul>
 
           
         </div><div class="grid__item one-third palm--one-whole page-side-bar">
-          <img src="http://obesitychallenge.rewiredstate.org/webhook-uploads/1441207772961/cc.jpg">
-          <h5>More about openhealthhub CIC</h5>
-          open health stuff, sort of.
+          <img src="http://www.dataflock.co.uk/wp-content/uploads/2016/09/Presentation.001-3.jpeg">
+          <h5>More about Data Flock</h5>
+          Data Flock provide expert data insight for organisations and companies who want to use information to further their goals.
         </div>
       </div>
     </div>
   </div>
 </div>
 <script>
-  var tagNames = ["api","obesity"]
+  var tagNames = ["diabetes","prescribing"]
   var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
   var tags = [];
 
