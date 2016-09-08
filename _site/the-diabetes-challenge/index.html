@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+  <title>The Diabetes Challenge</title>
+
+<meta name="description" content="Open Health Data Project Showcase">
+<meta name="keywords" content="Open data,open,data,nhs">
+<meta name="author" content="NHS England">
+
+<!-- Facebook -->
+<meta property="og:description" content="Revealing the products and projects using healthcare open data to make an impact"/>
+<meta property="og:url" content="data.england.nhs.uk/"/>
+<meta property="og:image" content="www.england.nhs.uk/wp-content/themes/nhsengland/templates/../assets/img/nhs-england-logo.png"/>
+<meta property="og:type" content="article or website or product"/>
+<meta property="og:site_name" content="Open Health Data Project Showcase"/>
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="Revealing the products and projects using healthcare open data to make an impact">
+<meta name="twitter:site" content="@NHSEngland">
+<meta name="twitter:title" content= "Open Health Data Project Showcase">
+<meta name="twitter:description" content="Revealing the products and projects using healthcare open data to make an impact">
+<meta name="twitter:creator" content="eg:author name">
+<meta name="twitter:image:src" content="http://www.england.nhs.uk/wp-content/themes/nhsengland/templates/../assets/img/nhs-england-logo.png">
+<meta name="twitter:domain" content="http://data.england.nhs.uk/">
+
+
+
+<link rel="stylesheet" href="/datadirectory/css/main.css">
+<!-- used for the remote -->
+
+<link rel="stylesheet" href="/directory/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/uk.js"></script>
+<script src="/datadirectory/assets/js/modernizr.js"></script>
+<link rel="stylesheet" type="text/css" href="https://data.england.nhs.uk/fanstatic/vendor/:version:2015-03-25T08:33:17.31/select2/select2.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <div class="top-banner">
+  <div class="inner-container">
+    <div class="grid">
+      <div class="grid__item one-third">
+        <a class="banner-link" href="/datadirectory">Open Health Data<br />Project Showcase</a>
+      </div><div class="grid__item one-third"></div><!--
+      --><div class="grid__item one-third" style="text-align: right">
+        <div class="logo"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer-main-container">
+  <div class="main-container">
+    <div class="post-header">
+      <h2>
+        The Diabetes Challenge
+      </h2>
+      <h5>
+          <em>by</em> Data Flock
+      </h5>
+    </div>
+    <div class="tags-header">
+      <div class="grid">
+        <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
+        <a class="tag" data-bind="attr: {href: url}, text: name"></a>
+      </div><div class="grid__item one-quarter palm--one-half align-right">
+          <a href="http://insights.dataflock.co.uk/diabetes-challenge/" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="grid">
+        <div class="grid__item two-thirds palm--one-whole">
+          <h4>Introduction</h4>
+          <p>Looking at Type 2 Diabetes, we focussed our attention on the initial drugs given to patients when the initial diet change is not effective. These drugs are Metformin, Sulfonylureas, and “other drugs” and can be found in the Prescribing Data from NHS Digital.
+Our focus was on Bradford CCG’s where we calculated that a potential £2.5m per year saving could be realised by prescribing excersize as an intervention before drugs. The excersize would take place at local council sports centres, generating</p>
+
+          
+            <h4>Impact</h4>
+            <p>The insight was well received by Bradford CCG’s, and by the senior leadership team at Bradford Council and we are hoping to work closely to create a pilot project.</p>
+
+          
+          
+          <h4>Datasets Used</h4>
+          <ul>
+  <li><a href="http://digital.nhs.uk/gpprescribingdata">Prescribing data</a></li>
+  <li>CCG shapefiles</li>
+  <li>Ward shapefiles</li>
+  <li>LSOA to Ward lookups</li>
+  <li>GP Practice locations</li>
+  <li>Sports centre locations</li>
+  <li>National diabetes audit</li>
+</ul>
+
+          
+        </div><div class="grid__item one-third palm--one-whole page-side-bar">
+          <img src="http://www.dataflock.co.uk/wp-content/uploads/2016/09/Presentation.001-3.jpeg">
+          <h5>More about Data Flock</h5>
+          Data Flock provide expert data insight for organisations and companies who want to use information to further their goals.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var tagNames = ["diabetes","prescribing"]
+  var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
+  var tags = [];
+
+  _.each(tagNames, function(tagName, index){
+      tags.push({name: tagName, url: urls[index]});
+  });
+  var mpv = {tags: tags};
+  ko.applyBindings(mpv);
+  window.mpv = mpv;
+</script>
+
+    <div class="footer">
+  <div class="project-grid-outer-container">
+    <div class="grid__item desk--one-third text-centre">
+      <i class="icon download"></i>
+      <p><b>Download Data</b></p>
+      <p>Get all of the information on this site as Open Data</p>
+      <a href="https://data.england.nhs/dataset/datadirectory" class="btn btn-primary">Download</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon feedback"></i>
+      <p><b>Give us feedback</b></p>
+      <p>Got ideas or suggestions? <br />Get in touch<p/>
+      <a href="" id="feedback" class="btn btn-primary">Feedback</a>
+    </div><div class="grid__item desk--one-third text-centre">
+      <i class="icon submit"></i>
+      <p><b>Submit your project</b></p>
+      <p>Have you worked on a relevant project? Let us know</p>
+      <a href="/datadirectory/add" class="btn btn-primary" >Submit</a>
+    </div>
+  </div>
+</div>
+<div class="base-footer">
+  <div class="project-grid-outer-container spaced">
+    <div class="grid">
+      <div class="grid__item palm--one-whole one-third">
+      <h5>pages</h5>
+      <a href="/datadirectory/">Home</a>
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      <a href="/datadirectory/about/">About this site</a>
+      </ul>
+      </div><div class="grid__item palm--one-whole one-third">
+        <h5>More</h5>
+        <a href="https://data.england.nhs.uk">Data Catalogue</a>
+        <i class="fa fa-circle" aria-hidden="true"></i>
+        <a href="https://github.com/nhsengland/datadirectory">Code on GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="project-grid-outer-container">
+    <div class="grid">
+      <div class="grid__item palm--one-whole one-third small-links">
+          <a href="http://www.england.nhs.uk/terms-and-conditions/">Terms & Conditions</a>
+          <i class="fa fa-circle" aria-hidden="true"></i><a href="https://www.england.nhs.uk/privacy-policy/">Privacy & Cookies</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+<style type="text/css" media="screen, projection">
+  @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+</style>
+<script type="text/javascript">
+  if (typeof(Zenbox) !== "undefined") {
+  Zenbox.init({
+  dropboxID:   "20263731",
+  url:         "https://nhse.zendesk.com",
+  tabTooltip:  "Feedback",
+  tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_feedback.png",
+  tabColor:    "#A00054",
+  tabPosition: "Left"
+  });
+  var zenbox = document.getElementById("zenbox_tab");
+  zenbox.setAttribute('data-intro', 'Click the "Feedback" tab to tell us your thoughts, report bugs and request features.');
+  zenbox.setAttribute('data-position', 'right');
+  }
+</script>
+<script>
+  $("#feedback").click(function(){
+      window.Zenbox.show();
+      $("#zenbox_body").css("height", 400);
+  });
+</script>
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-51757615-1', 'england.nhs.uk');
+      ga('send', 'pageview');
+    </script>
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/jquery.min.js"></script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2015-03-25T08:33:17.31/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/fanstatic/base/:version:2015-03-25T08:33:17.30/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/related-item.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script>
+
+  </body>
+</html>
