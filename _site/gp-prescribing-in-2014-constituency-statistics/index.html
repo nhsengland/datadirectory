@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
+  <title>GP Prescribing in 2014: Constituency Statistics</title>
+
 <meta name="description" content="Open Health Data Project Showcase">
 <meta name="keywords" content="Open data,open,data,nhs">
 <meta name="author" content="NHS England">
@@ -61,10 +64,10 @@
   <div class="main-container">
     <div class="post-header">
       <h2>
-        Parkinson's Disease Measurement
+        GP Prescribing in 2014: Constituency Statistics
       </h2>
       <h5>
-          <em>by</em> John Turner
+          <em>by</em> House of Commons Library
       </h5>
     </div>
     <div class="tags-header">
@@ -72,7 +75,7 @@
         <div data-bind="foreach: tags" class="grid__item three-quarters palm--one-half">
         <a class="tag" data-bind="attr: {href: url}, text: name"></a>
       </div><div class="grid__item one-quarter palm--one-half align-right">
-          <a href="http://www.parkinsonsmeasurement.org/Epidemiology/EnglandPrescription/prevalenceEngland1.htm#maps" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
+          <a href="http://researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7161" class="btn btn-primary" target="_blank">FIND OUT MORE</a>
         </div>
       </div>
     </div>
@@ -80,11 +83,7 @@
       <div class="grid">
         <div class="grid__item two-thirds palm--one-whole">
           <h4>Introduction</h4>
-          <p>This paper presents maps of the inferred relative prevalence of PD in England. The maps are based on data from publicly accessible data sets:
-* one that contains for each of the 10,000 GP practices in England the number of NHS prescriptions written for each drug in June 2012;
-* one that shows the post code of each practice;
-*one that shows the eastings and northings of each post code.
-The data does not explicitly mention PD, so we adopt a proxy measure. This is based on the observation that</p>
+          <p>Prescription rates for medicines and treatments provide one useful measure of the burden of illness and disease across the country. This note provides statistics on prescriptions by GP practices in England as a whole and local variation for individual drugs and treatments.</p>
 
           
           
@@ -95,16 +94,16 @@ The data does not explicitly mention PD, so we adopt a proxy measure. This is ba
 
           
         </div><div class="grid__item one-third palm--one-whole page-side-bar">
-          <img src="http://www.parkinsonsmeasurement.org/Epidemiology/EnglandPrescription/prevalenceEngland1_00_50_50_75_100_H500.gif">
-          <h5>More about John Turner</h5>
-          
+          <img src="http://researchbriefings.files.parliament.uk/documents/CBP-7161/assets/e5856cb0-9d90-4ffd-8b64-037125226dff.png">
+          <h5>More about House of Commons Library</h5>
+          The House of Commons Library provides research, analysis and information services for MPs and their staff.
         </div>
       </div>
     </div>
   </div>
 </div>
 <script>
-  var tagNames = ["parkinsons","mapping","prescribing"]
+  var tagNames = ["prescribing"]
   var urls = _.map(tagNames, function(tag){ return "/datadirectory/?tag=" + encodeURIComponent(tag)});
   var tags = [];
 

@@ -5,7 +5,7 @@ author: John Turner
 orgdescription: ""
 impact: ""
 datasets: "* [Prescribing data ](http://www.hscic.gov.uk/gpprescribingdata) is from the monthly files published by the HSCIC"
-date: 27-07-2016 12:06 +0000
+date: 08-09-2016 12:32 +0000
 description: "
 This paper presents maps of the inferred relative prevalence of PD in England. The maps are based on data from publicly accessible data sets:
 

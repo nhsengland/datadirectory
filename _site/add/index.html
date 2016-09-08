@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
+  <title>NHS England Data Directory</title>
+
 <meta name="description" content="Open Health Data Project Showcase">
 <meta name="keywords" content="Open data,open,data,nhs">
 <meta name="author" content="NHS England">
@@ -220,7 +223,7 @@
             // post
             var postDict = {
                 z_name: ko.utils.unwrapObservable(self.form.name),
-                z_email: ko.utils.unwrapObservable(self.form.email),
+                z_requester: ko.utils.unwrapObservable(self.form.email),
                 z_subject: "Data directory form",
             };
 
