@@ -17,7 +17,7 @@ datasets: "* [Prescribing data](http://digital.nhs.uk/gpprescribingdata)
 * Sports centre locations
 
 * National diabetes audit"
-date: 09-09-2016 14:17 +0000
+date: 04-11-2016 11:37 +0000
 description: "Looking at Type 2 Diabetes, we focussed our attention on the initial drugs given to patients when the initial diet change is not effective. These drugs are Metformin, Sulfonylureas, and “other drugs” and can be found in the Prescribing Data from NHS Digital.
 
 Our focus was on Bradford CCG's where we calculated that a potential £2.5m per year saving could be realised by prescribing excersize as an intervention before drugs. The excersize would take place at local council sports centres, generating £1m per year for the council in class fees. Our suggestion was to also include a practice nurse at the sports classes to not only help patients, but to also take regular readings from patients (fitbit, bloods, weight, etc) to feed back into the system."

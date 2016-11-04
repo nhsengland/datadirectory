@@ -13,9 +13,9 @@ datasets: "* [Prescribing data ](http://www.hscic.gov.uk/gpprescribingdata) is f
 * [Practice list sizes](https://apps.nhsbsa.nhs.uk/infosystems/welcome) are from the NHS Business Service Authority's Information Portal.
 
 * [BNF Codes](https://apps.nhsbsa.nhs.uk/infosystems/welcome) are from the NHS Business Service Authority's Information Portal."
-date: 09-09-2016 14:17 +0000
+date: 04-11-2016 11:37 +0000
 description: "Every month, the NHS in England publishes anonymised data about the drugs prescribed by GPs. But the raw data files are large and unwieldy, with more than 600 million rows. We're making it easier for GPs, managers and everyone to explore - supporting safer, more efficient prescribing."
-imageurl: https://ebmdatalab.net/images/portfolio/openprescribing.png
+imageurl: https://pbs.twimg.com/media/CqoX8t-WAAAuj-2.jpg
 external_link: https://openprescribing.net/
 order: 3
 tags:

@@ -9,7 +9,7 @@ impact: "Through the Health Innovation, university students were given the oppor
 
 The Health Innovation Lab saw Student Data Labs collaborate with a variety of amazing organisations in the region from digital innovation agencies like mHealth Habitat to Leeds Data Mill, the HSCIC and Leeds Beckett. Our ultimate aim is to create social impact with the data projects and we're working with dynamic and innovative organisations to try and make this happen."
 datasets: ""
-date: 09-09-2016 14:17 +0000
+date: 04-11-2016 11:37 +0000
 description: "In February Student Data Labs ran a Health Innovation Lab as part of the Leeds Digital Festival at the Leeds Institute for Data Analytics. The aim here was to teach practical data science skills whilst tackling Type 2 Diabetes in Leeds. Open health data and Leeds-based organisations like the Health and Social Care Information Centre (HSCIC), who have one of the largest repositories of open data in Europe, were integral to the success of the Lab. We are very lucky to be based in a city that is at the forefront of the open health data revolution. All of our projects made use of data that is open and freely available for anyone to download. For some university students, the Health Innovation Lab was the first time they had made use of open data. This provided us with the opportunity to demonstrate the huge potential of open health data for building innovative tools and discovering valuable insights that can potentially save lives."
 imageurl: https://studentdatalabs.files.wordpress.com/2016/01/newlogo4.png?w=138&h=138
 external_link: http://studentdatalabs.com/

@@ -91,7 +91,7 @@ No single group of GP practices were serial early adopters of all the innovation
             <h4>Impact</h4>
             <p>This report demonstrates a rising opportunity to inform practitioners and patients by making use of open data. Analysis of primary care open data shows the potential to chart GP surgeries’ uptake of promising innovations in technologies, drugs and practices.
 Using open data, this report charts where, when and which GP practices across England have taken-up promising innovations. As well as showing the varied uptake of certain proven drugs, technologies and practices by GP surgeries, the report explores how making use of open data can help people understand trends and differences in service within primary care, and inform patient and practitioner priorities and choices.
-The report is based on the analysis of open datasets from the Health and Social Care Information Centre, demographic data, as well as qualitative and quantitative research. </p>
+The report is based on the analysis of open datasets from the Health and Social Care Information Centre, demographic data, as well as qualitative and quantitative research.</p>
 
           
           
@@ -129,7 +129,7 @@ The report is based on the analysis of open datasets from the Health and Social 
       <i class="icon download"></i>
       <p><b>Download Data</b></p>
       <p>Get all of the information on this site as Open Data</p>
-      <a href="https://data.england.nhs/dataset/datadirectory" class="btn btn-primary">Download</a>
+      <a href="https://data.england.nhs.uk/dataset/data-directory" class="btn btn-primary">Download</a>
     </div><div class="grid__item desk--one-third text-centre">
       <i class="icon feedback"></i>
       <p><b>Give us feedback</b></p>
@@ -169,29 +169,15 @@ The report is based on the analysis of open datasets from the Health and Social 
     </div>
   </div>
 </div>
-<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
-<style type="text/css" media="screen, projection">
-  @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
-</style>
-<script type="text/javascript">
-  if (typeof(Zenbox) !== "undefined") {
-  Zenbox.init({
-  dropboxID:   "20263731",
-  url:         "https://nhse.zendesk.com",
-  tabTooltip:  "Feedback",
-  tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_feedback.png",
-  tabColor:    "#A00054",
-  tabPosition: "Left"
-  });
-  var zenbox = document.getElementById("zenbox_tab");
-  zenbox.setAttribute('data-intro', 'Click the "Feedback" tab to tell us your thoughts, report bugs and request features.');
-  zenbox.setAttribute('data-position', 'right');
-  }
-</script>
+<!-- Start of nhse Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","nhse.zendesk.com");
+/*]]>*/</script>
+<!-- End of nhse Zendesk Widget script -->
+
 <script>
-  $("#feedback").click(function(){
-      window.Zenbox.show();
-      $("#zenbox_body").css("height", 400);
+  $("#feedback").click(function(event){
+      event.preventDefault();
+      zE.activate();
   });
 </script>
 <script>

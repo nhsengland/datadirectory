@@ -5,4 +5,5 @@
 .DS_Store
 .bundle
 .project
-vedor
+vendor
+Gemfile.lock

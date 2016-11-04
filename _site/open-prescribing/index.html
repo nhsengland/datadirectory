@@ -96,7 +96,7 @@
 
           
         </div><div class="grid__item one-third palm--one-whole page-side-bar">
-          <img src="https://ebmdatalab.net/images/portfolio/openprescribing.png">
+          <img src="https://pbs.twimg.com/media/CqoX8t-WAAAuj-2.jpg">
           <h5>More about EBM DATA LAB</h5>
           The EBM Data Lab is a range of projects being designed and built by Dr Ben Goldacre and Anna Powell-Smith at the University of Oxford, with colleagues across the university and around the world.
 We have set out to create interesting, innovative, live, impactful projects using academic and health data. We publish academic papers. But we think academics should collaborate outside academia, and work with data in ways that go beyond static PDFs in academic journals.
@@ -125,7 +125,7 @@ We are based in the Centre for Evidence-Based Medicine, in the Nuffield Departme
       <i class="icon download"></i>
       <p><b>Download Data</b></p>
       <p>Get all of the information on this site as Open Data</p>
-      <a href="https://data.england.nhs/dataset/datadirectory" class="btn btn-primary">Download</a>
+      <a href="https://data.england.nhs.uk/dataset/data-directory" class="btn btn-primary">Download</a>
     </div><div class="grid__item desk--one-third text-centre">
       <i class="icon feedback"></i>
       <p><b>Give us feedback</b></p>
@@ -165,29 +165,15 @@ We are based in the Centre for Evidence-Based Medicine, in the Nuffield Departme
     </div>
   </div>
 </div>
-<script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
-<style type="text/css" media="screen, projection">
-  @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
-</style>
-<script type="text/javascript">
-  if (typeof(Zenbox) !== "undefined") {
-  Zenbox.init({
-  dropboxID:   "20263731",
-  url:         "https://nhse.zendesk.com",
-  tabTooltip:  "Feedback",
-  tabImageURL: "https://p3.zdassets.com/external/zenbox/images/tab_feedback.png",
-  tabColor:    "#A00054",
-  tabPosition: "Left"
-  });
-  var zenbox = document.getElementById("zenbox_tab");
-  zenbox.setAttribute('data-intro', 'Click the "Feedback" tab to tell us your thoughts, report bugs and request features.');
-  zenbox.setAttribute('data-position', 'right');
-  }
-</script>
+<!-- Start of nhse Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","nhse.zendesk.com");
+/*]]>*/</script>
+<!-- End of nhse Zendesk Widget script -->
+
 <script>
-  $("#feedback").click(function(){
-      window.Zenbox.show();
-      $("#zenbox_body").css("height", 400);
+  $("#feedback").click(function(event){
+      event.preventDefault();
+      zE.activate();
   });
 </script>
 <script>

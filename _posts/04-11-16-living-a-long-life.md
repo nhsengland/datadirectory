@@ -17,7 +17,7 @@ datasets: " * [QOF](https://data.england.nhs.uk/group/qof) Quality and Outcomes 
  * PHE mortality data
  
  * [Adult Social Care Outcome Framework](https://data.england.nhs.uk/group/ascof)"
-date: 09-09-2016 14:17 +0000
+date: 04-11-2016 11:37 +0000
 description: "
 RSA OPSN collated publically available data and worked with academic colleagues at the University of Surrey to band CCGs based on the experiences of mental health service users in their area. RSA OPSN have banded them ‘low’, ‘as expected’ and ‘high’ based on our expected outcomes adjusted for population. While these bandings provide an important basis of understanding national trends and where particular attention is required, it is important to note whether ‘as expected’, ‘low’ or ‘high’, across all indicators and all bandings, the gap between mental health service users and the rest of the population is stark and concerning.
 

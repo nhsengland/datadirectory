@@ -9,7 +9,7 @@ Using open data, this report charts where, when and which GP practices across En
 
 The report is based on the analysis of open datasets from the Health and Social Care Information Centre, demographic data, as well as qualitative and quantitative research. "
 datasets: "* [Prescribing data ](http://www.hscic.gov.uk/gpprescribingdata) is from the monthly files published by the HSCIC"
-date: 09-09-2016 14:17 +0000
+date: 04-11-2016 11:37 +0000
 description: "The report looks at early adoption of promising new ideas across primary care in England and argues that analysing open data can help public services gain a greater understanding of their take up of innovations.
 
 Key findings

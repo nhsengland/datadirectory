@@ -9,7 +9,7 @@ Second, money available for healthcare is not limitless. Wasteful spending on un
 
 Dr James Moon, a cardiologist, has calculated that the NHS could save £1.4bn per year if doctors switched patients from expensive medicines to cheap ones that are just as good."
 datasets: "* [Prescribing data ](http://www.hscic.gov.uk/gpprescribingdata) is from the monthly files published by the HSCIC"
-date: 09-09-2016 14:17 +0000
+date: 04-11-2016 11:37 +0000
 description: "We combined raw prescription data with expert guidance from qualified doctors and medical researchers, cross-checked against NICE guidelines and other best practice, to develop reasonable assumptions about where prescribing choices may be driving excess spending. We investigated statins as the first area to look at, since the guidance is generally straightforward in that area and well-documented: in almost all cases, generic simvastatin is the recommended best-value option, and is enormously cheaper than branded alternatives.
 
 We identified drugs that only appear in branded formulations (atorvastatin and rosuvastatin calcium) and conservatively assumed that doctors would always have prescribed the cheaper generic form where it exists in any other case - for example, Pravastatin Sodium comes in both branded and generic forms.
